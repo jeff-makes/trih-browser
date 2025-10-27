@@ -9,6 +9,18 @@ interface EpisodeListProps {
   episodes: Episode[];
 }
 
+const normalizeString = (value: unknown): string => {
+  if (typeof value === 'string') {
+    return value;
+  }
+
+  if (value === null || value === undefined) {
+    return '';
+  }
+
+  return String(value);
+};
+
 export default function EpisodeList({ episodes }: EpisodeListProps) {
   const [search, setSearch] = useState('');
   const [selectedEras, setSelectedEras] = useState<Set<string>>(new Set());
@@ -54,12 +66,17 @@ export default function EpisodeList({ episodes }: EpisodeListProps) {
 
     if (search) {
       const searchLower = search.toLowerCase();
-      filtered = filtered.filter(
-        (ep) =>
-          ep.title_feed.toLowerCase().includes(searchLower) ||
-          ep.title_sheet?.toLowerCase().includes(searchLower) ||
-          ep.description?.toLowerCase().includes(searchLower)
-      );
+      filtered = filtered.filter((ep) => {
+        const valuesToSearch = [
+          normalizeString(ep.title_feed),
+          normalizeString(ep.title_sheet),
+          normalizeString(ep.description),
+        ];
+
+        return valuesToSearch.some((value) =>
+          value.toLowerCase().includes(searchLower)
+        );
+      });
     }
 
     if (selectedEras.size > 0) {
@@ -81,8 +98,8 @@ export default function EpisodeList({ episodes }: EpisodeListProps) {
       sorted.sort((a, b) => a.episode - b.episode);
     } else if (sortBy === 'alphabetical') {
       sorted.sort((a, b) =>
-        (a.title_sheet || a.title_feed).localeCompare(
-          b.title_sheet || b.title_feed
+        normalizeString(a.title_sheet || a.title_feed).localeCompare(
+          normalizeString(b.title_sheet || b.title_feed)
         )
       );
     }
