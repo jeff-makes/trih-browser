@@ -36,3 +36,15 @@ This project combines:
 | Data | RSS feed + CSV/JSON metadata |
 | Deployment | Bolt.new or Vercel |
 | Parsing | `xml2js` or `fast-xml-parser` |
+
+
+/app (or /pages)
+  index.tsx           # Main episode list
+  layout.tsx          # Global layout
+/lib
+  rss.ts              # RSS fetching & XML parsing
+  join.ts             # Merges feed with CSV data
+/data
+  trih_episode_list.csv  # Curated episode metadata
+/styles
+  globals.css
