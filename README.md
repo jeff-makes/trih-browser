@@ -48,3 +48,11 @@ This project combines:
   trih_episode_list.csv  # Curated episode metadata
 /styles
   globals.css
+
+## Roadmap
+
+ 🎨 Add timeline visualization by century
+ 🗺️ Add map view (episodes by region)
+ 🧠 Extract characters and places from transcripts
+ 📱 Improve mobile card layout
+ 🌙 Add dark mode
