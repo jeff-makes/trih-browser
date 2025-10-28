@@ -1,5 +1,41 @@
 [
   {
+    "key": "1066-1",
+    "title": "1066 1",
+    "count": 1,
+    "episodes": [
+      554
+    ],
+    "slugs": [
+      "554-the-shadows-of-war-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1066,
+      "max": 1066
+    }
+  },
+  {
+    "key": "1066-the-norman-conquest",
+    "title": "1066: The Norman Conquest",
+    "count": 1,
+    "episodes": [
+      557
+    ],
+    "slugs": [
+      "557-the-norman-conquest-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1066,
+      "max": 1070
+    }
+  },
+  {
     "key": "1922-the-birth-of-the-modern-world",
     "title": "1922: The Birth of the Modern World",
     "count": 2,
@@ -14,6 +50,42 @@
     "parts": [
       1,
       2
+    ],
+    "years": {
+      "min": 1922,
+      "max": 1922
+    }
+  },
+  {
+    "key": "a-christmas-carol",
+    "title": "A Christmas Carol",
+    "count": 1,
+    "episodes": [
+      132
+    ],
+    "slugs": [
+      "132-a-christmas-carol"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1843,
+      "max": 1843
+    }
+  },
+  {
+    "key": "afghanistan",
+    "title": "Afghanistan",
+    "count": 1,
+    "episodes": [
+      87
+    ],
+    "slugs": [
+      "87-afghanistan---part-1"
+    ],
+    "parts": [
+      1
     ],
     "years": {
       "min": null,
@@ -37,8 +109,509 @@
       2
     ],
     "years": {
+      "min": 323,
+      "max": 336
+    }
+  },
+  {
+    "key": "alfred-the-great",
+    "title": "Alfred the Great",
+    "count": 2,
+    "episodes": [
+      250,
+      251
+    ],
+    "slugs": [
+      "250-alfred-the-great-fury-of-the-vikings-part-1",
+      "251-alfred-the-great-return-of-the-king-part-2"
+    ],
+    "parts": [
+      1,
+      2
+    ],
+    "years": {
+      "min": 871,
+      "max": 899
+    }
+  },
+  {
+    "key": "america-in-68",
+    "title": "America in '68",
+    "count": 6,
+    "episodes": [
+      508,
+      509,
+      510,
+      511,
+      512,
+      513
+    ],
+    "slugs": [
+      "508-america-in-68-nightmare-in-vietnam-part-1",
+      "509-america-in-68-the-assassination-of-martin-luther-king-jr-par",
+      "510-america-in-68-the-killing-of-robert-kennedy-part-3",
+      "511-america-in-68-george-wallace-the-first-donald-trump-part-4",
+      "512-america-in-68-the-chicago-riots-part-5",
+      "513-america-in-68-nixons-great-comeback-part-6"
+    ],
+    "parts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "years": {
+      "min": 1968,
+      "max": 1968
+    }
+  },
+  {
+    "key": "american-civil-war",
+    "title": "American Civil War",
+    "count": 4,
+    "episodes": [
+      200,
+      201,
+      202,
+      203
+    ],
+    "slugs": [
+      "200-american-civil-war-the-causes-part-1",
+      "201-american-civil-war-outbreak-part-2",
+      "202-american-civil-war-gettysburg-part-3",
+      "203-american-civil-war-aftermath-legacy-part-4"
+    ],
+    "parts": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "years": {
+      "min": 1861,
+      "max": 1865
+    }
+  },
+  {
+    "key": "american-revolution-2",
+    "title": "American revolution 2",
+    "count": 1,
+    "episodes": [
+      348
+    ],
+    "slugs": [
+      "348-the-boston-tea-party-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1773,
+      "max": 1773
+    }
+  },
+  {
+    "key": "amsterdam-2",
+    "title": "Amsterdam 2",
+    "count": 1,
+    "episodes": [
+      352
+    ],
+    "slugs": [
+      "352-amsterdam-kings-canals-and-coffee-houses-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
       "min": null,
       "max": null
+    }
+  },
+  {
+    "key": "ancient-carthage-lords-of-the-sea",
+    "title": "Ancient Carthage: Lords of the Sea",
+    "count": 1,
+    "episodes": [
+      421
+    ],
+    "slugs": [
+      "421-ancient-carthage-lords-of-the-sea-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "ancient-carthage-rise-of-a-superpower",
+    "title": "Ancient Carthage: Rise of a superpower",
+    "count": 1,
+    "episodes": [
+      422
+    ],
+    "slugs": [
+      "422-ancient-carthage-rise-of-a-superpower-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 200,
+      "max": 900
+    }
+  },
+  {
+    "key": "antony-and-cleopatra",
+    "title": "Antony and Cleopatra",
+    "count": 1,
+    "episodes": [
+      197
+    ],
+    "slugs": [
+      "197-antony-cleopatra-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "atlantis-legacy-of-the-lost-empire",
+    "title": "Atlantis: Legacy of the Lost Empire",
+    "count": 1,
+    "episodes": [
+      315
+    ],
+    "slugs": [
+      "315-atlantis-legacy-of-the-lost-empire-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "atlantis-the-legend",
+    "title": "Atlantis: The Legend",
+    "count": 1,
+    "episodes": [
+      314
+    ],
+    "slugs": [
+      "314-atlantis-the-legend"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "australian-pms-1",
+    "title": "Australian PMs 1",
+    "count": 1,
+    "episodes": [
+      187
+    ],
+    "slugs": [
+      "187-australian-prime-ministers-edmund-barton---robert-menzies-pa"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1901,
+      "max": 1972
+    }
+  },
+  {
+    "key": "australian-pms-2",
+    "title": "Australian PMs 2",
+    "count": 1,
+    "episodes": [
+      188
+    ],
+    "slugs": [
+      "188-australian-prime-ministers-harold-holt---malcolm-fraser-part"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "australian-pms-3",
+    "title": "Australian PMs 3",
+    "count": 1,
+    "episodes": [
+      189
+    ],
+    "slugs": [
+      "189-australian-prime-ministers-bob-hawke---scott-morrison-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1983,
+      "max": 2021
+    }
+  },
+  {
+    "key": "baghdad",
+    "title": "Baghdad",
+    "count": 1,
+    "episodes": [
+      378
+    ],
+    "slugs": [
+      "378-baghdad-the-golden-age"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 750,
+      "max": 850
+    }
+  },
+  {
+    "key": "baghdad-the-arabian-nights",
+    "title": "Baghdad: The Arabian Nights",
+    "count": 1,
+    "episodes": [
+      379
+    ],
+    "slugs": [
+      "379-baghdad-the-arabian-nights"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 750,
+      "max": 1258
+    }
+  },
+  {
+    "key": "birth-of-russia",
+    "title": "Birth of Russia",
+    "count": 1,
+    "episodes": [
+      149
+    ],
+    "slugs": [
+      "149-the-birth-of-russia"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "britain-in-1974-countdown-to-a-coup",
+    "title": "Britain in 1974: Countdown to a coup",
+    "count": 1,
+    "episodes": [
+      419
+    ],
+    "slugs": [
+      "419-britain-in-1974-countdown-to-a-coup-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1974,
+      "max": 1974
+    }
+  },
+  {
+    "key": "britain-in-1974-state-of-emergency",
+    "title": "Britain in 1974: State of Emergency",
+    "count": 1,
+    "episodes": [
+      417
+    ],
+    "slugs": [
+      "417-britain-in-1974-state-of-emergency-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1974,
+      "max": 1974
+    }
+  },
+  {
+    "key": "britain-in-1974-the-crisis-election",
+    "title": "Britain in 1974: The Crisis Election",
+    "count": 1,
+    "episodes": [
+      418
+    ],
+    "slugs": [
+      "418-britain-in-1974-the-crisis-election-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1974,
+      "max": 1974
+    }
+  },
+  {
+    "key": "caesar-and-cleopatra",
+    "title": "Caesar and Cleopatra",
+    "count": 1,
+    "episodes": [
+      196
+    ],
+    "slugs": [
+      "196-julius-caesar-cleopatra-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "captain-cook",
+    "title": "Captain Cook",
+    "count": 1,
+    "episodes": [
+      381
+    ],
+    "slugs": [
+      "381-captain-cook-to-the-ends-of-the-earth"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1768,
+      "max": 1771
+    }
+  },
+  {
+    "key": "captain-cook-1",
+    "title": "Captain Cook 1",
+    "count": 1,
+    "episodes": [
+      380
+    ],
+    "slugs": [
+      "380-captain-cook-historys-greatest-explorer"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1768,
+      "max": 1779
+    }
+  },
+  {
+    "key": "carthage-vs-rome-the-wolf-at-the-gates",
+    "title": "Carthage vs Rome: The Wolf at the gates",
+    "count": 1,
+    "episodes": [
+      423
+    ],
+    "slugs": [
+      "423-carthage-vs-rome-the-wolf-at-the-gates-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 265,
+      "max": 390
+    }
+  },
+  {
+    "key": "carthage-vs-rome-total-war",
+    "title": "Carthage vs Rome: Total War",
+    "count": 1,
+    "episodes": [
+      424
+    ],
+    "slugs": [
+      "424-carthage-vs-rome-total-war-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 250,
+      "max": 263
+    }
+  },
+  {
+    "key": "charlemagne",
+    "title": "Charlemagne",
+    "count": 3,
+    "episodes": [
+      523,
+      524,
+      525
+    ],
+    "slugs": [
+      "523-charlemagne-return-of-the-kings-part-1",
+      "524-charlemagne-pagan-killer-part-2",
+      "525-charlemagne-emperor-of-the-west-part-3"
+    ],
+    "parts": [
+      1,
+      2,
+      3
+    ],
+    "years": {
+      "min": 741,
+      "max": 800
+    }
+  },
+  {
+    "key": "children-s-history",
+    "title": "Children’s History",
+    "count": 1,
+    "episodes": [
+      70
+    ],
+    "slugs": [
+      "70-childrens-history"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 2023,
+      "max": 2023
     }
   },
   {
@@ -56,6 +629,888 @@
     "parts": [
       1,
       2
+    ],
+    "years": {
+      "min": 1937,
+      "max": 1945
+    }
+  },
+  {
+    "key": "cleopatra-s-downfall",
+    "title": "Cleopatra's downfall",
+    "count": 1,
+    "episodes": [
+      198
+    ],
+    "slugs": [
+      "198-cleopatras-downfall-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "columbus",
+    "title": "Columbus",
+    "count": 2,
+    "episodes": [
+      308,
+      309
+    ],
+    "slugs": [
+      "308-columbus-death-in-the-caribbean-part-3",
+      "309-columbus-villain-or-hero-part-4"
+    ],
+    "parts": [
+      3,
+      4
+    ],
+    "years": {
+      "min": 1492,
+      "max": 1506
+    }
+  },
+  {
+    "key": "columbus-2",
+    "title": "Columbus 2",
+    "count": 1,
+    "episodes": [
+      307
+    ],
+    "slugs": [
+      "307-columbus-a-new-world-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1492,
+      "max": 1492
+    }
+  },
+  {
+    "key": "columbus-the-adventure-begins",
+    "title": "Columbus - the adventure begins",
+    "count": 1,
+    "episodes": [
+      306
+    ],
+    "slugs": [
+      "306-columbus-the-adventure-begins-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1492,
+      "max": 1492
+    }
+  },
+  {
+    "key": "conspiracy-theories",
+    "title": "Conspiracy Theories",
+    "count": 1,
+    "episodes": [
+      12
+    ],
+    "slugs": [
+      "12-conspiracy-theories"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "coronations",
+    "title": "Coronations",
+    "count": 1,
+    "episodes": [
+      329
+    ],
+    "slugs": [
+      "329-coronations-chaos-ceremony-and-empire-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 2023,
+      "max": 2023
+    }
+  },
+  {
+    "key": "coronations-2",
+    "title": "Coronations 2",
+    "count": 1,
+    "episodes": [
+      328
+    ],
+    "slugs": [
+      "328-coronations-sex-holy-oil-and-civil-war-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "coronations-deep-history",
+    "title": "Coronations - deep history",
+    "count": 1,
+    "episodes": [
+      327
+    ],
+    "slugs": [
+      "327-coronations-the-deep-history-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1000,
+      "max": 1000
+    }
+  },
+  {
+    "key": "crucifixion",
+    "title": "Crucifixion",
+    "count": 1,
+    "episodes": [
+      175
+    ],
+    "slugs": [
+      "175-crucifixion-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "culture-wars",
+    "title": "Culture Wars",
+    "count": 1,
+    "episodes": [
+      46
+    ],
+    "slugs": [
+      "46-culture-wars"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "custer-s-last-stand-death-in-the-black-hills",
+    "title": "Custer's Last Stand: Death in the Black Hills",
+    "count": 1,
+    "episodes": [
+      450
+    ],
+    "slugs": [
+      "450-custers-last-stand-death-in-the-black-hills-part-5"
+    ],
+    "parts": [
+      5
+    ],
+    "years": {
+      "min": 1873,
+      "max": 1873
+    }
+  },
+  {
+    "key": "custer-s-last-stand-the-charge-of-the-7th-cavalry",
+    "title": "Custer's Last Stand: The Charge of the 7th Cavalry",
+    "count": 1,
+    "episodes": [
+      451
+    ],
+    "slugs": [
+      "451-custers-last-stand-the-charge-of-the-7th-cavalry-part-6"
+    ],
+    "parts": [
+      6
+    ],
+    "years": {
+      "min": 1876,
+      "max": 1876
+    }
+  },
+  {
+    "key": "custer-s-last-stand-the-final-showdown",
+    "title": "Custer's Last Stand: The Final Showdown",
+    "count": 1,
+    "episodes": [
+      453
+    ],
+    "slugs": [
+      "453-custers-last-stand-the-final-showdown-part-8"
+    ],
+    "parts": [
+      8
+    ],
+    "years": {
+      "min": 1876,
+      "max": 1876
+    }
+  },
+  {
+    "key": "custer-vs-crazy-horse-rise-of-sitting-bull",
+    "title": "Custer vs Crazy Horse: Rise of Sitting Bull",
+    "count": 1,
+    "episodes": [
+      449
+    ],
+    "slugs": [
+      "449-custer-vs-crazy-horse-rise-of-sitting-bull-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1860,
+      "max": 1860
+    }
+  },
+  {
+    "key": "emperors-of-rome",
+    "title": "Emperors of Rome",
+    "count": 4,
+    "episodes": [
+      534,
+      535,
+      536,
+      537
+    ],
+    "slugs": [
+      "534-emperors-of-rome-sex-secrets-of-the-caesars-part-1",
+      "535-emperors-of-rome-tiberius-slaughter-and-scandal-part-2",
+      "536-emperors-of-rome-caligula-incest-and-insanity-part-3",
+      "537-emperors-of-rome-claudius-paranoia-and-poison-part-4"
+    ],
+    "parts": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "years": {
+      "min": 14,
+      "max": 68
+    }
+  },
+  {
+    "key": "empires",
+    "title": "Empires",
+    "count": 1,
+    "episodes": [
+      25
+    ],
+    "slugs": [
+      "25-empires"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "evita",
+    "title": "Evita",
+    "count": 3,
+    "episodes": [
+      494,
+      497,
+      498
+    ],
+    "slugs": [
+      "494-evita-birth-of-a-legend-part-1",
+      "497-evita-death-of-a-martyr-part-4",
+      "498-evita-the-mystery-of-the-missing-body-part-5"
+    ],
+    "parts": [
+      1,
+      4,
+      5
+    ],
+    "years": {
+      "min": 1919,
+      "max": 1952
+    }
+  },
+  {
+    "key": "evita-2",
+    "title": "Evita 2",
+    "count": 1,
+    "episodes": [
+      495
+    ],
+    "slugs": [
+      "495-evita-the-rise-of-general-pern-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1943,
+      "max": 1952
+    }
+  },
+  {
+    "key": "evita-3",
+    "title": "Evita 3",
+    "count": 1,
+    "episodes": [
+      496
+    ],
+    "slugs": [
+      "496-evita-the-worlds-most-powerful-woman-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1946,
+      "max": 1952
+    }
+  },
+  {
+    "key": "exams",
+    "title": "Exams",
+    "count": 1,
+    "episodes": [
+      84
+    ],
+    "slugs": [
+      "84-exams"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 2023,
+      "max": 2023
+    }
+  },
+  {
+    "key": "falklands-war-1",
+    "title": "Falklands War 1",
+    "count": 1,
+    "episodes": [
+      169
+    ],
+    "slugs": [
+      "169-the-falklands-war-countdown-to-invasion-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1982,
+      "max": 1982
+    }
+  },
+  {
+    "key": "falklands-war-2",
+    "title": "Falklands War 2",
+    "count": 1,
+    "episodes": [
+      170
+    ],
+    "slugs": [
+      "170-the-falklands-war-the-task-force-sails-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1982,
+      "max": 1982
+    }
+  },
+  {
+    "key": "falklands-war-3",
+    "title": "Falklands War 3",
+    "count": 1,
+    "episodes": [
+      171
+    ],
+    "slugs": [
+      "171-the-falklands-war-battle-for-the-islands-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1982,
+      "max": 1982
+    }
+  },
+  {
+    "key": "fall-of-saigon",
+    "title": "Fall of Saigon",
+    "count": 2,
+    "episodes": [
+      324,
+      325
+    ],
+    "slugs": [
+      "324-fall-of-saigon-the-nightmare-begins",
+      "325-fall-of-saigon-apocalypse-now-part-2"
+    ],
+    "parts": [
+      1,
+      2
+    ],
+    "years": {
+      "min": 1975,
+      "max": 1975
+    }
+  },
+  {
+    "key": "fall-of-the-aztecs",
+    "title": "Fall of the Aztecs",
+    "count": 8,
+    "episodes": [
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391
+    ],
+    "slugs": [
+      "384-the-fall-of-the-aztecs-the-adventure-begins-part-1",
+      "385-the-fall-of-the-aztecs-the-woman-who-changed-the-world-part-",
+      "386-the-fall-of-the-aztecs-the-city-of-gold-part-3",
+      "387-the-fall-of-the-aztecs-prisoners-of-montezuma-part-4",
+      "388-the-fall-of-the-aztecs-the-festival-of-blood-part-5",
+      "389-the-fall-of-the-aztecs-the-night-of-tears-part-6",
+      "390-the-fall-of-the-aztecs-war-to-the-death-part-7",
+      "391-the-fall-of-the-aztecs-the-last-emperor-part-8"
+    ],
+    "parts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "years": {
+      "min": 1519,
+      "max": 1521
+    }
+  },
+  {
+    "key": "food-glorious-food",
+    "title": "Food Glorious Food",
+    "count": 1,
+    "episodes": [
+      49
+    ],
+    "slugs": [
+      "49-food-glorious-food"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "french-presidents-1",
+    "title": "French Presidents 1",
+    "count": 1,
+    "episodes": [
+      178
+    ],
+    "slugs": [
+      "178-french-presidents-1958-1981-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1958,
+      "max": 1981
+    }
+  },
+  {
+    "key": "french-presidents-2",
+    "title": "French Presidents 2",
+    "count": 1,
+    "episodes": [
+      179
+    ],
+    "slugs": [
+      "179-french-presidents-1981-2022-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1981,
+      "max": 2022
+    }
+  },
+  {
+    "key": "game-of-thrones",
+    "title": "Game of Thrones",
+    "count": 1,
+    "episodes": [
+      53
+    ],
+    "slugs": [
+      "53-game-of-thrones"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "ghosts",
+    "title": "Ghosts",
+    "count": 1,
+    "episodes": [
+      66
+    ],
+    "slugs": [
+      "66-ghosts"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "golden-age-of-japan-1",
+    "title": "Golden Age of Japan 1",
+    "count": 1,
+    "episodes": [
+      560
+    ],
+    "slugs": [
+      "560-the-golden-age-of-japan-lady-murasaki-and-the-shining-prince"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 900,
+      "max": 1100
+    }
+  },
+  {
+    "key": "great-northern-war",
+    "title": "Great Northern War",
+    "count": 1,
+    "episodes": [
+      567
+    ],
+    "slugs": [
+      "567-the-great-northern-war-murder-in-moscow-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1707,
+      "max": 1707
+    }
+  },
+  {
+    "key": "great-northern-war-1",
+    "title": "Great Northern War 1",
+    "count": 1,
+    "episodes": [
+      564
+    ],
+    "slugs": [
+      "564-the-great-northern-war-the-battle-of-the-baltic-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1700,
+      "max": 1721
+    }
+  },
+  {
+    "key": "great-northern-war-2",
+    "title": "Great Northern War 2",
+    "count": 1,
+    "episodes": [
+      565
+    ],
+    "slugs": [
+      "565-the-great-northern-war-revenge-of-the-cossacks-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1700,
+      "max": 1721
+    }
+  },
+  {
+    "key": "great-northern-war-3",
+    "title": "Great Northern War 3",
+    "count": 1,
+    "episodes": [
+      566
+    ],
+    "slugs": [
+      "566-the-great-northern-war-slaughter-on-the-steppes-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1707,
+      "max": 1707
+    }
+  },
+  {
+    "key": "greek-myths",
+    "title": "Greek Myths",
+    "count": 3,
+    "episodes": [
+      603,
+      604,
+      605
+    ],
+    "slugs": [
+      "603-greek-myths-the-riddle-of-the-sphinx-part-2",
+      "604-greek-myths-sex-drugs-tragedy-part-3",
+      "605-greek-myths-jason-the-quest-for-the-golden-fleece-part-4"
+    ],
+    "parts": [
+      2,
+      3,
+      4
+    ],
+    "years": {
+      "min": 400,
+      "max": 500
+    }
+  },
+  {
+    "key": "greek-myths-1",
+    "title": "Greek Myths 1",
+    "count": 1,
+    "episodes": [
+      602
+    ],
+    "slugs": [
+      "602-greek-myths-zeus-king-of-the-gods-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "hannibal",
+    "title": "Hannibal",
+    "count": 2,
+    "episodes": [
+      569,
+      571
+    ],
+    "slugs": [
+      "569-hannibal-elephants-cross-the-alps-part-2",
+      "571-hannibal-roman-bloodbath-at-cannae-part-4"
+    ],
+    "parts": [
+      2,
+      4
+    ],
+    "years": {
+      "min": 216,
+      "max": 218
+    }
+  },
+  {
+    "key": "hannibal-1",
+    "title": "Hannibal 1",
+    "count": 1,
+    "episodes": [
+      568
+    ],
+    "slugs": [
+      "568-hannibal-romes-greatest-enemy-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 201,
+      "max": 264
+    }
+  },
+  {
+    "key": "hannibal-3",
+    "title": "Hannibal 3",
+    "count": 1,
+    "episodes": [
+      570
+    ],
+    "slugs": [
+      "570-hannibal-the-invasion-of-italy-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 218,
+      "max": 218
+    }
+  },
+  {
+    "key": "haunted-london",
+    "title": "Haunted London",
+    "count": 1,
+    "episodes": [
+      212
+    ],
+    "slugs": [
+      "212-haunted-london-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 2023,
+      "max": 2023
+    }
+  },
+  {
+    "key": "helen-of-troy-a-family-of-blood",
+    "title": "Helen of Troy: A Family of Blood",
+    "count": 1,
+    "episodes": [
+      458
+    ],
+    "slugs": [
+      "458-helen-of-troy-a-family-of-blood-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1870,
+      "max": 1870
+    }
+  },
+  {
+    "key": "helen-of-troy-queen-of-the-greek-myths",
+    "title": "Helen of Troy: Queen of the Greek Myths",
+    "count": 1,
+    "episodes": [
+      457
+    ],
+    "slugs": [
+      "457-helen-of-troy-queen-of-the-greek-myths-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "henry-iv",
+    "title": "Henry IV",
+    "count": 2,
+    "episodes": [
+      485,
+      486
+    ],
+    "slugs": [
+      "485-henry-iv-the-usurper-king-part-1",
+      "486-henry-iv-warrior-princes-and-fat-knights-part-2"
+    ],
+    "parts": [
+      1,
+      2
+    ],
+    "years": {
+      "min": 1399,
+      "max": 1403
+    }
+  },
+  {
+    "key": "historical-love-island",
+    "title": "Historical Love Island",
+    "count": 1,
+    "episodes": [
+      207
+    ],
+    "slugs": [
+      "207-historical-love-island-the-winner"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "historical-love-island-the-sequel",
+    "title": "Historical Love Island: The Sequel",
+    "count": 1,
+    "episodes": [
+      357
+    ],
+    "slugs": [
+      "357-historical-love-island-the-sequel"
+    ],
+    "parts": [
+      0
     ],
     "years": {
       "min": null,
@@ -84,6 +1539,42 @@
     }
   },
   {
+    "key": "history-s-greatest-beards",
+    "title": "History's Greatest Beards",
+    "count": 1,
+    "episodes": [
+      491
+    ],
+    "slugs": [
+      "491-historys-greatest-beards-from-egyptian-queens-to-medieval-co"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "history-s-greatest-monkeys",
+    "title": "History's Greatest Monkeys",
+    "count": 1,
+    "episodes": [
+      426
+    ],
+    "slugs": [
+      "426-historys-greatest-monkeys"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 500,
+      "max": 2024
+    }
+  },
+  {
     "key": "hitler",
     "title": "Hitler",
     "count": 2,
@@ -100,8 +1591,809 @@
       2
     ],
     "years": {
+      "min": 1939,
+      "max": 1945
+    }
+  },
+  {
+    "key": "hitler-s-war-on-poland",
+    "title": "Hitler's War on Poland",
+    "count": 3,
+    "episodes": [
+      530,
+      531,
+      532
+    ],
+    "slugs": [
+      "530-hitlers-war-on-poland-countdown-to-armageddon-part-1",
+      "531-hitlers-war-on-poland-the-pact-with-stalin-part-2",
+      "532-hitlers-war-on-poland-the-fall-of-warsaw-part-3"
+    ],
+    "parts": [
+      1,
+      2,
+      3
+    ],
+    "years": {
+      "min": 1939,
+      "max": 1939
+    }
+  },
+  {
+    "key": "hitler-with-ian-kershaw",
+    "title": "Hitler, with Ian Kershaw",
+    "count": 1,
+    "episodes": [
+      63
+    ],
+    "slugs": [
+      "63-hitler-with-ian-kershaw---part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1933,
+      "max": 1945
+    }
+  },
+  {
+    "key": "holidays-byron-s-grand-tour",
+    "title": "Holidays: Byron's Grand Tour",
+    "count": 1,
+    "episodes": [
+      221
+    ],
+    "slugs": [
+      "221-holidays-byrons-grand-tour"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1760,
+      "max": 1820
+    }
+  },
+  {
+    "key": "horror-in-the-congo",
+    "title": "Horror in the Congo",
+    "count": 3,
+    "episodes": [
+      538,
+      539,
+      540
+    ],
+    "slugs": [
+      "538-horror-in-the-congo-the-nightmare-begins-part-1",
+      "539-horror-in-the-congo-the-crimes-of-empire-part-2",
+      "540-horror-in-the-congo-a-conspiracy-unmasked-part-3"
+    ],
+    "parts": [
+      1,
+      2,
+      3
+    ],
+    "years": {
+      "min": 1870,
+      "max": 1900
+    }
+  },
+  {
+    "key": "hundred-years-war",
+    "title": "Hundred Years' War",
+    "count": 6,
+    "episodes": [
+      319,
+      320,
+      321,
+      488,
+      489,
+      490
+    ],
+    "slugs": [
+      "319-hundred-years-war-triumph-of-the-longbow-part-2",
+      "320-hundred-years-war-the-black-prince-part-3",
+      "321-hundred-years-war-a-storm-of-swords-part-4",
+      "488-hundred-years-war-the-road-to-agincourt-part-2",
+      "489-hundred-years-war-bloodbath-at-agincourt-part-3",
+      "490-hundred-years-war-england-triumphant-part-4"
+    ],
+    "parts": [
+      2,
+      3,
+      4,
+      2,
+      3,
+      4
+    ],
+    "years": {
+      "min": 1337,
+      "max": 1453
+    }
+  },
+  {
+    "key": "ireland-1",
+    "title": "Ireland 1",
+    "count": 1,
+    "episodes": [
+      336
+    ],
+    "slugs": [
+      "336-ireland-celts-conquest-and-cromwell-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1169,
+      "max": 1798
+    }
+  },
+  {
+    "key": "ireland-2",
+    "title": "Ireland 2",
+    "count": 1,
+    "episodes": [
+      337
+    ],
+    "slugs": [
+      "337-ireland-union-famine-and-parnell-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1800,
+      "max": 1900
+    }
+  },
+  {
+    "key": "ireland-3",
+    "title": "Ireland 3",
+    "count": 1,
+    "episodes": [
+      338
+    ],
+    "slugs": [
+      "338-ireland-home-rule-mutiny---and-civil-war-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1912,
+      "max": 1912
+    }
+  },
+  {
+    "key": "ireland-4",
+    "title": "Ireland 4",
+    "count": 1,
+    "episodes": [
+      339
+    ],
+    "slugs": [
+      "339-ireland-the-easter-rising-1916-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1916,
+      "max": 1916
+    }
+  },
+  {
+    "key": "irish-civil-war-1",
+    "title": "Irish Civil War 1",
+    "count": 1,
+    "episodes": [
+      580
+    ],
+    "slugs": [
+      "580-the-irish-civil-war-the-assassination-of-sir-henry-wilson-pa"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1922,
+      "max": 1922
+    }
+  },
+  {
+    "key": "irish-civil-war-2",
+    "title": "Irish Civil War 2",
+    "count": 1,
+    "episodes": [
+      581
+    ],
+    "slugs": [
+      "581-the-irish-civil-war-the-killing-of-michael-collins-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1922,
+      "max": 1922
+    }
+  },
+  {
+    "key": "irish-war-of-independence",
+    "title": "Irish War of Independence",
+    "count": 1,
+    "episodes": [
+      579
+    ],
+    "slugs": [
+      "579-the-irish-war-of-independence-showdown-in-london-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1921,
+      "max": 1921
+    }
+  },
+  {
+    "key": "irish-war-of-independence-1",
+    "title": "Irish War of Independence 1",
+    "count": 1,
+    "episodes": [
+      576
+    ],
+    "slugs": [
+      "576-the-irish-war-of-independence-rise-of-the-ira-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1916,
+      "max": 1921
+    }
+  },
+  {
+    "key": "irish-war-of-independence-2",
+    "title": "Irish War of Independence 2",
+    "count": 1,
+    "episodes": [
+      577
+    ],
+    "slugs": [
+      "577-the-irish-war-of-independence-the-violence-begins-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1919,
+      "max": 1921
+    }
+  },
+  {
+    "key": "irish-war-of-independence-3",
+    "title": "Irish War of Independence 3",
+    "count": 1,
+    "episodes": [
+      578
+    ],
+    "slugs": [
+      "578-the-irish-war-of-independence-bloody-sunday-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1920,
+      "max": 1920
+    }
+  },
+  {
+    "key": "jesus-1",
+    "title": "Jesus 1",
+    "count": 1,
+    "episodes": [
+      287
+    ],
+    "slugs": [
+      "287-jesus-christ-the-mystery-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
       "min": null,
       "max": null
+    }
+  },
+  {
+    "key": "jesus-2",
+    "title": "Jesus 2",
+    "count": 1,
+    "episodes": [
+      288
+    ],
+    "slugs": [
+      "288-jesus-christ-the-history-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "jfk",
+    "title": "JFK",
+    "count": 2,
+    "episodes": [
+      394,
+      395
+    ],
+    "slugs": [
+      "394-jfk-death-in-dallas-part-3",
+      "395-jfk-hunt-for-a-killer-part-4"
+    ],
+    "parts": [
+      3,
+      4
+    ],
+    "years": {
+      "min": 1963,
+      "max": 1963
+    }
+  },
+  {
+    "key": "jfk-1",
+    "title": "JFK 1",
+    "count": 1,
+    "episodes": [
+      392
+    ],
+    "slugs": [
+      "392-jfk-the-road-to-the-white-house-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1963,
+      "max": 1963
+    }
+  },
+  {
+    "key": "jfk-2",
+    "title": "JFK 2",
+    "count": 1,
+    "episodes": [
+      393
+    ],
+    "slugs": [
+      "393-jfk-cuba-camelot-and-the-cold-war-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1961,
+      "max": 1963
+    }
+  },
+  {
+    "key": "jfk-5",
+    "title": "JFK 5",
+    "count": 1,
+    "episodes": [
+      396
+    ],
+    "slugs": [
+      "396-jfk-the-second-assassin-strikes-part-5"
+    ],
+    "parts": [
+      5
+    ],
+    "years": {
+      "min": 1963,
+      "max": 1963
+    }
+  },
+  {
+    "key": "jfk-6",
+    "title": "JFK 6",
+    "count": 1,
+    "episodes": [
+      397
+    ],
+    "slugs": [
+      "397-jfk-a-conspiracy-unmasked-part-6"
+    ],
+    "parts": [
+      6
+    ],
+    "years": {
+      "min": 1963,
+      "max": 1963
+    }
+  },
+  {
+    "key": "jubilees",
+    "title": "Jubilees",
+    "count": 1,
+    "episodes": [
+      190
+    ],
+    "slugs": [
+      "190-jubilees"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 2022,
+      "max": 2022
+    }
+  },
+  {
+    "key": "justinian-making-rome-great-again",
+    "title": "Justinian: Making Rome Great Again",
+    "count": 1,
+    "episodes": [
+      219
+    ],
+    "slugs": [
+      "219-justinian-making-rome-great-again-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 532,
+      "max": 532
+    }
+  },
+  {
+    "key": "killer-fashion",
+    "title": "Killer Fashion",
+    "count": 1,
+    "episodes": [
+      158
+    ],
+    "slugs": [
+      "158-killer-fashion"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "lady-jane-grey-1",
+    "title": "Lady Jane Grey 1",
+    "count": 1,
+    "episodes": [
+      293
+    ],
+    "slugs": [
+      "293-lady-jane-grey-the-nine-days-queen-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1553,
+      "max": 1553
+    }
+  },
+  {
+    "key": "lady-jane-grey-2",
+    "title": "Lady Jane Grey 2",
+    "count": 1,
+    "episodes": [
+      294
+    ],
+    "slugs": [
+      "294-lady-jane-grey-the-axe-falls-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1553,
+      "max": 1554
+    }
+  },
+  {
+    "key": "londinium",
+    "title": "Londinium",
+    "count": 1,
+    "episodes": [
+      209
+    ],
+    "slugs": [
+      "209-londinium-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "london",
+    "title": "London",
+    "count": 1,
+    "episodes": [
+      213
+    ],
+    "slugs": [
+      "213-london-moments-part-5"
+    ],
+    "parts": [
+      5
+    ],
+    "years": {
+      "min": 2023,
+      "max": 2023
+    }
+  },
+  {
+    "key": "london-1",
+    "title": "London 1",
+    "count": 1,
+    "episodes": [
+      210
+    ],
+    "slugs": [
+      "210-london-places-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "london-2",
+    "title": "London 2",
+    "count": 1,
+    "episodes": [
+      211
+    ],
+    "slugs": [
+      "211-london-people-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "lord-byron-dangerous-liaisons",
+    "title": "Lord Byron: Dangerous liaisons",
+    "count": 1,
+    "episodes": [
+      442
+    ],
+    "slugs": [
+      "442-lord-byron-dangerous-liaisons-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1812,
+      "max": 1824
+    }
+  },
+  {
+    "key": "luther-a-world-torn-apart",
+    "title": "Luther: A World torn apart",
+    "count": 1,
+    "episodes": [
+      437
+    ],
+    "slugs": [
+      "437-luther-a-world-torn-apart-part-5"
+    ],
+    "parts": [
+      5
+    ],
+    "years": {
+      "min": 1524,
+      "max": 1524
+    }
+  },
+  {
+    "key": "luther-showdown-with-the-emperor",
+    "title": "Luther: Showdown with the emperor",
+    "count": 1,
+    "episodes": [
+      436
+    ],
+    "slugs": [
+      "436-luther-showdown-with-the-emperor-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1521,
+      "max": 1521
+    }
+  },
+  {
+    "key": "luther-the-battle-against-satan",
+    "title": "Luther: The Battle against Satan",
+    "count": 1,
+    "episodes": [
+      435
+    ],
+    "slugs": [
+      "435-luther-the-battle-against-satan-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1518,
+      "max": 1518
+    }
+  },
+  {
+    "key": "luther-the-man-who-changed-the-world",
+    "title": "Luther: The Man who changed the world",
+    "count": 1,
+    "episodes": [
+      433
+    ],
+    "slugs": [
+      "433-luther-the-man-who-changed-the-world-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1517,
+      "max": 1517
+    }
+  },
+  {
+    "key": "luther-the-revolution-begins",
+    "title": "Luther: The Revolution begins",
+    "count": 1,
+    "episodes": [
+      434
+    ],
+    "slugs": [
+      "434-luther-the-revolution-begins-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1517,
+      "max": 1517
+    }
+  },
+  {
+    "key": "mad-elections",
+    "title": "Mad elections",
+    "count": 1,
+    "episodes": [
+      463
+    ],
+    "slugs": [
+      "463-mad-elections-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1265,
+      "max": 1900
+    }
+  },
+  {
+    "key": "mad-victorian-sport",
+    "title": "Mad Victorian Sport",
+    "count": 1,
+    "episodes": [
+      592
+    ],
+    "slugs": [
+      "592-mad-victorian-sport"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1837,
+      "max": 1901
+    }
+  },
+  {
+    "key": "mary-queen-of-scots",
+    "title": "Mary Queen of Scots",
+    "count": 6,
+    "episodes": [
+      584,
+      585,
+      586,
+      587,
+      588,
+      589
+    ],
+    "slugs": [
+      "584-mary-queen-of-scots-birth-of-a-legend-part-1",
+      "585-mary-queen-of-scots-the-royal-rivals-part-2",
+      "586-mary-queen-of-scots-the-battle-for-scotland-part-3",
+      "587-mary-queen-of-scots-murder-most-foul-part-4",
+      "588-mary-queen-of-scots-the-mystery-of-the-exploding-mansion-par",
+      "589-mary-queen-of-scots-downfall-part-6"
+    ],
+    "parts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "years": {
+      "min": 1542,
+      "max": 1587
+    }
+  },
+  {
+    "key": "mediaeval-treason",
+    "title": "Mediaeval treason",
+    "count": 1,
+    "episodes": [
+      248
+    ],
+    "slugs": [
+      "248-medieval-treason-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1351,
+      "max": 1603
+    }
+  },
+  {
+    "key": "modern-british-elections",
+    "title": "Modern British Elections",
+    "count": 1,
+    "episodes": [
+      464
+    ],
+    "slugs": [
+      "464-modern-british-elections-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1945,
+      "max": 2024
     }
   },
   {
@@ -121,8 +2413,326 @@
       2
     ],
     "years": {
+      "min": 1896,
+      "max": 2023
+    }
+  },
+  {
+    "key": "nazis",
+    "title": "Nazis",
+    "count": 1,
+    "episodes": [
+      298
+    ],
+    "slugs": [
+      "298-the-nazis-total-power-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1933,
+      "max": 1934
+    }
+  },
+  {
+    "key": "nazis-1",
+    "title": "Nazis 1",
+    "count": 1,
+    "episodes": [
+      295
+    ],
+    "slugs": [
+      "295-the-rise-of-the-nazis-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1945
+    }
+  },
+  {
+    "key": "nazis-2",
+    "title": "Nazis 2",
+    "count": 1,
+    "episodes": [
+      296
+    ],
+    "slugs": [
+      "296-the-nazis-the-beer-hall-putsch-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1920,
+      "max": 1929
+    }
+  },
+  {
+    "key": "nazis-3",
+    "title": "Nazis 3",
+    "count": 1,
+    "episodes": [
+      297
+    ],
+    "slugs": [
+      "297-the-nazis-hitlers-triumph-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1929,
+      "max": 1933
+    }
+  },
+  {
+    "key": "nazis-road-to-war",
+    "title": "Nazis road to war",
+    "count": 1,
+    "episodes": [
+      528
+    ],
+    "slugs": [
+      "528-the-nazis-road-to-war-hitler-prepares-to-strike-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1938,
+      "max": 1938
+    }
+  },
+  {
+    "key": "nelson",
+    "title": "Nelson",
+    "count": 9,
+    "episodes": [
+      515,
+      516,
+      517,
+      518,
+      608,
+      609,
+      610,
+      611,
+      612
+    ],
+    "slugs": [
+      "515-nelson-attack-the-french-part-2",
+      "516-nelson-god-of-war-part-3",
+      "517-nelson-the-hunt-for-napoleon-part-4",
+      "518-nelson-the-battle-of-the-nile-part-5",
+      "608-nelson-slaughter-in-naples-part-1",
+      "609-nelson-the-gathering-storm-part-2",
+      "610-nelson-the-battle-of-copenhagen-part-3",
+      "611-nelson-bonaparte-prepares-to-strike-part-4",
+      "612-nelson-the-final-showdown-part-5"
+    ],
+    "parts": [
+      2,
+      3,
+      4,
+      5,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "years": {
+      "min": 1793,
+      "max": 1805
+    }
+  },
+  {
+    "key": "nelson-1",
+    "title": "Nelson 1",
+    "count": 1,
+    "episodes": [
+      514
+    ],
+    "slugs": [
+      "514-nelson-hero-of-the-seas-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1758,
+      "max": 1788
+    }
+  },
+  {
+    "key": "oil-the-making-of-the-modern-world",
+    "title": "Oil: The Making of the Modern World",
+    "count": 1,
+    "episodes": [
+      167
+    ],
+    "slugs": [
+      "167-oil-the-making-of-the-modern-world"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1850,
+      "max": 2023
+    }
+  },
+  {
+    "key": "oppenheimer",
+    "title": "Oppenheimer",
+    "count": 2,
+    "episodes": [
+      343,
+      344
+    ],
+    "slugs": [
+      "343-oppenheimer-the-father-of-the-atom-bomb-part-1",
+      "344-oppenheimer-the-witch-hunt-part-2"
+    ],
+    "parts": [
+      1,
+      2
+    ],
+    "years": {
+      "min": 1943,
+      "max": 1954
+    }
+  },
+  {
+    "key": "oscar-wilde-2",
+    "title": "Oscar Wilde 2",
+    "count": 1,
+    "episodes": [
+      342
+    ],
+    "slugs": [
+      "342-the-trials-of-oscar-wilde-downfall-and-prison-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1895,
+      "max": 1895
+    }
+  },
+  {
+    "key": "peter-the-great",
+    "title": "Peter the Great",
+    "count": 2,
+    "episodes": [
+      562,
+      563
+    ],
+    "slugs": [
+      "562-peter-the-great-the-rise-of-russia-part-1",
+      "563-peter-the-great-bloodbath-in-the-kremlin-part-2"
+    ],
+    "parts": [
+      1,
+      2
+    ],
+    "years": {
+      "min": 1672,
+      "max": 1725
+    }
+  },
+  {
+    "key": "portugal",
+    "title": "Portugal",
+    "count": 1,
+    "episodes": [
+      227
+    ],
+    "slugs": [
+      "227-portugal-on-the-edge-of-the-world-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
       "min": null,
       "max": null
+    }
+  },
+  {
+    "key": "portugal-4",
+    "title": "Portugal 4",
+    "count": 1,
+    "episodes": [
+      230
+    ],
+    "slugs": [
+      "230-portugal-football-fado-and-fascism-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1900,
+      "max": 2000
+    }
+  },
+  {
+    "key": "portugal-gold-earthquakes-and-brazil",
+    "title": "Portugal: Gold, Earthquakes, and Brazil",
+    "count": 1,
+    "episodes": [
+      229
+    ],
+    "slugs": [
+      "229-portugal-gold-earthquakes-and-brazil-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "portugal-the-golden-age-of-discovery",
+    "title": "Portugal: The Golden Age of Discovery",
+    "count": 1,
+    "episodes": [
+      228
+    ],
+    "slugs": [
+      "228-portugal-the-golden-age-of-discovery-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1498,
+      "max": 1600
+    }
+  },
+  {
+    "key": "putin-s-russia",
+    "title": "Putin's Russia",
+    "count": 1,
+    "episodes": [
+      162
+    ],
+    "slugs": [
+      "162-putins-russia"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 2000,
+      "max": 2010
     }
   },
   {
@@ -142,8 +2752,197 @@
       2
     ],
     "years": {
+      "min": 1926,
+      "max": 2022
+    }
+  },
+  {
+    "key": "reagan-2",
+    "title": "Reagan 2",
+    "count": 1,
+    "episodes": [
+      311
+    ],
+    "slugs": [
+      "311-reagan-the-road-to-the-white-house-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1964,
+      "max": 1966
+    }
+  },
+  {
+    "key": "reagan-3",
+    "title": "Reagan 3",
+    "count": 1,
+    "episodes": [
+      312
+    ],
+    "slugs": [
+      "312-reagan-iran-contra-and-the-cold-war-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1980,
+      "max": 1989
+    }
+  },
+  {
+    "key": "road-to-1066",
+    "title": "Road to 1066",
+    "count": 3,
+    "episodes": [
+      549,
+      550,
+      551
+    ],
+    "slugs": [
+      "549-the-road-to-1066-revenge-of-the-vikings-part-2",
+      "550-the-road-to-1066-rise-of-the-normans-part-3",
+      "551-the-road-to-1066-countdown-to-conquest-part-4"
+    ],
+    "parts": [
+      2,
+      3,
+      4
+    ],
+    "years": {
+      "min": 1002,
+      "max": 1066
+    }
+  },
+  {
+    "key": "rolling-stones",
+    "title": "Rolling Stones",
+    "count": 1,
+    "episodes": [
+      559
+    ],
+    "slugs": [
+      "559-the-rolling-stones-satanic-majesties-of-sixties-rebellion-pa"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1967,
+      "max": 1967
+    }
+  },
+  {
+    "key": "roman-conquest-of-britain",
+    "title": "Roman conquest of Britain",
+    "count": 2,
+    "episodes": [
+      501,
+      502
+    ],
+    "slugs": [
+      "501-the-roman-conquest-of-britain-boudiccas-reign-of-blood-part-",
+      "502-the-roman-conquest-of-britain-to-the-ends-of-the-earth-part-"
+    ],
+    "parts": [
+      3,
+      4
+    ],
+    "years": {
+      "min": 43,
+      "max": 84
+    }
+  },
+  {
+    "key": "roman-conquest-of-britain-1",
+    "title": "Roman conquest of Britain 1",
+    "count": 1,
+    "episodes": [
+      499
+    ],
+    "slugs": [
+      "499-the-roman-conquest-of-britain-julius-caesars-invasion-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 55,
+      "max": 55
+    }
+  },
+  {
+    "key": "roman-holidays",
+    "title": "Roman Holidays",
+    "count": 1,
+    "episodes": [
+      224
+    ],
+    "slugs": [
+      "224-roman-holidays"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
       "min": null,
       "max": null
+    }
+  },
+  {
+    "key": "ronald-reagan-and-the-american-dream",
+    "title": "Ronald Reagan and the American Dream",
+    "count": 1,
+    "episodes": [
+      310
+    ],
+    "slugs": [
+      "310-ronald-reagan-and-the-american-dream-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1911,
+      "max": 1964
+    }
+  },
+  {
+    "key": "sex-in-the-city",
+    "title": "Sex in the City",
+    "count": 1,
+    "episodes": [
+      24
+    ],
+    "slugs": [
+      "24-sex-in-the-city"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1700,
+      "max": 1899
+    }
+  },
+  {
+    "key": "sherlock-holmes",
+    "title": "Sherlock Holmes",
+    "count": 1,
+    "episodes": [
+      85
+    ],
+    "slugs": [
+      "85-sherlock-holmes"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1887,
+      "max": 1914
     }
   },
   {
@@ -168,6 +2967,705 @@
     }
   },
   {
+    "key": "sixties-fashion-2",
+    "title": "Sixties' fashion 2",
+    "count": 1,
+    "episodes": [
+      364
+    ],
+    "slugs": [
+      "364-sixties-fashion-swinging-london"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1960,
+      "max": 1969
+    }
+  },
+  {
+    "key": "spies-with-ben-macintyre",
+    "title": "Spies, with Ben MacIntyre",
+    "count": 1,
+    "episodes": [
+      37
+    ],
+    "slugs": [
+      "37-spies-with-ben-macintyre"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "stalingrad-2",
+    "title": "Stalingrad 2",
+    "count": 1,
+    "episodes": [
+      215
+    ],
+    "slugs": [
+      "215-stalingrad-and-the-red-army-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1942,
+      "max": 1943
+    }
+  },
+  {
+    "key": "sun-sea-and-sex",
+    "title": "Sun, Sea, and Sex",
+    "count": 1,
+    "episodes": [
+      223
+    ],
+    "slugs": [
+      "223-sun-sea-and-sex"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1920,
+      "max": 1970
+    }
+  },
+  {
+    "key": "superheroes",
+    "title": "Superheroes",
+    "count": 1,
+    "episodes": [
+      130
+    ],
+    "slugs": [
+      "130-superheroes"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1930,
+      "max": 2023
+    }
+  },
+  {
+    "key": "teenagers",
+    "title": "Teenagers",
+    "count": 1,
+    "episodes": [
+      50
+    ],
+    "slugs": [
+      "50-teenagers"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "the-american-revolution",
+    "title": "The American Revolution",
+    "count": 1,
+    "episodes": [
+      347
+    ],
+    "slugs": [
+      "347-the-american-revolution-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1775,
+      "max": 1783
+    }
+  },
+  {
+    "key": "the-birth-of-the-united-states",
+    "title": "The Birth of the United States",
+    "count": 1,
+    "episodes": [
+      349
+    ],
+    "slugs": [
+      "349-the-birth-of-the-united-states-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1776,
+      "max": 1776
+    }
+  },
+  {
+    "key": "the-canterbury-tales",
+    "title": "The Canterbury Tales",
+    "count": 1,
+    "episodes": [
+      416
+    ],
+    "slugs": [
+      "416-the-canterbury-tales-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1340,
+      "max": 1400
+    }
+  },
+  {
+    "key": "the-fall-of-the-sioux",
+    "title": "The Fall of the Sioux",
+    "count": 1,
+    "episodes": [
+      454
+    ],
+    "slugs": [
+      "454-fall-of-the-sioux-death-of-crazy-horse-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1877,
+      "max": 1877
+    }
+  },
+  {
+    "key": "the-fall-of-the-sioux-the-massacre-at-wounded-knee",
+    "title": "The Fall of the Sioux: The Massacre at Wounded Knee",
+    "count": 1,
+    "episodes": [
+      456
+    ],
+    "slugs": [
+      "456-fall-of-the-sioux-the-massacre-at-wounded-knee-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1890,
+      "max": 1890
+    }
+  },
+  {
+    "key": "the-first-world-war",
+    "title": "The First World War",
+    "count": 1,
+    "episodes": [
+      598
+    ],
+    "slugs": [
+      "598-the-first-world-war-the-eastern-front-explodes-part-5"
+    ],
+    "parts": [
+      5
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1918
+    }
+  },
+  {
+    "key": "the-first-world-war-downfall-of-the-habsburgs",
+    "title": "The First World War: Downfall of the Habsburgs",
+    "count": 1,
+    "episodes": [
+      599
+    ],
+    "slugs": [
+      "599-the-first-world-war-downfall-of-the-habsburgs-part-6"
+    ],
+    "parts": [
+      6
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-first-world-war-the-battle-of-the-frontiers",
+    "title": "The First World War: The Battle of the Frontiers",
+    "count": 1,
+    "episodes": [
+      595
+    ],
+    "slugs": [
+      "595-the-first-world-war-the-battle-of-the-frontiers-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-first-world-war-the-massacre-of-the-innocents",
+    "title": "The First World War: The Massacre of the Innocents",
+    "count": 1,
+    "episodes": [
+      597
+    ],
+    "slugs": [
+      "597-the-first-world-war-the-massacre-of-the-innocents-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-french-revolution",
+    "title": "The French Revolution",
+    "count": 17,
+    "episodes": [
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      503,
+      504,
+      505,
+      506,
+      507,
+      544,
+      545,
+      546,
+      547
+    ],
+    "slugs": [
+      "475-the-french-revolution-marie-antoinette-part-1",
+      "476-the-french-revolution-the-diamond-necklace-scandal-part-2",
+      "477-the-french-revolution-the-violence-begins-part-3",
+      "478-the-french-revolution-showdown-in-versailles-part-4",
+      "479-the-french-revolution-the-storming-of-the-bastille-part-5",
+      "480-the-french-revolution-the-rights-of-man-part-6",
+      "481-the-french-revolution-the-womens-march-on-versailles-part-7",
+      "482-the-french-revolution-the-royal-family-escapes-part-8",
+      "503-the-french-revolution-bloodbath-in-paris-part-1",
+      "504-the-french-revolution-war-to-the-death-part-2",
+      "505-the-french-revolution-the-shadow-of-the-guillotine-part-3",
+      "506-the-french-revolution-massacre-at-the-palace-part-4",
+      "507-the-french-revolution-the-marseillaise-song-of-war-part-5",
+      "544-the-french-revolution-the-september-massacres-part-1",
+      "545-the-french-revolution-the-first-feminist-part-2",
+      "546-the-french-revolution-the-monarchy-falls-part-3",
+      "547-the-french-revolution-the-execution-of-the-king-part-4"
+    ],
+    "parts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      2,
+      2,
+      3,
+      12,
+      13,
+      14,
+      15,
+      16,
+      4
+    ],
+    "years": {
+      "min": 1785,
+      "max": 1799
+    }
+  },
+  {
+    "key": "the-golden-age-of-japan-secrets-of-the-imperial-court",
+    "title": "The Golden Age of Japan: Secrets of the Imperial Court",
+    "count": 1,
+    "episodes": [
+      561
+    ],
+    "slugs": [
+      "561-the-golden-age-of-japan-secrets-of-the-imperial-court-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 794,
+      "max": 1185
+    }
+  },
+  {
+    "key": "the-history-of-the-future",
+    "title": "The History of the Future",
+    "count": 1,
+    "episodes": [
+      21
+    ],
+    "slugs": [
+      "21-the-history-of-the-future"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "the-jewish-revolt",
+    "title": "The Jewish Revolt",
+    "count": 1,
+    "episodes": [
+      177
+    ],
+    "slugs": [
+      "177-the-jewish-revolt-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 66,
+      "max": 73
+    }
+  },
+  {
+    "key": "the-jews-against-rome",
+    "title": "The Jews against Rome",
+    "count": 1,
+    "episodes": [
+      176
+    ],
+    "slugs": [
+      "176-the-jews-against-rome-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 66,
+      "max": 73
+    }
+  },
+  {
+    "key": "the-kings-of-comedy",
+    "title": "The Kings of Comedy",
+    "count": 1,
+    "episodes": [
+      28
+    ],
+    "slugs": [
+      "28-the-kings-of-comedy"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "the-last-viking",
+    "title": "The Last Viking",
+    "count": 2,
+    "episodes": [
+      552,
+      553
+    ],
+    "slugs": [
+      "552-the-last-viking-the-saga-of-harald-hardrada-part-1",
+      "553-the-last-viking-warrior-of-the-new-rome-part-2"
+    ],
+    "parts": [
+      1,
+      2
+    ],
+    "years": {
+      "min": 1040,
+      "max": 1066
+    }
+  },
+  {
+    "key": "the-lord-of-the-rings",
+    "title": "The Lord of the Rings",
+    "count": 1,
+    "episodes": [
+      226
+    ],
+    "slugs": [
+      "226-the-lord-of-the-rings"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1937,
+      "max": 1949
+    }
+  },
+  {
+    "key": "the-medici",
+    "title": "The Medici",
+    "count": 1,
+    "episodes": [
+      575
+    ],
+    "slugs": [
+      "575-the-medici-the-bonfire-of-the-vanities-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1492,
+      "max": 1527
+    }
+  },
+  {
+    "key": "the-medici-1",
+    "title": "The Medici 1",
+    "count": 1,
+    "episodes": [
+      572
+    ],
+    "slugs": [
+      "572-the-medici-masters-of-florence-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1400,
+      "max": 1499
+    }
+  },
+  {
+    "key": "the-medici-2",
+    "title": "The Medici 2",
+    "count": 1,
+    "episodes": [
+      573
+    ],
+    "slugs": [
+      "573-the-medici-lorenzo-the-magnificent-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1478,
+      "max": 1478
+    }
+  },
+  {
+    "key": "the-medici-3",
+    "title": "The Medici 3",
+    "count": 1,
+    "episodes": [
+      574
+    ],
+    "slugs": [
+      "574-the-medici-curse-of-the-mad-monk-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1469,
+      "max": 1527
+    }
+  },
+  {
+    "key": "the-moonwalkers",
+    "title": "The Moonwalkers",
+    "count": 1,
+    "episodes": [
+      438
+    ],
+    "slugs": [
+      "438-the-moonwalkers-with-tom-hanks"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1962,
+      "max": 1969
+    }
+  },
+  {
+    "key": "the-murder-of-franz-ferdinand-the-conspiracy",
+    "title": "The Murder of Franz Ferdinand: The Conspiracy",
+    "count": 1,
+    "episodes": [
+      466
+    ],
+    "slugs": [
+      "466-the-murder-of-franz-ferdinand-the-conspiracy-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-murder-of-franz-ferdinand-the-crime",
+    "title": "The Murder of Franz Ferdinand: The Crime",
+    "count": 1,
+    "episodes": [
+      468
+    ],
+    "slugs": [
+      "468-the-murder-of-franz-ferdinand-the-crime-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-murder-of-franz-ferdinand-the-killer",
+    "title": "The Murder of Franz Ferdinand: The Killer",
+    "count": 1,
+    "episodes": [
+      465
+    ],
+    "slugs": [
+      "465-the-murder-of-franz-ferdinand-the-killer-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-murder-of-franz-ferdinand-the-victim",
+    "title": "The Murder of Franz Ferdinand: The Victim",
+    "count": 1,
+    "episodes": [
+      467
+    ],
+    "slugs": [
+      "467-the-murder-of-franz-ferdinand-the-victim-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-murder-of-richard-ii",
+    "title": "The Murder of Richard II",
+    "count": 1,
+    "episodes": [
+      415
+    ],
+    "slugs": [
+      "415-the-murder-of-richard-ii-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1381,
+      "max": 1400
+    }
+  },
+  {
+    "key": "the-nazis-road-to-war",
+    "title": "The Nazis' Road to War",
+    "count": 1,
+    "episodes": [
+      529
+    ],
+    "slugs": [
+      "529-the-nazis-road-to-war-showdown-in-munich-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1938,
+      "max": 1938
+    }
+  },
+  {
+    "key": "the-norse-sagas",
+    "title": "The Norse Sagas",
+    "count": 1,
+    "episodes": [
+      103
+    ],
+    "slugs": [
+      "103-the-norse-sagas"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 800,
+      "max": 1100
+    }
+  },
+  {
+    "key": "the-peasants-revolt-england-erupts",
+    "title": "The Peasants' Revolt: England Erupts",
+    "count": 1,
+    "episodes": [
+      413
+    ],
+    "slugs": [
+      "413-the-peasants-revolt-england-erupts-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1381,
+      "max": 1381
+    }
+  },
+  {
     "key": "the-princes-in-the-tower",
     "title": "The Princes in the Tower",
     "count": 2,
@@ -184,8 +3682,233 @@
       2
     ],
     "years": {
+      "min": 1483,
+      "max": 1485
+    }
+  },
+  {
+    "key": "the-real-da-vinci-code",
+    "title": "The Real Da Vinci Code",
+    "count": 1,
+    "episodes": [
+      301
+    ],
+    "slugs": [
+      "301-the-real-da-vinci-code"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
       "min": null,
       "max": null
+    }
+  },
+  {
+    "key": "the-real-downton-abbey",
+    "title": "The Real Downton Abbey",
+    "count": 1,
+    "episodes": [
+      300
+    ],
+    "slugs": [
+      "300-the-real-downton-abbey"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1901,
+      "max": 1910
+    }
+  },
+  {
+    "key": "the-real-harry-potter-magic-empire-and-beastly-bullies",
+    "title": "The Real Harry Potter: Magic, Empire and Beastly Bullies",
+    "count": 1,
+    "episodes": [
+      367
+    ],
+    "slugs": [
+      "367-the-real-harry-potter-magic-empire-and-beastly-bullies"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "the-rest-is-history",
+    "title": "The Rest Is History",
+    "count": 7,
+    "episodes": [
+      1,
+      13,
+      160,
+      181,
+      206,
+      253,
+      398
+    ],
+    "slugs": [
+      "1-trailer",
+      "13-stephen-fry-and-troy",
+      "160-the-fall-of-the-soviet-union",
+      "181-the-birth-of-babylon",
+      "206-historical-love-island",
+      "253-the-world-cup-post-war-reconciliation-brazilian-dictatorship",
+      "398-jfk-the-mystery-is-solved-part-7"
+    ],
+    "parts": [
+      0,
+      0,
+      2,
+      145,
+      0,
+      2,
+      7
+    ],
+    "years": {
+      "min": 1953,
+      "max": 2023
+    }
+  },
+  {
+    "key": "the-road-to-1066-anglo-saxon-apocalypse",
+    "title": "The Road to 1066: Anglo-Saxon Apocalypse",
+    "count": 1,
+    "episodes": [
+      548
+    ],
+    "slugs": [
+      "548-the-road-to-1066-anglo-saxon-apocalypse-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 975,
+      "max": 1066
+    }
+  },
+  {
+    "key": "the-road-to-the-great-war",
+    "title": "The Road to the Great War",
+    "count": 4,
+    "episodes": [
+      470,
+      471,
+      473,
+      474
+    ],
+    "slugs": [
+      "470-the-road-to-the-great-war-the-kaisers-blank-cheque-part-2",
+      "471-the-road-to-the-great-war-the-austrian-ultimatum-part-3",
+      "473-the-road-to-the-great-war-the-tsar-chooses-war-part-5",
+      "474-the-road-to-the-great-war-the-lights-go-out-part-6"
+    ],
+    "parts": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-road-to-the-great-war-britain-s-fateful-choice",
+    "title": "The Road to the Great War: Britain's fateful choice",
+    "count": 1,
+    "episodes": [
+      472
+    ],
+    "slugs": [
+      "472-the-road-to-the-great-war-britains-fateful-choice-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-road-to-the-great-war-countdown-to-armageddon",
+    "title": "The Road to the Great War: Countdown to Armageddon",
+    "count": 1,
+    "episodes": [
+      469
+    ],
+    "slugs": [
+      "469-the-road-to-the-great-war-countdown-to-armageddon-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "the-rolling-stones-sex-drugs-and-rock-n-roll",
+    "title": "The Rolling Stones: Sex, Drugs and Rock ‘n’ Roll",
+    "count": 1,
+    "episodes": [
+      558
+    ],
+    "slugs": [
+      "558-the-rolling-stones-sex-drugs-and-rock-n-roll-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1960,
+      "max": 1969
+    }
+  },
+  {
+    "key": "the-roman-conquest-of-britain",
+    "title": "The Roman Conquest of Britain",
+    "count": 1,
+    "episodes": [
+      500
+    ],
+    "slugs": [
+      "500-the-roman-conquest-of-britain-the-empire-strikes-back-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 43,
+      "max": 43
+    }
+  },
+  {
+    "key": "the-six-wives-of-henry-viii",
+    "title": "The Six Wives of Henry VIII",
+    "count": 1,
+    "episodes": [
+      74
+    ],
+    "slugs": [
+      "74-the-six-wives-of-henry-viii"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1509,
+      "max": 1547
     }
   },
   {
@@ -205,8 +3928,101 @@
       2
     ],
     "years": {
-      "min": null,
-      "max": null
+      "min": 1649,
+      "max": 1649
+    }
+  },
+  {
+    "key": "the-triumph-of-george-washington",
+    "title": "The Triumph of George Washington",
+    "count": 1,
+    "episodes": [
+      350
+    ],
+    "slugs": [
+      "350-the-triumph-of-george-washington-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1781,
+      "max": 1783
+    }
+  },
+  {
+    "key": "the-vikings-go-east",
+    "title": "The Vikings Go East",
+    "count": 1,
+    "episodes": [
+      148
+    ],
+    "slugs": [
+      "148-the-vikings-go-east"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 800,
+      "max": 1200
+    }
+  },
+  {
+    "key": "the-war-on-beards-from-peter-the-great-to-john-lennon",
+    "title": "The War on Beards: From Peter the Great to John Lennon",
+    "count": 1,
+    "episodes": [
+      492
+    ],
+    "slugs": [
+      "492-the-war-on-beards-from-peter-the-great-to-john-lennon-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1600,
+      "max": 1970
+    }
+  },
+  {
+    "key": "the-wild-west",
+    "title": "The Wild West",
+    "count": 1,
+    "episodes": [
+      42
+    ],
+    "slugs": [
+      "42-the-wild-west"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
+      "min": 1865,
+      "max": 1910
+    }
+  },
+  {
+    "key": "the-world-cup",
+    "title": "The World Cup",
+    "count": 2,
+    "episodes": [
+      252,
+      254
+    ],
+    "slugs": [
+      "252-the-world-cup-british-imperialism-south-american-rivalries-a",
+      "254-the-world-cup-the-falklands-despots-and-corruption-part-3"
+    ],
+    "parts": [
+      1,
+      3
+    ],
+    "years": {
+      "min": 1930,
+      "max": 1994
     }
   },
   {
@@ -231,6 +4047,270 @@
     }
   },
   {
+    "key": "theodora",
+    "title": "Theodora",
+    "count": 1,
+    "episodes": [
+      220
+    ],
+    "slugs": [
+      "220-justinian-theodora-the-secret-history-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 527,
+      "max": 565
+    }
+  },
+  {
+    "key": "theodora-empress-of-byzantium",
+    "title": "Theodora: Empress of Byzantium",
+    "count": 1,
+    "episodes": [
+      218
+    ],
+    "slugs": [
+      "218-theodora-empress-of-byzantium-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 527,
+      "max": 548
+    }
+  },
+  {
+    "key": "thermopylae-salamis",
+    "title": "Thermopylae & Salamis",
+    "count": 1,
+    "episodes": [
+      99
+    ],
+    "slugs": [
+      "99-thermopylae-salamis-episode-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 480,
+      "max": 480
+    }
+  },
+  {
+    "key": "thermopylae-salamis-episode-1",
+    "title": "Thermopylae & Salamis Episode 1",
+    "count": 1,
+    "episodes": [
+      98
+    ],
+    "slugs": [
+      "98-thermopylae-salamis-episode-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 480,
+      "max": 480
+    }
+  },
+  {
+    "key": "titanic-countdown-to-disaster",
+    "title": "Titanic: Countdown to disaster",
+    "count": 1,
+    "episodes": [
+      429
+    ],
+    "slugs": [
+      "429-titanic-countdown-to-disaster-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1912,
+      "max": 1912
+    }
+  },
+  {
+    "key": "titanic-kings-of-the-world",
+    "title": "Titanic: Kings of the world",
+    "count": 1,
+    "episodes": [
+      428
+    ],
+    "slugs": [
+      "428-titanic-kings-of-the-world-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1912,
+      "max": 1912
+    }
+  },
+  {
+    "key": "titanic-nightmare-at-midnight",
+    "title": "Titanic: Nightmare at midnight",
+    "count": 1,
+    "episodes": [
+      431
+    ],
+    "slugs": [
+      "431-titanic-nightmare-at-midnight-part-5"
+    ],
+    "parts": [
+      5
+    ],
+    "years": {
+      "min": 1912,
+      "max": 1912
+    }
+  },
+  {
+    "key": "titanic-the-iceberg-strikes",
+    "title": "Titanic: The Iceberg Strikes",
+    "count": 1,
+    "episodes": [
+      430
+    ],
+    "slugs": [
+      "430-titanic-the-iceberg-strikes-part-4"
+    ],
+    "parts": [
+      4
+    ],
+    "years": {
+      "min": 1912,
+      "max": 1912
+    }
+  },
+  {
+    "key": "titanic-the-survivors",
+    "title": "Titanic: The survivors",
+    "count": 1,
+    "episodes": [
+      432
+    ],
+    "slugs": [
+      "432-titanic-the-survivors-part-6"
+    ],
+    "parts": [
+      6
+    ],
+    "years": {
+      "min": 1912,
+      "max": 1912
+    }
+  },
+  {
+    "key": "titanic-the-tradgedy-begins",
+    "title": "Titanic: The tradgedy begins",
+    "count": 1,
+    "episodes": [
+      427
+    ],
+    "slugs": [
+      "427-titanic-the-tragedy-begins-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1912,
+      "max": 1912
+    }
+  },
+  {
+    "key": "trafalgar",
+    "title": "Trafalgar",
+    "count": 3,
+    "episodes": [
+      243,
+      244,
+      245
+    ],
+    "slugs": [
+      "243-trafalgar-a-world-at-war-part-1",
+      "244-trafalgar-countdown-to-annihilation-part-2",
+      "245-trafalgar-victory-part-3"
+    ],
+    "parts": [
+      1,
+      2,
+      3
+    ],
+    "years": {
+      "min": 1805,
+      "max": 1805
+    }
+  },
+  {
+    "key": "treason-in-modern-britain",
+    "title": "Treason in modern britain",
+    "count": 1,
+    "episodes": [
+      249
+    ],
+    "slugs": [
+      "249-treason-in-modern-britain-part-2"
+    ],
+    "parts": [
+      2
+    ],
+    "years": {
+      "min": 1600,
+      "max": 2023
+    }
+  },
+  {
+    "key": "victorian-holidays",
+    "title": "Victorian Holidays",
+    "count": 1,
+    "episodes": [
+      222
+    ],
+    "slugs": [
+      "222-victorian-holidays"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1837,
+      "max": 1901
+    }
+  },
+  {
+    "key": "warlords-of-the-west",
+    "title": "Warlords of the West",
+    "count": 3,
+    "episodes": [
+      520,
+      521,
+      522
+    ],
+    "slugs": [
+      "520-warlords-of-the-west-barbarian-heirs-of-rome-part-1",
+      "521-warlords-of-the-west-killer-queens-part-2",
+      "522-warlords-of-the-west-a-clash-of-ice-and-fire-part-3"
+    ],
+    "parts": [
+      1,
+      2,
+      3
+    ],
+    "years": {
+      "min": 400,
+      "max": 732
+    }
+  },
+  {
     "key": "watergate",
     "title": "Watergate",
     "count": 2,
@@ -247,8 +4327,158 @@
       2
     ],
     "years": {
+      "min": 1972,
+      "max": 1974
+    }
+  },
+  {
+    "key": "weird-wars",
+    "title": "Weird Wars",
+    "count": 1,
+    "episodes": [
+      22
+    ],
+    "slugs": [
+      "22-weird-wars"
+    ],
+    "parts": [
+      0
+    ],
+    "years": {
       "min": null,
       "max": null
+    }
+  },
+  {
+    "key": "world-cup-of-kings-and-queens",
+    "title": "World Cup of Kings and Queens",
+    "count": 1,
+    "episodes": [
+      123
+    ],
+    "slugs": [
+      "123-world-cup-of-kings-and-queens-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "wwi-miracle-on-the-marne",
+    "title": "WWI - Miracle on the Marne",
+    "count": 1,
+    "episodes": [
+      596
+    ],
+    "slugs": [
+      "596-the-first-world-war-the-miracle-on-the-marne-part-3"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1914,
+      "max": 1914
+    }
+  },
+  {
+    "key": "yeltsin-putin",
+    "title": "Yeltsin - Putin",
+    "count": 1,
+    "episodes": [
+      161
+    ],
+    "slugs": [
+      "161-yeltsin-economic-chaos-and-president-putin"
+    ],
+    "parts": [
+      3
+    ],
+    "years": {
+      "min": 1991,
+      "max": 1999
+    }
+  },
+  {
+    "key": "young-churchill",
+    "title": "Young Churchill",
+    "count": 3,
+    "episodes": [
+      239,
+      240,
+      241
+    ],
+    "slugs": [
+      "239-young-churchill-born-to-lead-part-1",
+      "240-young-churchill-soldier-of-empire-part-2",
+      "241-young-churchill-prisoner-and-fugitive-part-3"
+    ],
+    "parts": [
+      1,
+      2,
+      3
+    ],
+    "years": {
+      "min": 1874,
+      "max": 1902
+    }
+  },
+  {
+    "key": "young-cleopatra",
+    "title": "Young Cleopatra",
+    "count": 1,
+    "episodes": [
+      195
+    ],
+    "slugs": [
+      "195-young-cleopatra-part-1"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": null,
+      "max": null
+    }
+  },
+  {
+    "key": "young-napoleon",
+    "title": "Young Napoleon",
+    "count": 1,
+    "episodes": [
+      383
+    ],
+    "slugs": [
+      "383-young-napoleon-the-shadow-of-the-guillotine"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1793,
+      "max": 1799
+    }
+  },
+  {
+    "key": "young-putin",
+    "title": "Young Putin",
+    "count": 1,
+    "episodes": [
+      159
+    ],
+    "slugs": [
+      "159-young-putin-the-kgb-and-the-soviet-union"
+    ],
+    "parts": [
+      1
+    ],
+    "years": {
+      "min": 1964,
+      "max": 1991
     }
   }
 ]

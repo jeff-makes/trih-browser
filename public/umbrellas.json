@@ -1,4 +1,1221 @@
 {
-  "index": {},
-  "counts": {}
+  "index": {
+    "civil-war": [
+      2,
+      258
+    ],
+    "politics": [
+      3,
+      11,
+      17,
+      35,
+      36,
+      102,
+      106,
+      159,
+      161,
+      162,
+      168,
+      174,
+      178,
+      179,
+      187,
+      189,
+      193,
+      237,
+      246,
+      254,
+      273,
+      310,
+      311,
+      312,
+      354,
+      373,
+      392,
+      395,
+      397,
+      419,
+      420,
+      463,
+      464,
+      494,
+      495,
+      496,
+      497,
+      498,
+      511,
+      513,
+      606,
+      609
+    ],
+    "history": [
+      4,
+      7,
+      12,
+      14,
+      15,
+      24,
+      25,
+      26,
+      31,
+      33,
+      35,
+      36,
+      37,
+      40,
+      41,
+      42,
+      44,
+      46,
+      51,
+      53,
+      57,
+      60,
+      61,
+      67,
+      68,
+      69,
+      71,
+      74,
+      75,
+      79,
+      80,
+      81,
+      86,
+      100,
+      102,
+      103,
+      104,
+      105,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      115,
+      123,
+      125,
+      128,
+      131,
+      138,
+      139,
+      146,
+      150,
+      153,
+      159,
+      162,
+      163,
+      164,
+      165,
+      167,
+      174,
+      178,
+      180,
+      187,
+      191,
+      193,
+      194,
+      199,
+      221,
+      223,
+      227,
+      230,
+      234,
+      238,
+      242,
+      246,
+      248,
+      249,
+      252,
+      253,
+      255,
+      265,
+      267,
+      274,
+      275,
+      276,
+      279,
+      281,
+      300,
+      302,
+      306,
+      311,
+      313,
+      317,
+      323,
+      327,
+      330,
+      335,
+      336,
+      339,
+      343,
+      346,
+      351,
+      352,
+      354,
+      358,
+      360,
+      362,
+      365,
+      368,
+      369,
+      379,
+      380,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      396,
+      397,
+      401,
+      403,
+      411,
+      416,
+      425,
+      426,
+      432,
+      433,
+      434,
+      438,
+      440,
+      441,
+      443,
+      444,
+      459,
+      460,
+      462,
+      463,
+      464,
+      483,
+      484,
+      491,
+      495,
+      497,
+      498,
+      523,
+      534,
+      548,
+      551,
+      552,
+      557,
+      560,
+      561,
+      562,
+      563,
+      572,
+      582,
+      587,
+      592,
+      600,
+      606
+    ],
+    "mythology": [
+      6,
+      19,
+      457,
+      461,
+      602,
+      603,
+      604,
+      605
+    ],
+    "ancient-history": [
+      6,
+      16,
+      82,
+      98,
+      99,
+      114,
+      117,
+      145,
+      156,
+      176,
+      177,
+      181,
+      197,
+      262,
+      299,
+      304,
+      334,
+      355,
+      361,
+      421,
+      422,
+      423,
+      424,
+      457,
+      500,
+      501,
+      519,
+      568,
+      569,
+      570,
+      602,
+      604
+    ],
+    "social-media": [
+      8
+    ],
+    "printing-press": [
+      8
+    ],
+    "world-war-i": [
+      9,
+      90,
+      118,
+      216,
+      295,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599
+    ],
+    "cultural-history": [
+      10,
+      23,
+      29,
+      91,
+      186,
+      204,
+      363,
+      402,
+      412,
+      492
+    ],
+    "economics": [
+      11,
+      161,
+      168,
+      419
+    ],
+    "literature": [
+      14,
+      85,
+      104,
+      132,
+      185,
+      192,
+      208,
+      225,
+      332,
+      341,
+      379,
+      416,
+      440,
+      441,
+      442,
+      443,
+      461,
+      541,
+      560,
+      603
+    ],
+    "ideologies": [
+      17
+    ],
+    "historical-figures": [
+      19,
+      166,
+      584
+    ],
+    "china": [
+      20,
+      173
+    ],
+    "culture": [
+      24,
+      46,
+      57,
+      180,
+      286,
+      310
+    ],
+    "ancient-egypt": [
+      27
+    ],
+    "political-history": [
+      29,
+      54,
+      62
+    ],
+    "royalty": [
+      30
+    ],
+    "media": [
+      30
+    ],
+    "world-war-ii": [
+      32,
+      43,
+      63,
+      64,
+      182,
+      215,
+      235,
+      236,
+      247,
+      256,
+      284,
+      295,
+      296,
+      297,
+      298,
+      375,
+      399,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      493,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533
+    ],
+    "roman-empire": [
+      32,
+      217
+    ],
+    "sports": [
+      33,
+      69,
+      79,
+      80,
+      81,
+      129,
+      252,
+      253,
+      254,
+      592,
+      593
+    ],
+    "political-ideologies": [
+      38
+    ],
+    "monarchs": [
+      39,
+      122,
+      231,
+      232,
+      293,
+      584,
+      585,
+      589
+    ],
+    "games": [
+      40
+    ],
+    "war": [
+      47,
+      72,
+      169,
+      170,
+      171,
+      241,
+      576,
+      577,
+      578,
+      579
+    ],
+    "french-revolution": [
+      48,
+      382,
+      383,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      503,
+      504,
+      505,
+      506,
+      507,
+      544,
+      545,
+      546,
+      547
+    ],
+    "british-history": [
+      54,
+      586,
+      588,
+      608
+    ],
+    "ancient-rome": [
+      56,
+      134,
+      135,
+      224,
+      260,
+      340,
+      499,
+      502,
+      535,
+      536,
+      537,
+      571
+    ],
+    "religion": [
+      60,
+      153,
+      164,
+      265,
+      302,
+      346,
+      402,
+      403,
+      433,
+      434,
+      462
+    ],
+    "legal-history": [
+      62
+    ],
+    "nazi-germany": [
+      63,
+      297,
+      406
+    ],
+    "cold-war": [
+      83,
+      160,
+      312,
+      322,
+      344,
+      370,
+      393
+    ],
+    "philosophy": [
+      86
+    ],
+    "wars": [
+      88,
+      214,
+      282,
+      318,
+      319,
+      320,
+      321,
+      487,
+      489,
+      490,
+      564,
+      565,
+      566,
+      567,
+      585
+    ],
+    "climate-weather": [
+      89
+    ],
+    "music": [
+      91,
+      439,
+      526,
+      527,
+      558,
+      559
+    ],
+    "nuclear-weapons": [
+      92
+    ],
+    "terrorism": [
+      95,
+      420
+    ],
+    "military-history": [
+      99,
+      142,
+      319,
+      451,
+      453,
+      514,
+      515,
+      516,
+      517,
+      522,
+      608
+    ],
+    "classics": [
+      105
+    ],
+    "scandals": [
+      106,
+      107
+    ],
+    "us-politics": [
+      107
+    ],
+    "science": [
+      109,
+      283
+    ],
+    "paganism": [
+      113,
+      114
+    ],
+    "geopolitics": [
+      120
+    ],
+    "oil-crisis": [
+      120
+    ],
+    "exploration": [
+      121,
+      228,
+      283,
+      306,
+      307,
+      308,
+      309,
+      380,
+      381,
+      384,
+      543
+    ],
+    "colonialism": [
+      121,
+      147,
+      228,
+      272,
+      307,
+      308,
+      309,
+      381,
+      384,
+      538,
+      539,
+      540,
+      541,
+      543
+    ],
+    "monarchy": [
+      123,
+      415
+    ],
+    "napoleon-bonaparte": [
+      126
+    ],
+    "prehistory": [
+      127
+    ],
+    "transportation": [
+      140
+    ],
+    "industrial-revolution": [
+      140
+    ],
+    "victorian-era": [
+      141,
+      142,
+      222,
+      400
+    ],
+    "health": [
+      146
+    ],
+    "disease": [
+      147,
+      217
+    ],
+    "vikings": [
+      148
+    ],
+    "eastern-europe": [
+      148,
+      155
+    ],
+    "formation-of-russia-and-ukraine": [
+      148
+    ],
+    "russia": [
+      155
+    ],
+    "soviet-union": [
+      160
+    ],
+    "empires": [
+      166
+    ],
+    "cultural-revolution": [
+      173
+    ],
+    "folklore": [
+      192
+    ],
+    "archaeology": [
+      199
+    ],
+    "american-civil-war": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      446,
+      590
+    ],
+    "byzantine-empire": [
+      218,
+      219,
+      220,
+      553
+    ],
+    "travel": [
+      223
+    ],
+    "entertainment": [
+      237
+    ],
+    "fashion": [
+      238,
+      363,
+      364,
+      459
+    ],
+    "biography": [
+      239,
+      494
+    ],
+    "film": [
+      242,
+      278
+    ],
+    "battles": [
+      243,
+      245,
+      518,
+      555,
+      556,
+      610
+    ],
+    "napoleonic-wars": [
+      244,
+      611,
+      612
+    ],
+    "medieval-history": [
+      250,
+      251,
+      356,
+      520,
+      521,
+      524,
+      525,
+      549,
+      550
+    ],
+    "viking-age": [
+      250,
+      549,
+      553
+    ],
+    "resistance-movements": [
+      256
+    ],
+    "mystery": [
+      257
+    ],
+    "crime": [
+      257
+    ],
+    "iran": [
+      259
+    ],
+    "united-kingdom": [
+      259
+    ],
+    "latin-america": [
+      261
+    ],
+    "cultural-practices": [
+      264
+    ],
+    "korean-history": [
+      266
+    ],
+    "brazilian-empire": [
+      268
+    ],
+    "african-history": [
+      269
+    ],
+    "art": [
+      271
+    ],
+    "slavery": [
+      272,
+      316
+    ],
+    "revolution": [
+      273
+    ],
+    "japan": [
+      277
+    ],
+    "inventions": [
+      278
+    ],
+    "canada": [
+      285
+    ],
+    "indigenous-history": [
+      285
+    ],
+    "food": [
+      286,
+      484
+    ],
+    "holocaust": [
+      292,
+      408,
+      409,
+      410
+    ],
+    "british-monarchy": [
+      294
+    ],
+    "tudor-history": [
+      294
+    ],
+    "interwar-period": [
+      296
+    ],
+    "crusades": [
+      303
+    ],
+    "roman-republic": [
+      305
+    ],
+    "climate-change": [
+      313
+    ],
+    "abolitionism": [
+      316
+    ],
+    "post-war-europe": [
+      322
+    ],
+    "animals": [
+      323,
+      426
+    ],
+    "vietnam-war": [
+      324,
+      325,
+      508
+    ],
+    "revolutions": [
+      326
+    ],
+    "witch-trials": [
+      331
+    ],
+    "17th-century": [
+      333
+    ],
+    "ireland": [
+      336,
+      337,
+      338
+    ],
+    "19th-century": [
+      337
+    ],
+    "home-rule": [
+      338
+    ],
+    "lgbtq-history": [
+      341
+    ],
+    "nuclear-history": [
+      344
+    ],
+    "american-revolution": [
+      347,
+      348,
+      349,
+      350
+    ],
+    "natural-disasters": [
+      355
+    ],
+    "civil-rights-movement": [
+      359,
+      393,
+      509
+    ],
+    "architecture": [
+      362
+    ],
+    "modern-china": [
+      366
+    ],
+    "education": [
+      368
+    ],
+    "latin-american-history": [
+      370
+    ],
+    "political-events": [
+      371,
+      415
+    ],
+    "fascism": [
+      372,
+      373,
+      375
+    ],
+    "war-and-conflict": [
+      374
+    ],
+    "islamic-history": [
+      376
+    ],
+    "middle-ages": [
+      377
+    ],
+    "islamic-golden-age": [
+      377,
+      378
+    ],
+    "assassination": [
+      394,
+      395
+    ],
+    "u-s-history": [
+      394,
+      398,
+      455,
+      510,
+      512,
+      513,
+      591
+    ],
+    "film-and-media": [
+      412
+    ],
+    "revolts": [
+      413
+    ],
+    "social-movements": [
+      413,
+      439
+    ],
+    "peasants-revolt": [
+      414
+    ],
+    "food-drink": [
+      425
+    ],
+    "maritime-disasters": [
+      427,
+      430,
+      431
+    ],
+    "maritime-history": [
+      428,
+      429
+    ],
+    "20th-century-events": [
+      428,
+      430
+    ],
+    "disasters": [
+      429
+    ],
+    "reformation": [
+      435,
+      436,
+      437
+    ],
+    "space-exploration": [
+      438
+    ],
+    "romanticism": [
+      442
+    ],
+    "european-history": [
+      445,
+      517,
+      520,
+      521,
+      522,
+      525
+    ],
+    "american-indian-wars": [
+      446,
+      447,
+      448,
+      449,
+      450,
+      456
+    ],
+    "wild-west": [
+      449
+    ],
+    "american-history": [
+      451,
+      452,
+      453,
+      454,
+      601
+    ],
+    "indigenous-peoples": [
+      454
+    ],
+    "native-american-history": [
+      455
+    ],
+    "historical": [
+      485,
+      486
+    ],
+    "hundred-years-war": [
+      488
+    ],
+    "fashion-history": [
+      492
+    ],
+    "women-in-history": [
+      496
+    ],
+    "roman-history": [
+      500,
+      501
+    ],
+    "u-s-politics": [
+      508
+    ],
+    "civil-rights": [
+      511
+    ],
+    "naval-history": [
+      514,
+      515,
+      516
+    ],
+    "human-rights": [
+      538,
+      540
+    ],
+    "human-rights-violations": [
+      539
+    ],
+    "renaissance": [
+      542,
+      573,
+      574,
+      575
+    ],
+    "military": [
+      548,
+      609
+    ],
+    "norman-conquest": [
+      550
+    ],
+    "people": [
+      567,
+      607
+    ],
+    "irish-civil-war": [
+      580,
+      581
+    ],
+    "events": [
+      607
+    ]
+  },
+  "counts": {
+    "civil-war": 2,
+    "politics": 42,
+    "history": 164,
+    "mythology": 8,
+    "ancient-history": 32,
+    "social-media": 1,
+    "printing-press": 1,
+    "world-war-i": 21,
+    "cultural-history": 10,
+    "economics": 4,
+    "literature": 20,
+    "ideologies": 1,
+    "historical-figures": 3,
+    "china": 2,
+    "culture": 6,
+    "ancient-egypt": 1,
+    "political-history": 3,
+    "royalty": 1,
+    "media": 1,
+    "world-war-ii": 31,
+    "roman-empire": 2,
+    "sports": 11,
+    "political-ideologies": 1,
+    "monarchs": 8,
+    "games": 1,
+    "war": 10,
+    "french-revolution": 20,
+    "british-history": 4,
+    "ancient-rome": 12,
+    "religion": 11,
+    "legal-history": 1,
+    "nazi-germany": 3,
+    "cold-war": 7,
+    "philosophy": 1,
+    "wars": 15,
+    "climate-weather": 1,
+    "music": 6,
+    "nuclear-weapons": 1,
+    "terrorism": 2,
+    "military-history": 11,
+    "classics": 1,
+    "scandals": 2,
+    "us-politics": 1,
+    "science": 2,
+    "paganism": 2,
+    "geopolitics": 1,
+    "oil-crisis": 1,
+    "exploration": 11,
+    "colonialism": 14,
+    "monarchy": 2,
+    "napoleon-bonaparte": 1,
+    "prehistory": 1,
+    "transportation": 1,
+    "industrial-revolution": 1,
+    "victorian-era": 4,
+    "health": 1,
+    "disease": 2,
+    "vikings": 1,
+    "eastern-europe": 2,
+    "formation-of-russia-and-ukraine": 1,
+    "russia": 1,
+    "soviet-union": 1,
+    "empires": 1,
+    "cultural-revolution": 1,
+    "folklore": 1,
+    "archaeology": 1,
+    "american-civil-war": 7,
+    "byzantine-empire": 4,
+    "travel": 1,
+    "entertainment": 1,
+    "fashion": 4,
+    "biography": 2,
+    "film": 2,
+    "battles": 6,
+    "napoleonic-wars": 3,
+    "medieval-history": 9,
+    "viking-age": 3,
+    "resistance-movements": 1,
+    "mystery": 1,
+    "crime": 1,
+    "iran": 1,
+    "united-kingdom": 1,
+    "latin-america": 1,
+    "cultural-practices": 1,
+    "korean-history": 1,
+    "brazilian-empire": 1,
+    "african-history": 1,
+    "art": 1,
+    "slavery": 2,
+    "revolution": 1,
+    "japan": 1,
+    "inventions": 1,
+    "canada": 1,
+    "indigenous-history": 1,
+    "food": 2,
+    "holocaust": 4,
+    "british-monarchy": 1,
+    "tudor-history": 1,
+    "interwar-period": 1,
+    "crusades": 1,
+    "roman-republic": 1,
+    "climate-change": 1,
+    "abolitionism": 1,
+    "post-war-europe": 1,
+    "animals": 2,
+    "vietnam-war": 3,
+    "revolutions": 1,
+    "witch-trials": 1,
+    "17th-century": 1,
+    "ireland": 3,
+    "19th-century": 1,
+    "home-rule": 1,
+    "lgbtq-history": 1,
+    "nuclear-history": 1,
+    "american-revolution": 4,
+    "natural-disasters": 1,
+    "civil-rights-movement": 3,
+    "architecture": 1,
+    "modern-china": 1,
+    "education": 1,
+    "latin-american-history": 1,
+    "political-events": 2,
+    "fascism": 3,
+    "war-and-conflict": 1,
+    "islamic-history": 1,
+    "middle-ages": 1,
+    "islamic-golden-age": 2,
+    "assassination": 2,
+    "u-s-history": 7,
+    "film-and-media": 1,
+    "revolts": 1,
+    "social-movements": 2,
+    "peasants-revolt": 1,
+    "food-drink": 1,
+    "maritime-disasters": 3,
+    "maritime-history": 2,
+    "20th-century-events": 2,
+    "disasters": 1,
+    "reformation": 3,
+    "space-exploration": 1,
+    "romanticism": 1,
+    "european-history": 6,
+    "american-indian-wars": 6,
+    "wild-west": 1,
+    "american-history": 5,
+    "indigenous-peoples": 1,
+    "native-american-history": 1,
+    "historical": 2,
+    "hundred-years-war": 1,
+    "fashion-history": 1,
+    "women-in-history": 1,
+    "roman-history": 2,
+    "u-s-politics": 1,
+    "civil-rights": 1,
+    "naval-history": 3,
+    "human-rights": 2,
+    "human-rights-violations": 1,
+    "renaissance": 4,
+    "military": 2,
+    "norman-conquest": 1,
+    "people": 2,
+    "irish-civil-war": 2,
+    "events": 1
+  }
 }
