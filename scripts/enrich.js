@@ -3,19 +3,24 @@ import {
   kebabCase,
   normalizeTitle,
   readJsonFile,
-  seriesStem,
+  seriesHead,
+  shortHash,
   toTitleCase,
   writeJsonFile,
 } from './utils.js';
 
-function parseEpisodeNumber(id) {
-  if (!id) return Number.MAX_SAFE_INTEGER;
-  const match = String(id).match(/(\d+)/);
-  if (match) {
-    const value = Number(match[1]);
-    if (Number.isFinite(value)) {
-      return value;
-    }
+function getItunesEpisode(episode) {
+  const value = typeof episode.itunesEpisode === 'number' ? episode.itunesEpisode : null;
+  if (value !== null && Number.isFinite(value)) {
+    return value;
+  }
+  return null;
+}
+
+function getPubDateValue(pubDate) {
+  const value = Date.parse(pubDate ?? '');
+  if (Number.isFinite(value)) {
+    return value;
   }
   return Number.MAX_SAFE_INTEGER;
 }
@@ -27,151 +32,163 @@ async function main() {
     return;
   }
 
+  const baseEpisodes = new Map();
+  for (const episode of episodes) {
+    const cleaned = { ...episode };
+    delete cleaned.seriesId;
+    cleaned.part = null;
+    baseEpisodes.set(episode.id, cleaned);
+  }
+
+  const episodesForGrouping = [...episodes].sort((a, b) => {
+    const aEpisode = getItunesEpisode(a);
+    const bEpisode = getItunesEpisode(b);
+    const safeAEpisode = aEpisode === null ? Number.MAX_SAFE_INTEGER : aEpisode;
+    const safeBEpisode = bEpisode === null ? Number.MAX_SAFE_INTEGER : bEpisode;
+    if (safeAEpisode !== safeBEpisode) {
+      return safeAEpisode - safeBEpisode;
+    }
+    const aDate = getPubDateValue(a.pubDate);
+    const bDate = getPubDateValue(b.pubDate);
+    if (aDate !== bDate) {
+      return aDate - bDate;
+    }
+    return a.id.localeCompare(b.id);
+  });
+
   const groups = new Map();
 
-  for (const episode of episodes) {
+  for (const episode of episodesForGrouping) {
     const title = episode.title ?? '';
-    const rawStem = seriesStem(title);
-    const fallbackStem = normalizeTitle(title || episode.id || '');
-    const stemKey = rawStem || fallbackStem.toLowerCase() || (episode.id ?? '').toLowerCase();
-    const labelStem = rawStem || fallbackStem || episode.id || '';
-    const seriesIdBase = kebabCase(labelStem || episode.id || '');
-    const seriesId = seriesIdBase || kebabCase(episode.id ?? '') || (episode.id ?? '').toLowerCase();
-    const partFromEpisode = typeof episode.part === 'number' ? episode.part : null;
+    const normalizedTitle = normalizeTitle(title || episode.id || '');
+    const partFromEpisode = typeof episode.part === 'number' && Number.isFinite(episode.part) ? episode.part : null;
     const partFromTitle = extractPart(title);
     const part = partFromEpisode ?? partFromTitle ?? null;
-    const numericEpisode = typeof episode.itunesEpisode === 'number' && Number.isFinite(episode.itunesEpisode)
-      ? episode.itunesEpisode
-      : null;
-    const fallbackSort = parseEpisodeNumber(episode.id);
-    if (!groups.has(stemKey)) {
-      groups.set(stemKey, {
-        rawStem: labelStem || stemKey,
-        seriesId,
+    if (part === null) {
+      continue;
+    }
+
+    const headValueRaw = seriesHead(title);
+    const fallbackHead = headValueRaw || normalizedTitle || episode.id || '';
+    const headValue = headValueRaw || fallbackHead;
+    const headKeyBase = headValue || fallbackHead;
+    const headKeySlug = kebabCase(headKeyBase);
+    const headKey = headKeySlug || kebabCase(episode.id ?? '') || `series-${shortHash(headKeyBase)}`;
+
+    if (!groups.has(headKey)) {
+      groups.set(headKey, {
+        headKey,
+        headValue,
+        anchorId: episode.id,
         entries: [],
+        partsSeen: new Set(),
       });
     }
-    groups.get(stemKey).entries.push({
+
+    const group = groups.get(headKey);
+    if (!group) continue;
+
+    if (group.entries.length === 0) {
+      group.anchorId = episode.id;
+    }
+
+    if (group.partsSeen.has(part)) {
+      continue;
+    }
+
+    group.partsSeen.add(part);
+    group.entries.push({
       episode,
       part,
-      numericEpisode,
-      sortValue: fallbackSort,
+      itunesEpisode: getItunesEpisode(episode),
+      pubDateValue: getPubDateValue(episode.pubDate),
     });
   }
 
-  const updatedEpisodes = [];
-  const multiSeriesRecords = [];
-  const topicsRecords = [];
-  let multiCount = 0;
-  let singletonCount = 0;
-  const debugEntries = [];
+  const seriesRecords = [];
+  const debugSeries = [];
 
   for (const group of groups.values()) {
-    group.entries.sort((a, b) => {
-      const aEpisode = a.numericEpisode ?? Number.MAX_SAFE_INTEGER;
-      const bEpisode = b.numericEpisode ?? Number.MAX_SAFE_INTEGER;
+    if (group.entries.length < 2) {
+      continue;
+    }
+
+    const sortedEntries = [...group.entries].sort((a, b) => {
+      if (a.part !== b.part) {
+        return a.part - b.part;
+      }
+      const aEpisode = a.itunesEpisode ?? Number.MAX_SAFE_INTEGER;
+      const bEpisode = b.itunesEpisode ?? Number.MAX_SAFE_INTEGER;
       if (aEpisode !== bEpisode) {
         return aEpisode - bEpisode;
       }
-      if (a.sortValue !== b.sortValue) {
-        return a.sortValue - b.sortValue;
+      if (a.pubDateValue !== b.pubDateValue) {
+        return a.pubDateValue - b.pubDateValue;
       }
       return a.episode.id.localeCompare(b.episode.id);
     });
 
-    const parts = group.entries.map((entry) => entry.part);
-    const hasParts = parts.some((value) => typeof value === 'number' && Number.isFinite(value));
-    const stemTitle = toTitleCase(group.rawStem);
+    const seriesId = `s_${shortHash(`${group.headKey}::${group.anchorId}`)}`;
+    const titleSource = group.headValue || group.headKey.replace(/-/g, ' ');
+    const seriesTitle = toTitleCase(titleSource);
 
-    debugEntries.push({ stem: stemTitle, parts });
-
-    if (hasParts) {
-      multiCount += 1;
-      const episodeIds = group.entries.map((entry) => entry.episode.id);
-      const seriesSortValue = group.entries[0]?.numericEpisode ?? group.entries[0]?.sortValue ?? Number.MAX_SAFE_INTEGER;
-      multiSeriesRecords.push({
-        series: {
-          id: group.seriesId,
-          title: stemTitle,
-          episodeIds,
-          topicId: group.seriesId,
-          yearFrom: null,
-          yearTo: null,
-        },
-        sortValue: seriesSortValue,
-      });
-      topicsRecords.push({
-        topic: {
-          id: group.seriesId,
-          title: stemTitle,
-          seriesIds: [group.seriesId],
-        },
-        sortValue: seriesSortValue,
-      });
-      for (const entry of group.entries) {
-        const updated = {
-          ...entry.episode,
-          part: entry.part ?? null,
-          seriesId: group.seriesId,
-        };
-        updatedEpisodes.push(updated);
+    const episodeIds = [];
+    for (const entry of sortedEntries) {
+      const existing = baseEpisodes.get(entry.episode.id);
+      if (!existing) {
+        continue;
       }
-    } else {
-      singletonCount += 1;
-      for (const entry of group.entries) {
-        const updated = {
-          ...entry.episode,
-          part: entry.part ?? null,
-        };
-        delete updated.seriesId;
-        updatedEpisodes.push(updated);
-      }
+      existing.part = entry.part;
+      existing.seriesId = seriesId;
+      baseEpisodes.set(entry.episode.id, existing);
+      episodeIds.push(entry.episode.id);
     }
+
+    const uniqueEpisodeIds = Array.from(new Set(episodeIds));
+
+    seriesRecords.push({
+      id: seriesId,
+      title: seriesTitle,
+      episodeIds: uniqueEpisodeIds,
+      yearFrom: null,
+      yearTo: null,
+      provisional: {
+        head: group.headKey,
+      },
+    });
+
+    debugSeries.push({
+      headKey: group.headKey,
+      seriesId,
+      parts: sortedEntries.map((entry) => entry.part),
+    });
   }
 
+  const updatedEpisodes = Array.from(baseEpisodes.values());
   updatedEpisodes.sort((a, b) => {
-    const dateA = new Date(a.pubDate).getTime();
-    const dateB = new Date(b.pubDate).getTime();
-    if (!Number.isFinite(dateA) || !Number.isFinite(dateB)) {
-      return a.id.localeCompare(b.id);
-    }
+    const dateA = getPubDateValue(a.pubDate);
+    const dateB = getPubDateValue(b.pubDate);
     if (dateA !== dateB) {
       return dateA - dateB;
     }
     return a.id.localeCompare(b.id);
   });
 
-  multiSeriesRecords.sort((a, b) => {
-    if (a.sortValue !== b.sortValue) {
-      return a.sortValue - b.sortValue;
-    }
-    return a.series.id.localeCompare(b.series.id);
-  });
-  topicsRecords.sort((a, b) => {
-    if (a.sortValue !== b.sortValue) {
-      return a.sortValue - b.sortValue;
-    }
-    return a.topic.id.localeCompare(b.topic.id);
-  });
-
-  const nextSeries = multiSeriesRecords.map((entry) => entry.series);
-  const nextTopics = topicsRecords.map((entry) => entry.topic);
+  seriesRecords.sort((a, b) => a.id.localeCompare(b.id));
 
   await writeJsonFile('public/episodes.json', updatedEpisodes);
-  await writeJsonFile('public/series.json', nextSeries);
-  await writeJsonFile('public/topics.json', nextTopics);
+  await writeJsonFile('public/series.json', seriesRecords);
+  await writeJsonFile('public/topics.json', []);
 
-  console.log(`Total episodes: ${episodes.length}`);
-  console.log(`Multi-part series: ${multiCount}`);
-  console.log(`Singleton groups: ${singletonCount}`);
+  const singletonsCount = updatedEpisodes.reduce((count, episode) => (episode.seriesId ? count : count + 1), 0);
 
-  const topDebug = debugEntries
-    .sort((a, b) => b.parts.length - a.parts.length || a.stem.localeCompare(b.stem))
-    .slice(0, 20);
-  console.log('Top stems with part arrays:');
-  for (const entry of topDebug) {
-    const partsText = entry.parts.map((value) => (value === null ? 'null' : String(value))).join(', ');
-    console.log(` - ${entry.stem}: [${partsText}]`);
+  console.log('Total episodes:', episodes.length);
+  console.log('Series (multi-part):', seriesRecords.length);
+  console.log('Singletons:', singletonsCount);
+
+  const preview = debugSeries.slice(0, 10);
+  for (const entry of preview) {
+    console.log(` - ${entry.headKey}: ${entry.seriesId} parts=[${entry.parts.join(', ')}]`);
   }
 }
 
