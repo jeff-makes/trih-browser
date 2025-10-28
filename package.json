@@ -6,8 +6,10 @@
   "scripts": {
     "fetch": "node scripts/fetch-rss.js",
     "enrich": "node scripts/enrich.js",
+    "llm:enrich": "node scripts/llm-enrich.js",
     "validate": "node scripts/validate.js"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "openai": "file:vendor/openai"
+  }
 }
