@@ -21,15 +21,7 @@ import { createHash } from 'crypto';
  * @property {string[]} episodeIds
  * @property {(number|null)=} yearFrom
  * @property {(number|null)=} yearTo
- * @property {string} topicId
- */
-
-/**
- * @typedef {Object} Topic
- * @property {string} id
- * @property {string} title
- * @property {string[]=} aliases
- * @property {string[]} seriesIds
+ * @property {{ head: string }=} provisional
  */
 
 /**
@@ -104,7 +96,24 @@ export function kebabCase(input) {
 
 export function normalizeTitle(raw){ return raw.replace(/^\s*\d+\.\s*/,"").replace(/\s+/g," ").trim(); }
 export function extractPart(title){ const m=title.match(/\(\s*Part\s*(\d+)\s*\)/i); return m?Number(m[1]):null; }
-export function seriesStem(title){ return normalizeTitle(title).replace(/\(\s*Part\s*\d+\s*\)/gi,"").replace(/\s*[–—-]\s*/g,": ").replace(/\s+/g," ").trim().toLowerCase(); }
+export function seriesHead(title){
+  const normalized = normalizeTitle(title || '');
+  if (!normalized) {
+    return '';
+  }
+  const [beforeColon, afterColon] = normalized.split(/:/, 2);
+  if (afterColon !== undefined) {
+    const candidate = beforeColon.trim();
+    if (candidate) {
+      return candidate;
+    }
+  }
+  const beforeParen = normalized.split('(')[0]?.trim();
+  if (beforeParen) {
+    return beforeParen;
+  }
+  return normalized;
+}
 
 export function toTitleCase(input) {
   const lower = input.toLowerCase();
@@ -159,36 +168,6 @@ export function cosineSimilarity(a, b) {
 
 export function uniqueStrings(values) {
   return Array.from(new Set(values));
-}
-
-export function ensureSeriesStub(stem) {
-  const cleaned = stem
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[^a-z0-9\s]/g, ' ');
-  let words = cleaned.split(/\s+/).filter(Boolean);
-  if (words.length === 0) {
-    words = ['series'];
-  }
-  while (words.length < 3) {
-    words.push('story');
-  }
-  if (words.length > 6) {
-    words = words.slice(0, 6);
-  }
-  return words.join('-');
-}
-
-export function pickTopicTitle(stem) {
-  const [beforeColon, afterColon] = stem.split(/:\s*/, 2);
-  if (afterColon) {
-    return toTitleCase(beforeColon);
-  }
-  return toTitleCase(stem);
-}
-
-export function seriesTitleFromStem(stem) {
-  return toTitleCase(stem);
 }
 
 export function nowIso() {
