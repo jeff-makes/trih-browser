@@ -36,6 +36,11 @@ jobs:
       - name: Enrich metadata
         run: npm run enrich
 
+      - name: LLM Enrich (series + episodes)
+        run: npm run llm:enrich
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
       - name: Validate outputs
         run: npm run validate
 
