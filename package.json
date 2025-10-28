@@ -13,6 +13,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "build:enrich": "tsc -p tsconfig.scripts.json",
+    "enrich": "node dist-scripts/scripts/enrich/index.js",
+    "test": "npm run build:enrich && node --test dist-scripts/scripts/enrich/__tests__/*.test.js",
     "verify:data": "node -e \"const fs=require('fs');const path=require('path');const dataPath=path.join(process.cwd(),'public','episodes.json');if(!fs.existsSync(dataPath)){console.error('episodes.json not found. Run npm run build:data first.');process.exit(1);}const raw=fs.readFileSync(dataPath,'utf8');let parsed;try{parsed=JSON.parse(raw);}catch(err){console.error('Failed to parse episodes.json:',err);process.exit(1);}if(!Array.isArray(parsed)){console.error('episodes.json does not contain an array.');process.exit(1);}const total=parsed.length;const collect=(key)=>Array.from(new Set(parsed.flatMap((item)=>Array.isArray(item[key])?item[key]:[]))).sort();const eras=collect('eras');const regions=collect('regions');console.log('Total episodes: '+total);console.log('Unique eras ('+eras.length+'): '+eras.join(', '));console.log('Unique regions ('+regions.length+'): '+regions.join(', '));\""
   },
   "keywords": [],
@@ -26,15 +29,22 @@
     "autoprefixer": "^10.4.21",
     "csv-parse": "^6.1.0",
     "fast-xml-parser": "^5.3.0",
+    "p-limit": "^3.1.0",
     "next": "^16.0.0",
     "postcss": "^8.5.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwindcss": "^4.1.16",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "eslint": "^9.38.0",
-    "eslint-config-next": "^16.0.0"
+    "eslint-config-next": "^16.0.0",
+    "tsx": "^4.19.2",
+    "vitest": "^2.1.4"
+  },
+  "optionalDependencies": {
+    "openai": "^4.73.0"
   }
 }
