@@ -670,7 +670,7 @@ Each stage reads the previous layer and only appends or updates the keyed object
 - Example: `toSlug("Napoléon III") === "napoleon-iii"`.
 - Use this helper whenever generating the slug portion of a `seriesId` or similar identifiers.
 
-## 22. Security & Data Privacy
+## 23. Security & Data Privacy
 - The pipeline processes public RSS content only and must never ingest or store Personally Identifiable Information (PII).
 - CI logs and runtime logging must redact API keys and avoid printing full LLM prompts or responses; log only item identifiers, status, and metadata such as latency.
 - Treat the guidance here as non-negotiable guardrails for both local runs and CI executions.
