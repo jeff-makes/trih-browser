@@ -79,7 +79,8 @@ async function main() {
   const items = parseItems(xml);
   console.log(`Parsed ${items.length} item(s) from feed.`);
 
-  const existingEpisodes = await readJsonFile('public/episodes.json', []);
+  const existingEpisodes =
+    (await readJsonFile('public/episodes.raw.json', null)) ?? (await readJsonFile('public/episodes.json', []));
   const existingById = new Map(existingEpisodes.map((episode) => [episode.id, episode]));
   const totalBefore = existingEpisodes.length;
 
@@ -128,7 +129,7 @@ async function main() {
   newEpisodes.sort((a, b) => new Date(a.pubDate).getTime() - new Date(b.pubDate).getTime());
 
   const merged = [...existingEpisodes, ...newEpisodes];
-  await writeJsonFile('public/episodes.json', merged);
+  await writeJsonFile('public/episodes.raw.json', merged);
   console.log(`Appended ${newEpisodes.length} episode(s); total is now ${totalBefore + newEpisodes.length}.`);
 }
 
