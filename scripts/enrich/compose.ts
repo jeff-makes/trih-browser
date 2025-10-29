@@ -95,6 +95,48 @@ function sortSeries(list) {
   });
 }
 
+function formatSeriesEntry(entry) {
+  const { id, title, episodeIds } = entry;
+  const result = {
+    id,
+    title,
+    episodeIds,
+  };
+
+  if (Object.prototype.hasOwnProperty.call(entry, "yearFrom")) {
+    result.yearFrom = entry.yearFrom;
+  }
+
+  if (Object.prototype.hasOwnProperty.call(entry, "yearTo")) {
+    result.yearTo = entry.yearTo;
+  }
+
+  if (Object.prototype.hasOwnProperty.call(entry, "provisional")) {
+    result.provisional = entry.provisional;
+  }
+
+  if (Object.prototype.hasOwnProperty.call(entry, "publicTitle")) {
+    result.publicTitle = entry.publicTitle;
+  }
+
+  for (const [key, value] of Object.entries(entry)) {
+    if (
+      key === "id" ||
+      key === "title" ||
+      key === "episodeIds" ||
+      key === "yearFrom" ||
+      key === "yearTo" ||
+      key === "provisional" ||
+      key === "publicTitle"
+    ) {
+      continue;
+    }
+    result[key] = value;
+  }
+
+  return result;
+}
+
 function main() {
   const existingEpisodes = readJson(fromPublic("episodes.json"), []);
   const existingSeries = readJson(fromPublic("series.json"), []);
@@ -107,9 +149,10 @@ function main() {
 
   const enrichedEpisodes = sortEpisodes(applyEpisodeEnrichment(ensureArray(rawEpisodes), episodeCache));
   const enrichedSeries = sortSeries(applySeriesEnrichment(ensureArray(rawSeries), seriesCache));
+  const formattedSeries = enrichedSeries.map(formatSeriesEntry);
 
   writeJsonIfChanged(fromPublic("episodes.json"), enrichedEpisodes);
-  writeJsonIfChanged(fromPublic("series.json"), enrichedSeries);
+  writeJsonIfChanged(fromPublic("series.json"), formattedSeries);
 }
 
 main();
