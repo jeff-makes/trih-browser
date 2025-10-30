@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://trih-browser/schema/episode.public.schema.json",
+  "title": "PublicEpisode",
+  "type": "object",
+  "required": [
+    "id",
+    "episodeId",
+    "title",
+    "publishedAt",
+    "description",
+    "audioUrl",
+    "rssLastSeenAt",
+    "itunesEpisode",
+    "cleanTitle",
+    "cleanDescriptionMarkdown",
+    "cleanDescriptionText",
+    "descriptionBlocks",
+    "fingerprint",
+    "cleanupVersion",
+    "part",
+    "seriesId",
+    "seriesKey",
+    "seriesKeyRaw",
+    "seriesGroupingConfidence",
+    "keyPeople",
+    "keyPlaces",
+    "keyThemes",
+    "yearFrom",
+    "yearTo",
+    "yearConfidence"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "episodeId": { "type": "string", "minLength": 1 },
+    "title": { "type": "string" },
+    "publishedAt": { "type": "string", "format": "date-time" },
+    "description": { "type": "string" },
+    "audioUrl": { "type": "string", "minLength": 1 },
+    "rssLastSeenAt": { "type": "string", "format": "date-time" },
+    "itunesEpisode": { "type": ["integer", "null"] },
+    "cleanTitle": { "type": "string" },
+    "cleanDescriptionMarkdown": { "type": "string" },
+    "cleanDescriptionText": { "type": "string" },
+    "descriptionBlocks": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0
+    },
+    "credits": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "minProperties": 1
+    },
+    "fingerprint": { "type": "string", "minLength": 64, "maxLength": 64 },
+    "cleanupVersion": { "type": "integer", "minimum": 1 },
+    "derived": { "type": ["object", "null"], "additionalProperties": true },
+    "part": { "type": ["integer", "null"], "minimum": 1 },
+    "seriesId": { "type": ["string", "null"] },
+    "seriesKey": { "type": ["string", "null"] },
+    "seriesKeyRaw": { "type": ["string", "null"] },
+    "seriesGroupingConfidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "keyPeople": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "maxItems": 12
+    },
+    "keyPlaces": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "maxItems": 12
+    },
+    "keyThemes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "maxItems": 8,
+      "uniqueItems": true
+    },
+    "yearFrom": { "type": ["integer", "null"], "minimum": 0 },
+    "yearTo": { "type": ["integer", "null"], "minimum": 0 },
+    "yearConfidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"]
+    }
+  },
+  "additionalProperties": false
+}

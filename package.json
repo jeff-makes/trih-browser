@@ -1,0 +1,37 @@
+{
+  "name": "trih-browser",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "dev:pipeline": "tsx --tsconfig tsconfig.json src/run-local-pipeline.ts",
+    "migrate:caches": "node scripts/migrate-legacy-caches.mjs",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@vercel/blob": "^0.18.0",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "axios": "^1.6.7",
+    "next": "14.2.3",
+    "react": "18.3.0",
+    "react-dom": "18.3.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.4.5",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.5.3"
+  }
+}

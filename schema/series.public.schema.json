@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://trih-browser/schema/series.public.schema.json",
+  "title": "PublicSeries",
+  "type": "object",
+  "required": [
+    "id",
+    "seriesId",
+    "seriesGroupingConfidence",
+    "episodeIds",
+    "yearFrom",
+    "yearTo",
+    "yearConfidence",
+    "fingerprint",
+    "seriesTitle",
+    "narrativeSummary",
+    "tonalDescriptors",
+    "rssLastSeenAt"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "seriesId": { "type": "string", "minLength": 1 },
+    "seriesKey": { "type": ["string", "null"] },
+    "seriesKeyRaw": { "type": ["string", "null"] },
+    "seriesGroupingConfidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "episodeIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "yearFrom": { "type": ["integer", "null"], "minimum": 0 },
+    "yearTo": { "type": ["integer", "null"], "minimum": 0 },
+    "yearConfidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"]
+    },
+    "fingerprint": { "type": "string", "minLength": 64, "maxLength": 64 },
+    "memberEpisodeFingerprints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "derived": { "type": ["object", "null"], "additionalProperties": true },
+    "seriesTitle": { "type": "string" },
+    "narrativeSummary": { "type": ["string", "null"] },
+    "tonalDescriptors": {
+      "type": ["array", "null"],
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "rssLastSeenAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": false
+}

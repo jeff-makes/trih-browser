@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://trih-browser/schema/cache.llm.schema.json",
+  "title": "LlmCacheEntry",
+  "definitions": {
+    "base": {
+      "type": "object",
+      "properties": {
+        "fingerprint": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "promptVersion": { "type": "string", "minLength": 1 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["ok", "skipped", "error"] },
+        "notes": { "type": ["string", "null"] }
+      },
+      "required": ["fingerprint", "model", "promptVersion", "createdAt", "status", "notes"],
+      "additionalProperties": true
+    },
+    "episode": {
+      "type": "object",
+      "properties": {
+        "episodeId": { "type": "string" },
+        "seriesId": { "const": null },
+        "keyPeople": { "type": "array", "items": { "type": "string" }, "maxItems": 12, "uniqueItems": true },
+        "keyPlaces": { "type": "array", "items": { "type": "string" }, "maxItems": 12, "uniqueItems": true },
+        "keyThemes": { "type": "array", "items": { "type": "string" }, "minItems": 0, "maxItems": 8, "uniqueItems": true },
+        "yearFrom": { "type": ["integer", "null"], "minimum": 0 },
+        "yearTo": { "type": ["integer", "null"], "minimum": 0 },
+        "yearConfidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] }
+      },
+      "required": [
+        "episodeId",
+        "keyPeople",
+        "keyPlaces",
+        "keyThemes",
+        "yearFrom",
+        "yearTo",
+        "yearConfidence"
+      ]
+    },
+    "series": {
+      "type": "object",
+      "properties": {
+        "episodeId": { "const": null },
+        "seriesId": { "type": "string" },
+        "seriesTitle": { "type": ["string", "null"] },
+        "narrativeSummary": { "type": ["string", "null"] },
+        "tonalDescriptors": { "type": ["array", "null"], "items": { "type": "string" }, "uniqueItems": true },
+        "yearFrom": { "type": ["integer", "null"], "minimum": 0 },
+        "yearTo": { "type": ["integer", "null"], "minimum": 0 },
+        "yearConfidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] }
+      },
+      "required": [
+        "seriesId",
+        "seriesTitle",
+        "narrativeSummary",
+        "tonalDescriptors",
+        "yearFrom",
+        "yearTo",
+        "yearConfidence"
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "allOf": [
+        { "$ref": "#/definitions/base" },
+        { "$ref": "#/definitions/episode" }
+      ]
+    },
+    {
+      "allOf": [
+        { "$ref": "#/definitions/base" },
+        { "$ref": "#/definitions/series" }
+      ]
+    }
+  ]
+}
