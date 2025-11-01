@@ -98,48 +98,54 @@ export const runValidation = ({
   const publicSeriesMap = new Map(publicSeries.map((series) => [series.seriesId, series]));
 
   publicEpisodes.forEach((episode) => {
-    if (!rawEpisodeMap.has(episode.episodeId)) {
-      throw new Error(`Public episode ${episode.episodeId} missing corresponding raw episode`);
+    const episodeId = episode.episodeId;
+    if (!episodeId) {
+      throw new Error("Encountered public episode without an episodeId");
     }
-    if (!programmaticEpisodeMap.has(episode.episodeId)) {
-      throw new Error(`Public episode ${episode.episodeId} missing corresponding programmatic episode`);
+    if (!rawEpisodeMap.has(episodeId)) {
+      throw new Error(`Public episode ${episodeId} missing corresponding raw episode`);
+    }
+    if (!programmaticEpisodeMap.has(episodeId)) {
+      throw new Error(`Public episode ${episodeId} missing corresponding programmatic episode`);
     }
 
     if (episode.seriesId) {
       const parentSeries = publicSeriesMap.get(episode.seriesId);
       if (!parentSeries) {
-        throw new Error(`Public episode ${episode.episodeId} references missing series ${episode.seriesId}`);
+        throw new Error(`Public episode ${episodeId} references missing series ${episode.seriesId}`);
       }
-      if (!parentSeries.episodeIds.includes(episode.episodeId)) {
-        throw new Error(
-          `Series ${episode.seriesId} does not include episode ${episode.episodeId} in its membership`
-        );
+      if (!parentSeries.episodeIds.includes(episodeId)) {
+        throw new Error(`Series ${episode.seriesId} does not include episode ${episodeId} in its membership`);
       }
     }
 
-    ensureYearOrder(episode.yearFrom, episode.yearTo, `public episode ${episode.episodeId}`);
+    ensureYearOrder(episode.yearFrom, episode.yearTo, `public episode ${episodeId}`);
 
     if (!validateEpisode(episode)) {
       throw new Error(
-        `Public episode ${episode.episodeId} failed schema validation:\n${formatAjvErrors(validateEpisode.errors)}`
+        `Public episode ${episodeId} failed schema validation:\n${formatAjvErrors(validateEpisode.errors)}`
       );
     }
   });
 
-  publicSeries.forEach((series) => {
+  publicSeries.forEach((series: PublicSeries) => {
+    const seriesId = series.seriesId;
+    if (!seriesId) {
+      throw new Error("Encountered public series without a seriesId");
+    }
     if (!validateSeries(series)) {
       throw new Error(
-        `Public series ${series.seriesId} failed schema validation:\n${formatAjvErrors(validateSeries.errors)}`
+        `Public series ${seriesId} failed schema validation:\n${formatAjvErrors(validateSeries.errors)}`
       );
     }
 
     series.episodeIds.forEach((episodeId) => {
       if (!publicEpisodeIds.includes(episodeId)) {
-        throw new Error(`Series ${series.seriesId} references missing public episode ${episodeId}`);
+        throw new Error(`Series ${seriesId} references missing public episode ${episodeId}`);
       }
     });
 
-    ensureYearOrder(series.yearFrom, series.yearTo, `public series ${series.seriesId}`);
+    ensureYearOrder(series.yearFrom, series.yearTo, `public series ${seriesId}`);
   });
 
   Object.entries(episodeLlmCache).forEach(([cacheKey, entry]) => {

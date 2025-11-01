@@ -8,13 +8,23 @@ export type RawEpisodeInput = {
   publishedAt: string | null;
 };
 
+export type RawSeriesDerived = {
+  episodeCount: number;
+  episodeSummaries?: {
+    cleanDescriptionText: string;
+    cleanTitle: string;
+    part: number | null;
+  }[];
+};
+
 export type RawSeriesInput = {
   id: string;
   seriesTitle: string;
   yearFrom: number | null;
   yearTo: number | null;
-  episodeCount: number;
   episodeIds: string[];
+  episodeCount?: number;
+  derived?: RawSeriesDerived;
 };
 
 export type EpisodeSummary = {
@@ -160,6 +170,13 @@ export function buildTimeline(options: BuildTimelineOptions): BuildTimelineResul
       orderIndex.set(episodeId, index);
     });
 
+    const resolvedEpisodeCount =
+      typeof seriesRecord.derived?.episodeCount === 'number'
+        ? seriesRecord.derived.episodeCount
+        : typeof seriesRecord.episodeCount === 'number'
+          ? seriesRecord.episodeCount
+          : seriesRecord.episodeIds.length;
+
     const memberEpisodes = seriesRecord.episodeIds
       .map((episodeId) => episodesById.get(episodeId))
       .filter((episode): episode is RawEpisodeInput => Boolean(episode));
@@ -217,7 +234,7 @@ export function buildTimeline(options: BuildTimelineOptions): BuildTimelineResul
       title: seriesRecord.seriesTitle,
       yearFrom: derivedYearFrom,
       yearTo: derivedYearTo,
-      episodeCount: seriesRecord.episodeCount,
+      episodeCount: resolvedEpisodeCount,
       primaryYear: primaryYear(derivedYearFrom, derivedYearTo),
       episodes: sortedMemberEpisodes.map((episode) => ({
         id: episode.id,
