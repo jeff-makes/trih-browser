@@ -104,6 +104,19 @@ export interface ProgrammaticSeries {
   rssLastSeenAt: string | null;
 }
 
+export interface EpisodePersonRef {
+  id: string | null;
+  name: string;
+  type?: string | null;
+}
+
+export interface EpisodePlaceRef {
+  id: string | null;
+  name: string;
+  type?: string | null;
+  notes?: string | null;
+}
+
 export interface LlmEpisodeCacheEntry {
   episodeId: string;
   fingerprint: string;
@@ -119,6 +132,8 @@ export interface LlmEpisodeCacheEntry {
   yearFrom: number | null;
   yearTo: number | null;
   yearConfidence: YearConfidence;
+  people?: EpisodePersonRef[];
+  places?: EpisodePlaceRef[];
 }
 
 export interface LlmSeriesCacheEntry {
@@ -167,6 +182,8 @@ export interface PublicEpisode {
   yearFrom: number | null;
   yearTo: number | null;
   yearConfidence: YearConfidence;
+  people?: EpisodePersonRef[];
+  places?: EpisodePlaceRef[];
 }
 
 export interface PublicSeries {

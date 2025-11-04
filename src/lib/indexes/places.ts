@@ -20,7 +20,10 @@ const buildIndex = (): PlacesIndex => {
   const working = new Map<string, { appearances: number; episodeIds: Set<string>; seriesCounts: Map<string, number> }>();
 
   episodes.forEach((episode: PublicEpisode) => {
-    const uniquePlaces = Array.from(new Set((episode.keyPlaces ?? []).map(normaliseName))).filter(Boolean);
+    const refs = episode.places && episode.places.length > 0
+      ? episode.places.map((place) => place.name)
+      : episode.keyPlaces ?? [];
+    const uniquePlaces = Array.from(new Set(refs.map(normaliseName))).filter(Boolean);
     uniquePlaces.forEach((place) => {
       if (!working.has(place)) {
         working.set(place, {

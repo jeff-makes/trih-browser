@@ -4,6 +4,28 @@ import { getAllEpisodes, getAllSeries, getEpisodesForSeries } from "@/lib/data";
 
 const toSet = (values: string[] | null | undefined): Set<string> => new Set((values ?? []).filter(Boolean));
 
+const toPersonSet = (episode: PublicEpisode): Set<string> => {
+  const refs = episode.people && episode.people.length > 0
+    ? episode.people
+    : (episode.keyPeople ?? []).map((name) => ({ id: null, name }));
+  return new Set(
+    refs
+      .map((ref) => (ref.id ?? ref.name).toLowerCase())
+      .filter(Boolean)
+  );
+};
+
+const toPlaceSet = (episode: PublicEpisode): Set<string> => {
+  const refs = episode.places && episode.places.length > 0
+    ? episode.places
+    : (episode.keyPlaces ?? []).map((name) => ({ id: null, name }));
+  return new Set(
+    refs
+      .map((ref) => (ref.id ?? ref.name).toLowerCase())
+      .filter(Boolean)
+  );
+};
+
 const jaccard = (a: Set<string>, b: Set<string>): number => {
   if (a.size === 0 && b.size === 0) {
     return 0;
@@ -31,8 +53,8 @@ export interface SimilarSeries {
 }
 
 const buildEpisodeFeatureSets = (episode: PublicEpisode) => ({
-  people: toSet(episode.keyPeople),
-  places: toSet(episode.keyPlaces),
+  people: toPersonSet(episode),
+  places: toPlaceSet(episode),
   themes: toSet(episode.keyThemes),
   topics: new Set((episode.keyTopics ?? []).map((topic) => topic.id))
 });
@@ -87,8 +109,8 @@ const buildSeriesFeatureSets = (series: PublicSeries) => {
   const topics = new Set<string>();
 
   members.forEach((episode) => {
-    (episode.keyPeople ?? []).forEach((person) => people.add(person));
-    (episode.keyPlaces ?? []).forEach((place) => places.add(place));
+    toPersonSet(episode).forEach((person) => people.add(person));
+    toPlaceSet(episode).forEach((place) => places.add(place));
     (episode.keyThemes ?? []).forEach((theme) => themes.add(theme));
     (episode.keyTopics ?? []).forEach((topic) => topics.add(topic.id));
   });

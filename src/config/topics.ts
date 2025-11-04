@@ -4,10 +4,13 @@ export type TopicId = string;
 
 export interface TopicDefinition {
   id: TopicId;
+  preferredName?: string;
   label: string;
   slug: string;
   aliases: string[];
+  type?: string;
   description?: string;
+  notes?: string;
 }
 
 export const TOPIC_DEFINITIONS: TopicDefinition[] = registry;
@@ -22,10 +25,11 @@ export const TOPIC_BY_ID: Record<string, TopicDefinition> = TOPIC_DEFINITIONS.re
 
 export const TOPIC_ALIASES: Record<string, TopicDefinition> = TOPIC_DEFINITIONS.reduce(
   (acc, topic) => {
+    const preferred = (topic.preferredName ?? topic.label).toLowerCase();
+    acc[preferred] = topic;
     topic.aliases.forEach((alias) => {
       acc[alias.toLowerCase()] = topic;
     });
-    acc[topic.label.toLowerCase()] = topic;
     acc[topic.slug.toLowerCase()] = topic;
     acc[topic.id.toLowerCase()] = topic;
     acc[topic.label.toLowerCase()] = topic;

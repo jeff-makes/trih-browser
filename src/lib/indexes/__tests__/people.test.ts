@@ -24,7 +24,7 @@ describe("people index", () => {
   });
 
   it("lists people for an episode", () => {
-    const episode = getAllEpisodes().find((item) => item.keyPeople.length > 0);
+    const episode = getAllEpisodes().find((item) => (item.people?.length ?? item.keyPeople.length) > 0);
     expect(episode).toBeDefined();
 
     const people = getPeopleForEpisode(episode!.episodeId);

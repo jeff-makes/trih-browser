@@ -4,6 +4,8 @@ import createOpenAiClient, {
   ChatCompletionResult
 } from "@/lib/openai";
 import {
+  EpisodePersonRef,
+  EpisodePlaceRef,
   EpisodeTopic,
   ErrorLedgerEntry,
   LlmEpisodeCacheEntry,
@@ -13,6 +15,8 @@ import {
   YearConfidence
 } from "@/types";
 import { TOPIC_BY_ID, TOPIC_DEFINITIONS, findTopic } from "@/config/topics";
+import { PEOPLE_DEFINITIONS, findPerson } from "@/config/people";
+import { PLACE_DEFINITIONS, findPlace } from "@/config/places";
 
 interface LlmOptions {
   client?: OpenAiClient;
@@ -36,9 +40,12 @@ interface SeriesEnrichmentResult {
   planned: { seriesId: string; fingerprint: string }[];
 }
 
-const EPISODE_PROMPT_VERSION = "episode.enrichment.v2";
+const EPISODE_PROMPT_VERSION = "episode.enrichment.v3";
 const SERIES_PROMPT_VERSION = "series.enrichment.v1";
 const MAX_TOPICS_PER_EPISODE = 3;
+const MAX_PEOPLE_PER_EPISODE = 12;
+const MAX_PLACES_PER_EPISODE = 12;
+const HOST_NAME_BLOCKLIST = new Set(["tom holland", "dominic sandbrook"]);
 
 const EPISODE_SYSTEM_MESSAGE: ChatMessage = {
   role: "system",
@@ -101,13 +108,178 @@ const sanitizeThemes = (values: unknown[]): string[] => {
 
 const toJsonArrayString = (value: unknown): string => JSON.stringify(value, null, 2);
 
+interface PendingPersonProposal {
+  label: string;
+}
+
+interface PendingPlaceProposal {
+  label: string;
+}
+
+const buildPeopleRegistryPromptPayload = (): string =>
+  toJsonArrayString(
+    PEOPLE_DEFINITIONS.map((person) => ({
+      id: person.id,
+      preferredName: person.preferredName,
+      aliases: person.aliases,
+      type: person.type ?? null
+    }))
+  );
+
+const buildPlacesRegistryPromptPayload = (): string =>
+  toJsonArrayString(
+    PLACE_DEFINITIONS.map((place) => ({
+      id: place.id,
+      preferredName: place.preferredName,
+      aliases: place.aliases,
+      type: place.type ?? null,
+      notes: place.notes ?? null
+    }))
+  );
+
+const sanitisePersonEntry = (entry: unknown): { name: string | null; id: string | null } => {
+  if (typeof entry === "string") {
+    const name = entry.trim();
+    return { name: name || null, id: null };
+  }
+  if (entry && typeof entry === "object") {
+    const candidate = entry as Record<string, unknown>;
+    const name = typeof candidate.name === "string"
+      ? candidate.name.trim()
+      : typeof candidate.displayName === "string"
+      ? candidate.displayName.trim()
+      : null;
+    const id = typeof candidate.id === "string" ? candidate.id.trim() : null;
+    return { name: name && name.length > 0 ? name : null, id: id && id.length > 0 ? id : null };
+  }
+  return { name: null, id: null };
+};
+
+const sanitizePeople = (
+  value: unknown,
+  onPending?: (proposal: PendingPersonProposal) => void,
+  maxItems = MAX_PEOPLE_PER_EPISODE
+): EpisodePersonRef[] => {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const result: EpisodePersonRef[] = [];
+  const seen = new Set<string>();
+
+  for (const entry of value) {
+    if (result.length >= maxItems) {
+      break;
+    }
+
+    const { name, id: providedId } = sanitisePersonEntry(entry);
+    if (!name) {
+      continue;
+    }
+
+    const lower = name.toLowerCase();
+    if (HOST_NAME_BLOCKLIST.has(lower)) {
+      continue;
+    }
+
+    const definition = providedId ? findPerson(providedId) ?? findPerson(name) : findPerson(name);
+    const canonicalName = (definition?.preferredName ?? name).trim();
+    const canonicalId = definition?.id ?? (definition ? definition.id : providedId) ?? null;
+    const dedupeKey = canonicalId ? `id:${canonicalId}` : `name:${canonicalName.toLowerCase()}`;
+    if (seen.has(dedupeKey)) {
+      continue;
+    }
+    seen.add(dedupeKey);
+
+    if (!definition) {
+      onPending?.({ label: name });
+      continue;
+    }
+
+    result.push({
+      id: canonicalId,
+      name: canonicalName,
+      type: definition.type ?? null
+    });
+  }
+
+  return result;
+};
+
+const sanitisePlaceEntry = (entry: unknown): { name: string | null; id: string | null } => {
+  if (typeof entry === "string") {
+    const name = entry.trim();
+    return { name: name || null, id: null };
+  }
+  if (entry && typeof entry === "object") {
+    const candidate = entry as Record<string, unknown>;
+    const name = typeof candidate.name === "string"
+      ? candidate.name.trim()
+      : typeof candidate.displayName === "string"
+      ? candidate.displayName.trim()
+      : null;
+    const id = typeof candidate.id === "string" ? candidate.id.trim() : null;
+    return { name: name && name.length > 0 ? name : null, id: id && id.length > 0 ? id : null };
+  }
+  return { name: null, id: null };
+};
+
+const sanitizePlaces = (
+  value: unknown,
+  onPending?: (proposal: PendingPlaceProposal) => void,
+  maxItems = MAX_PLACES_PER_EPISODE
+): EpisodePlaceRef[] => {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const result: EpisodePlaceRef[] = [];
+  const seen = new Set<string>();
+
+  for (const entry of value) {
+    if (result.length >= maxItems) {
+      break;
+    }
+
+    const { name, id: providedId } = sanitisePlaceEntry(entry);
+    if (!name) {
+      continue;
+    }
+
+    const definition = providedId ? findPlace(providedId) ?? findPlace(name) : findPlace(name);
+    const canonicalName = (definition?.preferredName ?? name).trim();
+    const canonicalId = definition?.id ?? (definition ? definition.id : providedId) ?? null;
+    const dedupeKey = canonicalId ? `id:${canonicalId}` : `name:${canonicalName.toLowerCase()}`;
+    if (seen.has(dedupeKey)) {
+      continue;
+    }
+    seen.add(dedupeKey);
+
+    if (!definition) {
+      onPending?.({ label: name });
+      continue;
+    }
+
+    result.push({
+      id: canonicalId,
+      name: canonicalName,
+      type: definition.type ?? null,
+      notes: definition.notes ?? null
+    });
+  }
+
+  return result;
+};
+
 const buildTopicRegistryPromptPayload = (): string =>
   toJsonArrayString(
     TOPIC_DEFINITIONS.map((topic) => ({
       id: topic.id,
+      preferredName: topic.preferredName ?? topic.label,
       label: topic.label,
       slug: topic.slug,
-      aliases: topic.aliases
+      aliases: topic.aliases,
+      type: topic.type ?? null
     }))
   );
 
@@ -215,11 +387,48 @@ const sanitizeTopics = (
   return topics;
 };
 
-const normaliseEpisodeCacheEntry = (entry: LlmEpisodeCacheEntry): LlmEpisodeCacheEntry => ({
-  ...entry,
-  keyThemes: sanitizeThemes(entry.keyThemes ?? []),
-  keyTopics: sanitizeTopics(entry.keyTopics ?? [])
-});
+const normaliseEpisodeCacheEntry = (entry: LlmEpisodeCacheEntry): LlmEpisodeCacheEntry => {
+  const keyPeople = sanitizeArray(entry.keyPeople ?? [], MAX_PEOPLE_PER_EPISODE);
+  const keyPlaces = sanitizeArray(entry.keyPlaces ?? [], MAX_PLACES_PER_EPISODE);
+  const peopleRefs = sanitizePeople(entry.people ?? entry.keyPeople ?? []);
+  const placeRefs = sanitizePlaces(entry.places ?? entry.keyPlaces ?? []);
+
+  const normalisedPeople = Array.from(
+    new Set(
+      keyPeople.map((name) => {
+        const definition = findPerson(name);
+        if (definition) {
+          return definition.preferredName;
+        }
+        const ref = peopleRefs.find((person) => person.name.toLowerCase() === name.toLowerCase());
+        return ref ? ref.name : name;
+      })
+    )
+  );
+
+  const normalisedPlaces = Array.from(
+    new Set(
+      keyPlaces.map((name) => {
+        const definition = findPlace(name);
+        if (definition) {
+          return definition.preferredName;
+        }
+        const ref = placeRefs.find((place) => place.name.toLowerCase() === name.toLowerCase());
+        return ref ? ref.name : name;
+      })
+    )
+  );
+
+  return {
+    ...entry,
+    keyPeople: normalisedPeople,
+    keyPlaces: normalisedPlaces,
+    keyThemes: sanitizeThemes(entry.keyThemes ?? []),
+    keyTopics: sanitizeTopics(entry.keyTopics ?? []),
+    people: peopleRefs,
+    places: placeRefs
+  };
+};
 
 const cleanJsonFence = (content: string): string => {
   const trimmed = content.trim();
@@ -230,6 +439,8 @@ const cleanJsonFence = (content: string): string => {
 };
 
 const buildEpisodeUserMessage = (episode: ProgrammaticEpisode): ChatMessage => {
+  const peopleRegistryJson = buildPeopleRegistryPromptPayload();
+  const placeRegistryJson = buildPlacesRegistryPromptPayload();
   const topicRegistryJson = buildTopicRegistryPromptPayload();
   return {
     role: "user",
@@ -238,11 +449,15 @@ const buildEpisodeUserMessage = (episode: ProgrammaticEpisode): ChatMessage => {
       `Title: ${episode.cleanTitle}`,
       `Synopsis: ${episode.cleanDescriptionText}`,
       "From the text provided, perform the following tasks:",
-      "1. Identify key historical figures mentioned. Do NOT include the hosts, Tom Holland and Dominic Sandbrook. Do NOT include producer or staff names mentioned in a credits list.",
-      "2. Identify key geographical places or locations central to the narrative.",
+      "1. Identify key historical figures mentioned. Return only individual humans (historical, legendary, mythological). Use names exactly as they appear in the People Registry (preferredName or aliases). Exclude the hosts (Tom Holland, Dominic Sandbrook), producers, staff, and any collectives or organizations. If you cannot find a figure in the registry, return the most specific proper name you know.",
+      "2. Identify key geographical places or locations central to the narrative. Use the Place Registry for canonical names. Choose historically appropriate terms, avoid combining city and country (e.g., do NOT emit \"Paris, France\" unless disambiguation is required), skip conceptual regions such as \"The West\" or alliances like \"The Allies\", and if no registry match exists, output the most specific historically accurate name you know.",
       "3. Infer a numeric year span (yearFrom, yearTo) for the main historical period discussed. If the episode covers multiple distinct periods or no specific historical period (e.g., mythology, ghosts), you MUST return `null` for both yearFrom and yearTo.",
       "4. Extract up to five short, key themes that summarize the episode's subject matter.",
       "5. Select up to three curated key topics from the registry below. Use the `id` values exactly as provided. If no topic applies, you may propose ONE new topic: Title Case, 1–4 words, slug/kebab-case id, and include a short `notes` justification. Mark proposed topics with `\"isPending\": true`.",
+      "People Registry (JSON array):",
+      peopleRegistryJson,
+      "Place Registry (JSON array):",
+      placeRegistryJson,
       "Topic Registry (JSON array):",
       topicRegistryJson,
       "Return your analysis ONLY as a single, valid JSON object with the following schema:",
@@ -443,6 +658,8 @@ export const runLlmEpisodeEnrichment = async (
         keyPlaces: [],
         keyThemes: [],
         keyTopics: [],
+        people: [],
+        places: [],
         yearFrom: null,
         yearTo: null,
         yearConfidence: "unknown"
@@ -452,11 +669,33 @@ export const runLlmEpisodeEnrichment = async (
 
     try {
       const parsed = parseJsonContent(response.content) as Record<string, unknown>;
-      const keyPeople = sanitizeArray((parsed.keyPeople as unknown[]) ?? [], 12);
-      const keyPlaces = sanitizeArray((parsed.keyPlaces as unknown[]) ?? [], 12);
+      const pendingPeople: PendingPersonProposal[] = [];
+      const pendingPlaces: PendingPlaceProposal[] = [];
+      const keyPeople = sanitizeArray((parsed.keyPeople as unknown[]) ?? [], MAX_PEOPLE_PER_EPISODE);
+      const keyPlaces = sanitizeArray((parsed.keyPlaces as unknown[]) ?? [], MAX_PLACES_PER_EPISODE);
+      const peopleRefs = sanitizePeople(parsed.keyPeople ?? [], (proposal) => pendingPeople.push(proposal));
+      const placeRefs = sanitizePlaces(parsed.keyPlaces ?? [], (proposal) => pendingPlaces.push(proposal));
       const keyThemes = sanitizeThemes((parsed.keyThemes as unknown[]) ?? []);
       const pendingTopics: EpisodeTopic[] = [];
       const keyTopics = sanitizeTopics(parsed.keyTopics ?? [], (topic) => pendingTopics.push(topic));
+
+      if (pendingPeople.length > 0) {
+        errors.push(
+          createErrorEntry("llm:episodes", episode.episodeId, "info", "LLM proposed new or unknown person(s)", {
+            cacheKey,
+            personProposal: pendingPeople
+          })
+        );
+      }
+
+      if (pendingPlaces.length > 0) {
+        errors.push(
+          createErrorEntry("llm:episodes", episode.episodeId, "info", "LLM proposed new or unknown place(s)", {
+            cacheKey,
+            placeProposal: pendingPlaces
+          })
+        );
+      }
 
       if (pendingTopics.length > 0) {
         errors.push(
@@ -483,6 +722,8 @@ export const runLlmEpisodeEnrichment = async (
         keyPlaces,
         keyThemes,
         keyTopics,
+        people: peopleRefs,
+        places: placeRefs,
         yearFrom: ensureYear(parsed.yearFrom),
         yearTo: ensureYear(parsed.yearTo),
         yearConfidence: normaliseYearConfidence(parsed.yearConfidence ?? "unknown")
@@ -509,6 +750,8 @@ export const runLlmEpisodeEnrichment = async (
         keyPlaces: [],
         keyThemes: [],
         keyTopics: [],
+        people: [],
+        places: [],
         yearFrom: null,
         yearTo: null,
         yearConfidence: "unknown"

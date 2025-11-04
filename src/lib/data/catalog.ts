@@ -113,8 +113,12 @@ const buildCountsFromEpisodes = (episodes: PublicEpisode[]): {
   const topics: CountMap = {};
 
   episodes.forEach((episode) => {
-    const uniquePeople = new Set(episode.keyPeople ?? []);
-    const uniquePlaces = new Set(episode.keyPlaces ?? []);
+    const uniquePeople = new Set(
+      (episode.people && episode.people.length > 0 ? episode.people.map((person) => person.name) : episode.keyPeople) ?? []
+    );
+    const uniquePlaces = new Set(
+      (episode.places && episode.places.length > 0 ? episode.places.map((place) => place.name) : episode.keyPlaces) ?? []
+    );
     const uniqueThemes = new Set(episode.keyThemes ?? []);
     const uniqueTopics = new Set((episode.keyTopics ?? []).map((topic) => topic.id));
 

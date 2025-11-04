@@ -31,8 +31,14 @@ export function EpisodeCard({
   seriesHref,
   seriesLabel
 }: EpisodeCardProps): JSX.Element {
-  const people = (episode.keyPeople ?? []).slice(0, showPeopleCount);
-  const places = (episode.keyPlaces ?? []).slice(0, showPlacesCount);
+  const people = (episode.people && episode.people.length > 0
+    ? episode.people
+    : (episode.keyPeople ?? []).map((name) => ({ id: null, name }))
+  ).slice(0, showPeopleCount);
+  const places = (episode.places && episode.places.length > 0
+    ? episode.places
+    : (episode.keyPlaces ?? []).map((name) => ({ id: null, name }))
+  ).slice(0, showPlacesCount);
   const themes = (episode.keyThemes ?? []).slice(0, showThemesCount);
   const topics = (episode.keyTopics ?? []).slice(0, showTopicsCount);
   const yearFrom = formatYear(episode.yearFrom ?? null);
@@ -71,13 +77,21 @@ export function EpisodeCard({
 
       <div className={styles.chipRow}>
         {people.map((person) => (
-          <PillLink key={person} href={`/people/${encodeURIComponent(person)}`} variant="people">
-            {person}
+          <PillLink
+            key={person.id ?? person.name}
+            href={`/people/${encodeURIComponent(person.id ?? person.name)}`}
+            variant="people"
+          >
+            {person.name}
           </PillLink>
         ))}
         {places.map((place) => (
-          <PillLink key={place} href={`/places/${encodeURIComponent(place)}`} variant="places">
-            {place}
+          <PillLink
+            key={place.id ?? place.name}
+            href={`/places/${encodeURIComponent(place.id ?? place.name)}`}
+            variant="places"
+          >
+            {place.name}
           </PillLink>
         ))}
         {topics.map((topic) => (

@@ -16,18 +16,24 @@
 - **Reference:** Product requirements live in `docs/PRD-Pipeline.md`.
 
 ## Current Focus
-- Frontend timeline polish: BCE-aware ranges, collapsible long gaps, and updated UI PRD alignment.
+- Structured entity rollout for people/places/topics, validating LLM outputs against the canonical registries and backfilling early/mid/late episode batches.
 
 ## Next Steps
-- ~~Hook the slug registry builder into the pipeline/publish flow so artefacts + slugs refresh together.~~ Done — composer now emits slugs and the publish workflow refreshes the registry automatically.
-- ~~Refresh timeline + detail pages with slug-aware links and detail components.~~ Done — series/episode pages live with shared UI + indexes; timeline now links straight to detail views.
-- ~~Build the shared people/places indexes + similarity scoring utilities ahead of the detail pages.~~ Done — indexes power the new detail components and related suggestions.
+- Run the next enrichment batch (20-ish episodes spanning mid/late catalogue) using the command below, then merge the new proposals into the registries.
+- Continue curating pending entities: review `data/errors.jsonl` and `data/pending/*.jsonl`, approve into `data/rules/{people,places,topics}.json`, and log outcomes in `data/pending/reviews.jsonl` before re-running the pipeline.
+- Audit existing registry entries for redundant topics (merge canonical choices like `US Politics`, `The Sixties`, `Ancient Mesopotamia`) and map early episodes to the new IDs.
 - Monitor the scheduled GitHub Actions publish + Vercel revalidation webhook once deployed to ensure artefacts update as expected.
-- Land the curated topic registry plumbing (`data/rules/topics.json`, prompt updates, composer changes) so `keyTopics` chips show up across the UI without drift.
-- Review LLM-proposed topic additions in `data/errors.jsonl`, curate updates to `data/rules/topics.json`, and wire topic search routes once the taxonomy settles.
+
+## Canon backfill command
+```bash
+source .env.local && npm run dev:pipeline -- \
+  --force-llm 24104338-377e-42eb-afb7-e3184d74af40,d7b04e6f-4dc6-4b27-aa9e-aa69b44d2cf9,8583b546-9a5d-4d2c-82bb-5251b5cd1808,19f9fd6c-418e-4d54-935d-ae0fe7e797b6,9c12bcb9-a366-4c17-8511-64833851e0da,153dbff0-3c58-11ee-89ae-230c87feb0f3,2442a58a-3fa8-11ee-a70d-6febee05c4ec,4980a77c-41d6-11ee-8fb0-377b7b3a169c,f7b61202-44f9-11ee-8586-dfc5fd9824e6,21b45546-4752-11ee-a897-2fa9790f950b,cc32cad8-8f05-11ef-a38b-c7f6c9e51049,5d9e8f2e-9259-11ef-9679-7fcfc5b2fd32,b79d4556-99ed-11ef-a256-b3fbb21524d9,f9b83be0-9c9e-11ef-b06b-c7950e9b6f7d,def484dc-b097-11ef-bb19-134ff0ea1942,04252de4-93e4-11f0-bd6e-d388f3afe963,9bf1c766-9544-11f0-9a9b-2fcec944c46f,e761611a-995f-11f0-8039-7bf33cc9f49d,8940fee2-9ae5-11f0-b94d-5f85be665521,0a127432-9eb1-11f0-84b4-eff338ad799f \
+  --max-llm-calls 25
+```
+_After the run_: review `data/errors.jsonl`, curate registries, append a review record to `data/pending/reviews.jsonl`, then recompose with `OPENAI_API_KEY=dummy npm run dev:pipeline -- --max-llm-calls 0` so artefacts pick up the canonical refs.
 
 ## Recent Changes
-- **2025-11-04:** Added curated topic registry + prompt v2, re-ran `--force-llm episodes` to backfill `keyTopics`, surfaced topic chips on episode detail/summary cards, and logged pending topic proposals for follow-up curation.
+- **2025-11-04:** Introduced canonical people/places/topic registries end-to-end (prompt v3, composer/validator/schema updates), enriched a 20-episode pilot batch (`2, 4–7, 360–364, 505, 507, 510, 511, 519, 601–605`), accepted 24 new people + 13 places, added topics (`thatcher-era`, `the-sixties`, `ancient-mesopotamia`, `mughal-empire`, `us-politics`), and logged decisions in `data/pending/reviews.jsonl`; artefacts (`public/episodes.json`) now ship structured entity refs alongside legacy arrays.
 - **2025-11-03:** Timeline re-centered with linked episode/series cards, responsive mobile layout, and slug-aware data mappers feeding the new detail pages.
 - **2025-11-02:** Added deterministic slug registry tooling (helpers, build script, tests) and refreshed PRDs/detail-view docs with V7 slug rules + layout notes.
 - **2025-11-01:** Timeline now keeps BCE spans intact, collapses large gaps with spine-mounted markers, and scales spacing at 1.5px/year; PRDs updated accordingly.

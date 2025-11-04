@@ -67,6 +67,7 @@ source .env.local && npm run dev:pipeline
 
 - `npm run dev:pipeline -- --plan` exercises every stage without writing to disk; handy for CI and smoke checks.
 - Additional flags: `--since <YYYY-MM-DD>` (limit RSS ingestion), `--force-llm episodes|series|all` (invalidate caches), `--max-llm-calls <N>` (guard token spend).
+- After any `--force-llm` run, review `data/errors.jsonl` and the `data/pending/` JSONL files to approve new people/places/topics into the registries (`data/rules/*.json`) and log decisions in `data/pending/reviews.jsonl` before recomposing artefacts.
 - `npm run schema:check` runs AJV against `schema/*.json` to guarantee artefact compatibility.
 - `npm run migrate:caches` upgrades legacy LLM cache formats when needed.
 

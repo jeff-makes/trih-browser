@@ -44,7 +44,10 @@ const buildIndex = (): PeopleIndex => {
   const working = new Map<string, ReturnType<typeof createEntry>>();
 
   episodes.forEach((episode: PublicEpisode) => {
-    const uniquePeople = Array.from(new Set((episode.keyPeople ?? []).map(normaliseName))).filter(Boolean);
+    const refs = episode.people && episode.people.length > 0
+      ? episode.people.map((person) => person.name)
+      : episode.keyPeople ?? [];
+    const uniquePeople = Array.from(new Set(refs.map(normaliseName))).filter(Boolean);
     uniquePeople.forEach((person) => {
       if (!working.has(person)) {
         working.set(person, createEntry(person));

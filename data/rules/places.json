@@ -1,0 +1,317 @@
+[
+  {
+    "id": "united-kingdom",
+    "preferredName": "United Kingdom",
+    "aliases": ["Britain", "Great Britain", "UK", "U.K.", "United Kingdom of Great Britain and Northern Ireland"],
+    "type": "nation"
+  },
+  {
+    "id": "england",
+    "preferredName": "England",
+    "aliases": ["Kingdom of England"],
+    "type": "constituent-country"
+  },
+  {
+    "id": "scotland",
+    "preferredName": "Scotland",
+    "aliases": ["Kingdom of Scotland"],
+    "type": "constituent-country"
+  },
+  {
+    "id": "wales",
+    "preferredName": "Wales",
+    "aliases": ["Principality of Wales"],
+    "type": "constituent-country"
+  },
+  {
+    "id": "france",
+    "preferredName": "France",
+    "aliases": ["French Republic"],
+    "type": "nation"
+  },
+  {
+    "id": "rome",
+    "preferredName": "Rome",
+    "aliases": ["Roma"],
+    "type": "city"
+  },
+  {
+    "id": "italy",
+    "preferredName": "Italy",
+    "aliases": ["Italian Republic"],
+    "type": "nation"
+  },
+  {
+    "id": "united-states",
+    "preferredName": "United States",
+    "aliases": ["USA", "US", "U.S.", "United States of America", "America", "the States"],
+    "type": "nation"
+  },
+  {
+    "id": "london",
+    "preferredName": "London",
+    "aliases": ["City of London", "Victorian London", "Edwardian London"],
+    "type": "city"
+  },
+  {
+    "id": "germany",
+    "preferredName": "Germany",
+    "aliases": ["Federal Republic of Germany", "German Reich"],
+    "type": "nation"
+  },
+  {
+    "id": "europe",
+    "preferredName": "Europe",
+    "aliases": [],
+    "type": "region:continent"
+  },
+  {
+    "id": "ireland",
+    "preferredName": "Ireland",
+    "aliases": ["Republic of Ireland"],
+    "type": "nation"
+  },
+  {
+    "id": "spain",
+    "preferredName": "Spain",
+    "aliases": ["Kingdom of Spain"],
+    "type": "nation"
+  },
+  {
+    "id": "portugal",
+    "preferredName": "Portugal",
+    "aliases": ["Portuguese Republic"],
+    "type": "nation"
+  },
+  {
+    "id": "russia",
+    "preferredName": "Russia",
+    "aliases": ["Russian Federation"],
+    "type": "nation"
+  },
+  {
+    "id": "soviet-union",
+    "preferredName": "Soviet Union",
+    "aliases": ["USSR", "Union of Soviet Socialist Republics"],
+    "type": "extinct-polity"
+  },
+  {
+    "id": "china",
+    "preferredName": "China",
+    "aliases": ["People's Republic of China"],
+    "type": "nation"
+  },
+  {
+    "id": "ancient-rome",
+    "preferredName": "Ancient Rome",
+    "aliases": ["Roman Empire", "Roman Republic"],
+    "type": "extinct-polity"
+  },
+  {
+    "id": "ancient-greece",
+    "preferredName": "Ancient Greece",
+    "aliases": ["Classical Greece", "Hellenic World"],
+    "type": "extinct-polity"
+  },
+  {
+    "id": "egypt",
+    "preferredName": "Egypt",
+    "aliases": ["Arab Republic of Egypt"],
+    "type": "nation"
+  },
+  {
+    "id": "scandinavia",
+    "preferredName": "Scandinavia",
+    "aliases": [],
+    "type": "region"
+  },
+  {
+    "id": "australia",
+    "preferredName": "Australia",
+    "aliases": ["Commonwealth of Australia"],
+    "type": "nation"
+  },
+  {
+    "id": "argentina",
+    "preferredName": "Argentina",
+    "aliases": ["Argentine Republic"],
+    "type": "nation"
+  },
+  {
+    "id": "serbia",
+    "preferredName": "Serbia",
+    "aliases": ["Republic of Serbia"],
+    "type": "nation"
+  },
+  {
+    "id": "washington-dc",
+    "preferredName": "Washington, D.C.",
+    "aliases": ["Washington DC", "District of Columbia"],
+    "type": "city"
+  },
+  {
+    "id": "watergate-complex",
+    "preferredName": "Watergate Complex",
+    "aliases": ["Watergate complex", "Watergate complex (Washington, D.C.)"],
+    "type": "site"
+  },
+  {
+    "id": "istanbul",
+    "preferredName": "Istanbul",
+    "aliases": ["Constantinople", "Byzantium"],
+    "type": "city",
+    "notes": "Display label should reflect historical context (e.g., \"Constantinople\" for pre-1930 episodes)."
+  },
+  {
+    "id": "belgium",
+    "preferredName": "Belgium",
+    "aliases": ["Kingdom of Belgium"],
+    "type": "nation"
+  },
+  {
+    "id": "india",
+    "preferredName": "India",
+    "aliases": ["Republic of India"],
+    "type": "nation"
+  },
+  {
+    "id": "tenochtitlan",
+    "preferredName": "Tenochtitlan",
+    "aliases": ["Mexico-Tenochtitlan"],
+    "type": "extinct-city"
+  },
+  {
+    "id": "greece",
+    "preferredName": "Greece",
+    "aliases": ["Hellenic Republic"],
+    "type": "nation"
+  },
+  {
+    "id": "austria",
+    "preferredName": "Austria",
+    "aliases": ["Republic of Austria"],
+    "type": "nation"
+  },
+  {
+    "id": "paris",
+    "preferredName": "Paris",
+    "aliases": ["Paris, France"],
+    "type": "city",
+    "notes": "Use 'Paris, France' only for disambiguation (e.g., if another Paris is referenced)."
+  },
+  {
+    "id": "the-midlands",
+    "preferredName": "The Midlands",
+    "aliases": ["Midlands"],
+    "type": "region"
+  },
+  {
+    "id": "covent-garden",
+    "preferredName": "Covent Garden",
+    "aliases": ["Covent Garden, London", "Covent Garden, London, England"],
+    "type": "district"
+  },
+  {
+    "id": "dunkirk",
+    "preferredName": "Dunkirk",
+    "aliases": ["Dunkerque"],
+    "type": "city"
+  },
+  {
+    "id": "tehran",
+    "preferredName": "Tehran",
+    "aliases": ["Teheran"],
+    "type": "city"
+  },
+  {
+    "id": "library-of-alexandria",
+    "preferredName": "Library of Alexandria",
+    "aliases": [],
+    "type": "extinct-site"
+  },
+  {
+    "id": "wessex",
+    "preferredName": "Wessex",
+    "aliases": ["Kingdom of Wessex"],
+    "type": "extinct-polity"
+  },
+  {
+    "id": "yugoslavia",
+    "preferredName": "Yugoslavia",
+    "aliases": ["Socialist Federal Republic of Yugoslavia", "SFR Yugoslavia"],
+    "type": "extinct-polity"
+  },
+  {
+    "id": "troy",
+    "preferredName": "Troy",
+    "aliases": ["Ilion"],
+    "type": "extinct-site"
+  },
+  {
+    "id": "new-york-city",
+    "preferredName": "New York City",
+    "aliases": ["NYC", "New York, NY"],
+    "type": "city"
+  },
+  {
+    "id": "taj-mahal",
+    "preferredName": "Taj Mahal",
+    "aliases": ["Mumtaz Mahal Mausoleum"],
+    "type": "site",
+    "notes": "Use for the mausoleum complex in Agra, India."
+  },
+  {
+    "id": "marseille",
+    "preferredName": "Marseille",
+    "aliases": ["Marseilles"],
+    "type": "city"
+  },
+  {
+    "id": "tuileries-palace",
+    "preferredName": "Tuileries Palace",
+    "aliases": ["Palais des Tuileries"],
+    "type": "site"
+  },
+  {
+    "id": "california",
+    "preferredName": "California",
+    "aliases": ["State of California", "CA"],
+    "type": "state"
+  },
+  {
+    "id": "ambassador-hotel",
+    "preferredName": "Ambassador Hotel",
+    "aliases": ["Ambassador Hotel (Los Angeles)"],
+    "type": "venue"
+  },
+  {
+    "id": "alabama",
+    "preferredName": "Alabama",
+    "aliases": ["State of Alabama", "AL"],
+    "type": "state"
+  },
+  {
+    "id": "uruk",
+    "preferredName": "Uruk",
+    "aliases": ["Erech"],
+    "type": "extinct-city"
+  },
+  {
+    "id": "southern-mesopotamia",
+    "preferredName": "Southern Mesopotamia",
+    "aliases": ["Lower Mesopotamia"],
+    "type": "region"
+  },
+  {
+    "id": "thebes",
+    "preferredName": "Thebes",
+    "aliases": ["Thebes, Greece"],
+    "type": "city"
+  },
+  {
+    "id": "athens",
+    "preferredName": "Athens",
+    "aliases": ["Athína"],
+    "type": "city"
+  }
+]

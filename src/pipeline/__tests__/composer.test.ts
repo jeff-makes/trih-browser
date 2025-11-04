@@ -136,25 +136,27 @@ const createSampleData = () => {
       episodeId: "ep-1",
       fingerprint: fingerprintOne,
       model: "gpt-5-nano",
-      promptVersion: "episode.enrichment.v1",
+      promptVersion: "episode.enrichment.v3",
       createdAt: "2024-01-05T00:00:00.000Z",
       status: "ok",
       notes: null,
       keyPeople: ["Horatio Nelson"],
-      keyPlaces: ["Britain"],
+      keyPlaces: ["United Kingdom"],
       keyThemes: ["napoleonic-wars", "naval-warfare", "britannia"],
       keyTopics: [
         { id: "napoleonic-wars", label: "Napoleonic Wars", slug: "napoleonic-wars" }
       ],
       yearFrom: 1803,
       yearTo: 1805,
-      yearConfidence: "high"
+      yearConfidence: "high",
+      people: [{ id: "horatio-nelson", name: "Horatio Nelson", type: "person:historical" }],
+      places: [{ id: "united-kingdom", name: "United Kingdom", type: "nation" }]
     },
     ["ep-2:" + fingerprintTwo]: {
       episodeId: "ep-2",
       fingerprint: fingerprintTwo,
       model: "gpt-5-nano",
-      promptVersion: "episode.enrichment.v1",
+      promptVersion: "episode.enrichment.v3",
       createdAt: "2024-01-05T00:00:00.000Z",
       status: "skipped",
       notes: "Fingerprint unchanged",
@@ -164,7 +166,9 @@ const createSampleData = () => {
       keyTopics: [],
       yearFrom: null,
       yearTo: null,
-      yearConfidence: "unknown"
+      yearConfidence: "unknown",
+      people: [],
+      places: []
     }
   };
 
@@ -219,7 +223,17 @@ describe("runComposeStep", () => {
     expect(publicEpisodes).toHaveLength(2);
     expect(publicEpisodes[0].episodeId).toBe("ep-1");
     expect(publicEpisodes[0].keyPeople).toEqual(["Horatio Nelson"]);
+    expect(publicEpisodes[0].people).toEqual([
+      expect.objectContaining({ id: "horatio-nelson", name: "Horatio Nelson" })
+    ]);
+    expect(publicEpisodes[0].keyPlaces).toEqual(["United Kingdom"]);
+    expect(publicEpisodes[0].places).toEqual([
+      expect.objectContaining({ id: "united-kingdom", name: "United Kingdom" })
+    ]);
     expect(publicEpisodes[1].keyPeople).toEqual([]);
+    expect(publicEpisodes[1].people).toEqual([]);
+    expect(publicEpisodes[1].keyPlaces).toEqual([]);
+    expect(publicEpisodes[1].places).toEqual([]);
     expect(publicEpisodes[0].keyTopics).toEqual([
       expect.objectContaining({ id: "napoleonic-wars", label: "Napoleonic Wars", slug: "napoleonic-wars" })
     ]);

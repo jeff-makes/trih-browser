@@ -84,6 +84,9 @@ export const runComposeStep = ({
         llm?.yearTo ?? episode.yearTo ?? null
       );
 
+      const people = llm?.people ? llm.people.map((person) => ({ ...person })) : [];
+      const places = llm?.places ? llm.places.map((place) => ({ ...place })) : [];
+
       return {
         id: episode.episodeId,
         episodeId: episode.episodeId,
@@ -106,10 +109,12 @@ export const runComposeStep = ({
         seriesKey: episode.seriesKey ?? null,
         seriesKeyRaw: episode.seriesKeyRaw ?? null,
         seriesGroupingConfidence: episode.seriesGroupingConfidence,
-        keyPeople: llm?.keyPeople ? [...llm.keyPeople] : [],
-        keyPlaces: llm?.keyPlaces ? [...llm.keyPlaces] : [],
+        keyPeople: people.length > 0 ? people.map((person) => person.name) : llm?.keyPeople ? [...llm.keyPeople] : [],
+        keyPlaces: places.length > 0 ? places.map((place) => place.name) : llm?.keyPlaces ? [...llm.keyPlaces] : [],
         keyThemes: llm?.keyThemes ? [...llm.keyThemes] : [],
         keyTopics: llm?.keyTopics ? llm.keyTopics.map((topic) => ({ ...topic })) : [],
+        people,
+        places,
         yearFrom: episodeYearFrom,
         yearTo: episodeYearTo,
         yearConfidence: llm?.yearConfidence ?? episode.yearConfidence ?? "unknown"

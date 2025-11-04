@@ -14,6 +14,27 @@
       },
       "required": ["id", "label", "slug"],
       "additionalProperties": false
+    },
+    "personRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": ["string", "null"], "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": { "type": ["string", "null"] }
+      },
+      "required": ["name"],
+      "additionalProperties": false
+    },
+    "placeRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": ["string", "null"], "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      },
+      "required": ["name"],
+      "additionalProperties": false
     }
   },
   "type": "object",
@@ -107,6 +128,18 @@
       "items": { "$ref": "#/definitions/topicRef" },
       "minItems": 0,
       "maxItems": 3,
+      "uniqueItems": true
+    },
+    "people": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/personRef" },
+      "maxItems": 12,
+      "uniqueItems": true
+    },
+    "places": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/placeRef" },
+      "maxItems": 12,
       "uniqueItems": true
     },
     "yearFrom": { "type": ["integer", "null"], "minimum": -9999, "maximum": 9999 },
