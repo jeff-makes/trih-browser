@@ -9,6 +9,12 @@
 - Skim the PRDs — `docs/PRD-Pipeline.md` and `docs/PRD-UI.md` — so work stays aligned with current requirements; dive deeper into whichever matches the day’s focus.
 - When running the pipeline locally, load secrets first: `source .env.local && npm run dev:pipeline` so `OPENAI_API_KEY` and related env vars are available.
 
+### Avoiding CI Artefact Conflicts
+- Begin every working block with `git fetch origin && git rebase origin/main` so the local pipeline builds on the latest GitHub Actions artefacts and RSS snapshots.
+- After curating a batch and regenerating JSON, commit and push immediately; CI rewrites the same files nightly, so delaying pushes guarantees rebases.
+- When possible, separate code/schema updates from artefact/registry commits—if CI lands in between, you can rebase the code-only commit and re-run the pipeline for fresh outputs instead of hand-merging huge JSON blobs.
+- If a rebase does pull newer artefacts, just rerun the pipeline (deterministic output) before pushing to avoid churn in `public/*.json` and `data/*programmatic.json`.
+
 ## Project Overview
 - **Repository:** trih-browser
 - **Purpose:** Next.js + TypeScript project for The Rest Is History podcast data pipeline. Ingests RSS feed, performs deterministic enrichments (programmatic + LLM), and publishes JSON artefacts validated against schemas. Supports local runs and scheduled GitHub Actions publishes (Vercel serves static JSON).
