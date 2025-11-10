@@ -40,7 +40,7 @@
     "preferredName": "Ancient Greece",
     "label": "Ancient Greece",
     "slug": "ancient-greece",
-    "aliases": ["Classical Greece", "Hellenic World"],
+    "aliases": ["Greek Civilization"],
     "type": "civilization",
     "description": "Greek city-states and culture from the Archaic period through Hellenistic times."
   },
@@ -49,7 +49,7 @@
     "preferredName": "Ancient Rome",
     "label": "Ancient Rome",
     "slug": "ancient-rome",
-    "aliases": ["Roman Empire", "Roman Republic"],
+    "aliases": ["Roman Civilization"],
     "type": "civilization",
     "description": "People, politics, and wars tied to Rome from monarchy through empire."
   },
@@ -103,7 +103,7 @@
     "preferredName": "Disney",
     "label": "Disney",
     "slug": "disney",
-    "aliases": ["Walt Disney Company", "Walt Disney"],
+    "aliases": ["Walt Disney Company"],
     "type": "organization",
     "description": "Entertainment company and brand spanning film, television, and theme parks."
   },
@@ -136,10 +136,10 @@
   },
   {
     "id": "mary-queen-of-scots",
-    "preferredName": "Mary, Queen of Scots",
-    "label": "Mary, Queen of Scots",
+    "preferredName": "Reign of Mary, Queen of Scots",
+    "label": "Reign of Mary, Queen of Scots",
     "slug": "mary-queen-of-scots",
-    "aliases": ["Mary Stuart"],
+    "aliases": ["Mary Queen of Scots' Reign"],
     "type": "biography",
     "description": "Episodes focused on the life and legacy of Mary Stuart."
   },
@@ -166,7 +166,7 @@
     "preferredName": "Napoleonic Wars",
     "label": "Napoleonic Wars",
     "slug": "napoleonic-wars",
-    "aliases": ["Napoleon", "Napoleonic Era"],
+    "aliases": ["Napoleonic Era"],
     "type": "conflict",
     "description": "Campaigns and politics tied to Napoleon Bonaparte."
   },
@@ -211,7 +211,7 @@
     "preferredName": "Theme Parks & Disney",
     "label": "Theme Parks & Disney",
     "slug": "theme-parks-and-disney",
-    "aliases": ["Walt Disney", "Disney Parks"],
+    "aliases": ["Disney Parks"],
     "type": "deprecated",
     "description": "Deprecated fused topic retained for backward compatibility. Use `theme-parks` and `disney`.",
     "notes": "Existing data should migrate to separate Theme Parks and Disney topics."

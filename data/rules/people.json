@@ -18,6 +18,12 @@
     "type": "person:historical"
   },
   {
+    "id": "anne-boleyn",
+    "preferredName": "Anne Boleyn",
+    "aliases": ["Queen Anne Boleyn", "Anne Bullen"],
+    "type": "person:historical"
+  },
+  {
     "id": "archduke-franz-ferdinand",
     "preferredName": "Archduke Franz Ferdinand",
     "aliases": ["Franz Ferdinand"],
@@ -33,6 +39,12 @@
     "id": "caligula",
     "preferredName": "Caligula",
     "aliases": ["Emperor Caligula", "Gaius Julius Caesar Augustus Germanicus"],
+    "type": "person:historical"
+  },
+  {
+    "id": "catherine-of-aragon",
+    "preferredName": "Catherine of Aragon",
+    "aliases": ["Queen Catherine of Aragon", "Catalina de Aragón"],
     "type": "person:historical"
   },
   {
@@ -100,6 +112,12 @@
     "preferredName": "Boris Johnson",
     "aliases": ["Alexander Boris de Pfeffel Johnson"],
     "type": "person:historical"
+  },
+  {
+    "id": "bob-iger",
+    "preferredName": "Bob Iger",
+    "aliases": ["Robert Iger"],
+    "type": "person:contemporary"
   },
   {
     "id": "charles-dickens",

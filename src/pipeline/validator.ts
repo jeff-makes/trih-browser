@@ -13,7 +13,7 @@ import {
   PublicSeries,
   RawEpisode
 } from "@/types";
-import { TOPIC_BY_ID } from "@/config/topics";
+import { TOPIC_BY_ID, findTopic } from "@/config/topics";
 import { findPerson } from "@/config/people";
 import { findPlace } from "@/config/places";
 
@@ -89,6 +89,32 @@ const detectEntityCollision = (value?: string): string | null => {
   return null;
 };
 
+const detectTopicCollision = (value?: string) => {
+  if (!value) {
+    return null;
+  }
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return null;
+  }
+  return findTopic(trimmed) ?? null;
+};
+
+const ensureNoTopicCollision = (names: string[], context: string, entityLabel: "Person" | "Place") => {
+  names.forEach((name) => {
+    const candidate = name?.trim();
+    if (!candidate) {
+      return;
+    }
+    const collision = detectTopicCollision(candidate);
+    if (collision) {
+      throw new Error(
+        `${entityLabel} name "${candidate}" in ${context} conflicts with existing topic "${collision.label}"`
+      );
+    }
+  });
+};
+
 const validateTopicRefs = (topics: EpisodeTopic[], context: string) => {
   topics.forEach((topic) => {
     if (topic.isPending) {
@@ -162,6 +188,8 @@ const validatePersonRefs = (people: EpisodePersonRef[] | undefined, context: str
       );
     }
 
+    ensureNoTopicCollision([definition.preferredName, ...(definition.aliases ?? [])], context, "Person");
+
     canonicalNames.push(definition.preferredName);
   });
 
@@ -195,6 +223,8 @@ const validatePlaceRefs = (places: EpisodePlaceRef[] | undefined, context: strin
         `Place id mismatch for ${place.name} in ${context}: expected ${definition.id}, received ${place.id}`
       );
     }
+
+    ensureNoTopicCollision([definition.preferredName, ...(definition.aliases ?? [])], context, "Place");
 
     canonicalNames.push(definition.preferredName);
   });

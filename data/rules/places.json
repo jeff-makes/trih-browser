@@ -103,15 +103,17 @@
   },
   {
     "id": "ancient-rome",
-    "preferredName": "Ancient Rome",
-    "aliases": ["Roman Empire", "Roman Republic"],
-    "type": "extinct-polity"
+    "preferredName": "Roman Empire",
+    "aliases": ["Imperial Rome", "Roman Republic"],
+    "type": "extinct-polity",
+    "notes": "Canonical polity entry; use `rome` for the city."
   },
   {
     "id": "ancient-greece",
-    "preferredName": "Ancient Greece",
+    "preferredName": "Classical Greek World",
     "aliases": ["Classical Greece", "Hellenic World"],
-    "type": "extinct-polity"
+    "type": "extinct-polity",
+    "notes": "Canonical polity entry; use topic `ancient-greece` for cultural coverage."
   },
   {
     "id": "egypt",
