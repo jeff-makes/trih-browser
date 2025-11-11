@@ -1,81 +1,17 @@
 [
   {
-    "id": "adolf-hitler",
-    "preferredName": "Adolf Hitler",
-    "aliases": ["Hitler", "Der Führer", "Der Fuhrer"],
-    "type": "person:historical"
-  },
-  {
-    "id": "alfred-the-great",
-    "preferredName": "Alfred the Great",
-    "aliases": ["King Alfred the Great"],
-    "type": "person:historical"
-  },
-  {
-    "id": "alexander-the-great",
-    "preferredName": "Alexander the Great",
-    "aliases": ["Alexander III of Macedon"],
-    "type": "person:historical"
-  },
-  {
-    "id": "anne-boleyn",
-    "preferredName": "Anne Boleyn",
-    "aliases": ["Queen Anne Boleyn", "Anne Bullen"],
-    "type": "person:historical"
-  },
-  {
-    "id": "archduke-franz-ferdinand",
-    "preferredName": "Archduke Franz Ferdinand",
-    "aliases": ["Franz Ferdinand"],
-    "type": "person:historical"
-  },
-  {
-    "id": "augustus",
-    "preferredName": "Augustus",
-    "aliases": ["Gaius Octavius", "Octavian", "Octavianus"],
-    "type": "person:historical"
-  },
-  {
-    "id": "caligula",
-    "preferredName": "Caligula",
-    "aliases": ["Emperor Caligula", "Gaius Julius Caesar Augustus Germanicus"],
-    "type": "person:historical"
-  },
-  {
-    "id": "catherine-of-aragon",
-    "preferredName": "Catherine of Aragon",
-    "aliases": ["Queen Catherine of Aragon", "Catalina de Aragón"],
-    "type": "person:historical"
-  },
-  {
-    "id": "claudius",
-    "preferredName": "Claudius",
-    "aliases": ["Emperor Claudius", "Tiberius Claudius Caesar Augustus Germanicus"],
-    "type": "person:historical"
-  },
-  {
-    "id": "charlemagne",
-    "preferredName": "Charlemagne",
-    "aliases": ["Charles the Great", "Carolus Magnus"],
-    "type": "person:historical"
-  },
-  {
-    "id": "michael-collins",
-    "preferredName": "Michael Collins",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "cleopatra",
-    "preferredName": "Cleopatra",
-    "aliases": ["Cleopatra VII Philopator"],
-    "type": "person:historical"
-  },
-  {
     "id": "abraham-lincoln",
     "preferredName": "Abraham Lincoln",
-    "aliases": ["President Abraham Lincoln"],
+    "aliases": [
+      "President Abraham Lincoln"
+    ],
     "type": "person:historical"
+  },
+  {
+    "id": "achilles",
+    "preferredName": "Achilles",
+    "aliases": [],
+    "type": "person:legendary"
   },
   {
     "id": "adam-smith",
@@ -84,165 +20,37 @@
     "type": "person:historical"
   },
   {
-    "id": "kaiser-wilhelm-ii",
-    "preferredName": "Kaiser Wilhelm II",
-    "aliases": ["Wilhelm II", "Emperor Wilhelm II"],
+    "id": "adolf-hitler",
+    "preferredName": "Adolf Hitler",
+    "aliases": [
+      "Hitler",
+      "Der F\u00fchrer",
+      "Der Fuhrer"
+    ],
     "type": "person:historical"
   },
   {
-    "id": "eva-peron",
-    "preferredName": "Eva Perón",
-    "aliases": ["Evita Perón", "María Eva Duarte de Perón", "Evita Peron", "Maria Eva Duarte de Peron", "Eva Peron"],
+    "id": "alexander-the-great",
+    "preferredName": "Alexander the Great",
+    "aliases": [
+      "Alexander III of Macedon"
+    ],
     "type": "person:historical"
   },
   {
-    "id": "harald-hardrada",
-    "preferredName": "Harald Hardrada",
-    "aliases": ["Harald III of Norway"],
+    "id": "alfred-the-great",
+    "preferredName": "Alfred the Great",
+    "aliases": [
+      "King Alfred the Great"
+    ],
     "type": "person:historical"
   },
   {
-    "id": "oliver-cromwell",
-    "preferredName": "Oliver Cromwell",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "boris-johnson",
-    "preferredName": "Boris Johnson",
-    "aliases": ["Alexander Boris de Pfeffel Johnson"],
-    "type": "person:historical"
-  },
-  {
-    "id": "bob-iger",
-    "preferredName": "Bob Iger",
-    "aliases": ["Robert Iger"],
-    "type": "person:contemporary"
-  },
-  {
-    "id": "charles-dickens",
-    "preferredName": "Charles Dickens",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "mao-zedong",
-    "preferredName": "Mao Zedong",
-    "aliases": ["Chairman Mao"],
-    "type": "person:historical"
-  },
-  {
-    "id": "tony-blair",
-    "preferredName": "Tony Blair",
-    "aliases": ["Anthony Blair"],
-    "type": "person:historical"
-  },
-  {
-    "id": "neville-chamberlain",
-    "preferredName": "Neville Chamberlain",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "george-v",
-    "preferredName": "George V",
-    "aliases": ["King George V"],
-    "type": "person:historical"
-  },
-  {
-    "id": "henry-v",
-    "preferredName": "Henry V",
-    "aliases": ["King Henry V"],
-    "type": "person:historical"
-  },
-  {
-    "id": "charles-darwin",
-    "preferredName": "Charles Darwin",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "jrr-tolkien",
-    "preferredName": "J.R.R. Tolkien",
-    "aliases": ["John Ronald Reuel Tolkien"],
-    "type": "person:historical"
-  },
-  {
-    "id": "charles-i",
-    "preferredName": "Charles I",
-    "aliases": ["King Charles I"],
-    "type": "person:historical"
-  },
-  {
-    "id": "ronald-reagan",
-    "preferredName": "Ronald Reagan",
-    "aliases": ["President Ronald Reagan"],
-    "type": "person:historical"
-  },
-  {
-    "id": "christopher-columbus",
-    "preferredName": "Christopher Columbus",
-    "aliases": ["Cristoforo Colombo"],
-    "type": "person:historical"
-  },
-  {
-    "id": "george-washington",
-    "preferredName": "George Washington",
-    "aliases": ["President George Washington"],
-    "type": "person:historical"
-  },
-  {
-    "id": "paul-rouse",
-    "preferredName": "Paul Rouse",
-    "aliases": [],
-    "type": "person:guest"
-  },
-  {
-    "id": "harold-wilson",
-    "preferredName": "Harold Wilson",
-    "aliases": ["James Harold Wilson"],
-    "type": "person:historical"
-  },
-  {
-    "id": "tiberius",
-    "preferredName": "Tiberius",
-    "aliases": ["Emperor Tiberius", "Tiberius Julius Caesar"],
-    "type": "person:historical"
-  },
-  {
-    "id": "wolfgang-amadeus-mozart",
-    "preferredName": "Wolfgang Amadeus Mozart",
-    "aliases": ["Mozart"],
-    "type": "person:historical"
-  },
-  {
-    "id": "gavrilo-princip",
-    "preferredName": "Gavrilo Princip",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "suetonius",
-    "preferredName": "Suetonius",
-    "aliases": ["Gaius Suetonius Tranquillus"],
-    "type": "person:historical"
-  },
-  {
-    "id": "harold-godwinson",
-    "preferredName": "Harold Godwinson",
-    "aliases": ["King Harold II"],
-    "type": "person:historical"
-  },
-  {
-    "id": "emma-hamilton",
-    "preferredName": "Emma Hamilton",
-    "aliases": ["Lady Emma Hamilton"],
-    "type": "person:historical"
-  },
-  {
-    "id": "clement-attlee",
-    "preferredName": "Clement Attlee",
-    "aliases": ["Clem Attlee"],
+    "id": "alfred-wetzler",
+    "preferredName": "Alfr\u00e9d Wetzler",
+    "aliases": [
+      "Alfred Wetzler"
+    ],
     "type": "person:historical"
   },
   {
@@ -252,15 +60,183 @@
     "type": "person:guest"
   },
   {
-    "id": "iain-macgregor",
-    "preferredName": "Iain MacGregor",
-    "aliases": [],
-    "type": "person:guest"
+    "id": "anne-boleyn",
+    "preferredName": "Anne Boleyn",
+    "aliases": [
+      "Queen Anne Boleyn",
+      "Anne Bullen"
+    ],
+    "type": "person:historical"
   },
   {
-    "id": "queen-victoria",
-    "preferredName": "Queen Victoria",
-    "aliases": ["Victoria"],
+    "id": "archduke-franz-ferdinand",
+    "preferredName": "Archduke Franz Ferdinand",
+    "aliases": [
+      "Franz Ferdinand"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "artemis",
+    "preferredName": "Artemis",
+    "aliases": [
+      "Diana (Roman)"
+    ],
+    "type": "person:mythological"
+  },
+  {
+    "id": "augustus",
+    "preferredName": "Augustus",
+    "aliases": [
+      "Gaius Octavius",
+      "Octavian",
+      "Octavianus"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "bart-van-loo",
+    "preferredName": "Bart van Loo",
+    "aliases": [
+      "Bart Van Loo"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "bob-iger",
+    "preferredName": "Bob Iger",
+    "aliases": [
+      "Robert Iger"
+    ],
+    "type": "person:contemporary"
+  },
+  {
+    "id": "boris-johnson",
+    "preferredName": "Boris Johnson",
+    "aliases": [
+      "Alexander Boris de Pfeffel Johnson"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "caligula",
+    "preferredName": "Caligula",
+    "aliases": [
+      "Emperor Caligula",
+      "Gaius Julius Caesar Augustus Germanicus"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "catherine-of-aragon",
+    "preferredName": "Catherine of Aragon",
+    "aliases": [
+      "Queen Catherine of Aragon",
+      "Catalina de Arag\u00f3n"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "charlemagne",
+    "preferredName": "Charlemagne",
+    "aliases": [
+      "Charles the Great",
+      "Carolus Magnus"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "charles-darwin",
+    "preferredName": "Charles Darwin",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "charles-dickens",
+    "preferredName": "Charles Dickens",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "charles-i",
+    "preferredName": "Charles I",
+    "aliases": [
+      "King Charles I"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "christopher-columbus",
+    "preferredName": "Christopher Columbus",
+    "aliases": [
+      "Cristoforo Colombo"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "circe",
+    "preferredName": "Circe",
+    "aliases": [],
+    "type": "person:mythological"
+  },
+  {
+    "id": "claudius",
+    "preferredName": "Claudius",
+    "aliases": [
+      "Emperor Claudius",
+      "Tiberius Claudius Caesar Augustus Germanicus"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "clement-attlee",
+    "preferredName": "Clement Attlee",
+    "aliases": [
+      "Clem Attlee"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "cleopatra",
+    "preferredName": "Cleopatra",
+    "aliases": [
+      "Cleopatra VII Philopator"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "crazy-horse",
+    "preferredName": "Crazy Horse",
+    "aliases": [
+      "Tasunke Witko",
+      "T\u021fa\u0161\u00fa\u014bke Witk\u00f3",
+      "Tashunke Witko",
+      "Thasuke Witko"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "dionysus",
+    "preferredName": "Dionysus",
+    "aliases": [
+      "Bacchus"
+    ],
+    "type": "person:mythological"
+  },
+  {
+    "id": "donald-trump",
+    "preferredName": "Donald Trump",
+    "aliases": [
+      "President Donald Trump"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "edward-iii",
+    "preferredName": "Edward III",
+    "aliases": [
+      "King Edward III"
+    ],
     "type": "person:historical"
   },
   {
@@ -270,9 +246,312 @@
     "type": "person:historical"
   },
   {
-    "id": "richard-iii",
-    "preferredName": "Richard III",
-    "aliases": ["King Richard III"],
+    "id": "elizabeth-i",
+    "preferredName": "Elizabeth I",
+    "aliases": [
+      "Queen Elizabeth I"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "elizabeth-ii",
+    "preferredName": "Elizabeth II",
+    "aliases": [
+      "Queen Elizabeth II"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "emma-hamilton",
+    "preferredName": "Emma Hamilton",
+    "aliases": [
+      "Lady Emma Hamilton"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "eva-peron",
+    "preferredName": "Eva Per\u00f3n",
+    "aliases": [
+      "Evita Per\u00f3n",
+      "Mar\u00eda Eva Duarte de Per\u00f3n",
+      "Evita Peron",
+      "Maria Eva Duarte de Peron",
+      "Eva Peron"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "gavrilo-princip",
+    "preferredName": "Gavrilo Princip",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "george-armstrong-custer",
+    "preferredName": "George Armstrong Custer",
+    "aliases": [
+      "George A. Custer",
+      "General Custer"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "george-orwell",
+    "preferredName": "George Orwell",
+    "aliases": [
+      "Eric Arthur Blair"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "george-v",
+    "preferredName": "George V",
+    "aliases": [
+      "King George V"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "george-wallace",
+    "preferredName": "George Wallace",
+    "aliases": [
+      "George Corley Wallace"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "george-washington",
+    "preferredName": "George Washington",
+    "aliases": [
+      "President George Washington"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "grover-cleveland",
+    "preferredName": "Grover Cleveland",
+    "aliases": [
+      "Stephen Grover Cleveland"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "harald-hardrada",
+    "preferredName": "Harald Hardrada",
+    "aliases": [
+      "Harald III of Norway"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "harold-godwinson",
+    "preferredName": "Harold Godwinson",
+    "aliases": [
+      "King Harold II"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "harold-wilson",
+    "preferredName": "Harold Wilson",
+    "aliases": [
+      "James Harold Wilson"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "helen-of-troy",
+    "preferredName": "Helen of Troy",
+    "aliases": [
+      "Helen"
+    ],
+    "type": "person:legendary"
+  },
+  {
+    "id": "henry-morton-stanley",
+    "preferredName": "Henry Morton Stanley",
+    "aliases": [
+      "Sir Henry Morton Stanley",
+      "Henry Stanley"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "henry-v",
+    "preferredName": "Henry V",
+    "aliases": [
+      "King Henry V"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "henry-viii",
+    "preferredName": "Henry VIII",
+    "aliases": [
+      "King Henry VIII"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "hercules",
+    "preferredName": "Hercules",
+    "aliases": [
+      "Heracles"
+    ],
+    "type": "person:mythological"
+  },
+  {
+    "id": "hernan-cortes",
+    "preferredName": "Hern\u00e1n Cort\u00e9s",
+    "aliases": [
+      "Hernan Cortes",
+      "Hernan Cortez"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "horatio-nelson",
+    "preferredName": "Horatio Nelson",
+    "aliases": [
+      "Lord Nelson",
+      "Vice Admiral Horatio Nelson"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "iain-macgregor",
+    "preferredName": "Iain MacGregor",
+    "aliases": [],
+    "type": "person:guest"
+  },
+  {
+    "id": "jack-the-ripper",
+    "preferredName": "Jack the Ripper",
+    "aliases": [
+      "The Ripper"
+    ],
+    "type": "person:unidentified"
+  },
+  {
+    "id": "jan-van-eyck",
+    "preferredName": "Jan van Eyck",
+    "aliases": [
+      "Jan Van Eyck",
+      "Johannes de Eyck"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "jason",
+    "preferredName": "Jason",
+    "aliases": [
+      "Jason of Iolcos"
+    ],
+    "type": "person:legendary"
+  },
+  {
+    "id": "jean-shrimpton",
+    "preferredName": "Jean Shrimpton",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "jesus",
+    "preferredName": "Jesus",
+    "aliases": [
+      "Jesus Christ",
+      "Jesus of Nazareth"
+    ],
+    "type": "person:religious"
+  },
+  {
+    "id": "jimi-hendrix",
+    "preferredName": "Jimi Hendrix",
+    "aliases": [
+      "James Marshall Hendrix"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "john-f-kennedy",
+    "preferredName": "John F. Kennedy",
+    "aliases": [
+      "JFK",
+      "John Fitzgerald Kennedy"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "jonathan-freedland",
+    "preferredName": "Jonathan Freedland",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "jonathan-swift",
+    "preferredName": "Jonathan Swift",
+    "aliases": [
+      "Dean Swift"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "jrr-tolkien",
+    "preferredName": "J.R.R. Tolkien",
+    "aliases": [
+      "John Ronald Reuel Tolkien"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "juan-peron",
+    "preferredName": "Juan Per\u00f3n",
+    "aliases": [
+      "Juan Peron"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "julius-caesar",
+    "preferredName": "Julius Caesar",
+    "aliases": [
+      "Gaius Julius Caesar"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "justinian-i",
+    "preferredName": "Justinian I",
+    "aliases": [
+      "Emperor Justinian",
+      "Justinian the Great"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "kaiser-wilhelm-ii",
+    "preferredName": "Kaiser Wilhelm II",
+    "aliases": [
+      "Wilhelm II",
+      "Emperor Wilhelm II"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "king-arthur",
+    "preferredName": "King Arthur",
+    "aliases": [
+      "Arthur Pendragon"
+    ],
+    "type": "person:legendary"
+  },
+  {
+    "id": "kurt-schuschnigg",
+    "preferredName": "Kurt Schuschnigg",
+    "aliases": [
+      "Chancellor Kurt Schuschnigg"
+    ],
     "type": "person:historical"
   },
   {
@@ -282,45 +561,12 @@
     "type": "person:guest"
   },
   {
-    "id": "stanley-baldwin",
-    "preferredName": "Stanley Baldwin",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "theodora",
-    "preferredName": "Theodora",
-    "aliases": ["Empress Theodora"],
-    "type": "person:historical"
-  },
-  {
-    "id": "justinian-i",
-    "preferredName": "Justinian I",
-    "aliases": ["Emperor Justinian", "Justinian the Great"],
-    "type": "person:historical"
-  },
-  {
-    "id": "martin-luther-king-jr",
-    "preferredName": "Martin Luther King Jr.",
-    "aliases": ["Dr. Martin Luther King Jr."],
-    "type": "person:historical"
-  },
-  {
-    "id": "oswald-mosley",
-    "preferredName": "Oswald Mosley",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "montezuma",
-    "preferredName": "Montezuma",
-    "aliases": ["Moctezuma I"],
-    "type": "person:historical"
-  },
-  {
-    "id": "montezuma-ii",
-    "preferredName": "Montezuma II",
-    "aliases": ["Moctezuma II"],
+    "id": "lady-diana",
+    "preferredName": "Lady Diana",
+    "aliases": [
+      "Princess Diana",
+      "Diana Spencer"
+    ],
     "type": "person:historical"
   },
   {
@@ -330,273 +576,71 @@
     "type": "person:historical"
   },
   {
-    "id": "lyndon-b-johnson",
-    "preferredName": "Lyndon B. Johnson",
-    "aliases": ["President Lyndon B. Johnson"],
+    "id": "leopold-ii-of-belgium",
+    "preferredName": "Leopold II of Belgium",
+    "aliases": [
+      "King Leopold II",
+      "Leopold II"
+    ],
     "type": "person:historical"
-  },
-  {
-    "id": "edward-iii",
-    "preferredName": "Edward III",
-    "aliases": ["King Edward III"],
-    "type": "person:historical"
-  },
-  {
-    "id": "george-armstrong-custer",
-    "preferredName": "George Armstrong Custer",
-    "aliases": ["George A. Custer", "General Custer"],
-    "type": "person:historical"
-  },
-  {
-    "id": "red-cloud",
-    "preferredName": "Red Cloud",
-    "aliases": ["Maȟpíya Lúta", "Mahpiya Luta"],
-    "type": "person:historical"
-  },
-  {
-    "id": "ludwig-van-beethoven",
-    "preferredName": "Ludwig van Beethoven",
-    "aliases": ["Beethoven"],
-    "type": "person:historical"
-  },
-  {
-    "id": "crazy-horse",
-    "preferredName": "Crazy Horse",
-    "aliases": ["Tasunke Witko", "Tȟašúŋke Witkó", "Tashunke Witko", "Thasuke Witko"],
-    "type": "person:historical"
-  },
-  {
-    "id": "elizabeth-i",
-    "preferredName": "Elizabeth I",
-    "aliases": ["Queen Elizabeth I"],
-    "type": "person:historical"
-  },
-  {
-    "id": "elizabeth-ii",
-    "preferredName": "Elizabeth II",
-    "aliases": ["Queen Elizabeth II"],
-    "type": "person:historical"
-  },
-  {
-    "id": "henry-viii",
-    "preferredName": "Henry VIII",
-    "aliases": ["King Henry VIII"],
-    "type": "person:historical"
-  },
-  {
-    "id": "hernan-cortes",
-    "preferredName": "Hernán Cortés",
-    "aliases": ["Hernan Cortes", "Hernan Cortez"],
-    "type": "person:historical"
-  },
-  {
-    "id": "horatio-nelson",
-    "preferredName": "Horatio Nelson",
-    "aliases": ["Lord Nelson", "Vice Admiral Horatio Nelson"],
-    "type": "person:historical"
-  },
-  {
-    "id": "jack-the-ripper",
-    "preferredName": "Jack the Ripper",
-    "aliases": ["The Ripper"],
-    "type": "person:unidentified"
-  },
-  {
-    "id": "jesus",
-    "preferredName": "Jesus",
-    "aliases": ["Jesus Christ", "Jesus of Nazareth"],
-    "type": "person:religious"
-  },
-  {
-    "id": "john-f-kennedy",
-    "preferredName": "John F. Kennedy",
-    "aliases": ["JFK", "John Fitzgerald Kennedy"],
-    "type": "person:historical"
-  },
-  {
-    "id": "julius-caesar",
-    "preferredName": "Julius Caesar",
-    "aliases": ["Gaius Julius Caesar"],
-    "type": "person:historical"
-  },
-  {
-    "id": "king-arthur",
-    "preferredName": "King Arthur",
-    "aliases": ["Arthur Pendragon"],
-    "type": "person:legendary"
   },
   {
     "id": "lord-byron",
     "preferredName": "Lord Byron",
-    "aliases": ["George Gordon Byron"],
+    "aliases": [
+      "George Gordon Byron"
+    ],
     "type": "person:historical"
   },
   {
     "id": "louis-xvi",
     "preferredName": "Louis XVI",
-    "aliases": ["King Louis XVI of France"],
+    "aliases": [
+      "King Louis XVI of France"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "ludwig-van-beethoven",
+    "preferredName": "Ludwig van Beethoven",
+    "aliases": [
+      "Beethoven"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "lyndon-b-johnson",
+    "preferredName": "Lyndon B. Johnson",
+    "aliases": [
+      "President Lyndon B. Johnson"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "malinche",
+    "preferredName": "Malinche",
+    "aliases": [
+      "La Malinche",
+      "Malintzin",
+      "Do\u00f1a Marina",
+      "Dona Marina"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "mao-zedong",
+    "preferredName": "Mao Zedong",
+    "aliases": [
+      "Chairman Mao"
+    ],
     "type": "person:historical"
   },
   {
     "id": "margaret-thatcher",
     "preferredName": "Margaret Thatcher",
-    "aliases": ["Baroness Thatcher"],
-    "type": "person:historical"
-  },
-  {
-    "id": "marie-antoinette",
-    "preferredName": "Marie Antoinette",
-    "aliases": ["Queen Marie Antoinette"],
-    "type": "person:historical"
-  },
-  {
-    "id": "martin-luther",
-    "preferredName": "Martin Luther",
-    "aliases": ["Dr. Martin Luther"],
-    "type": "person:historical"
-  },
-  {
-    "id": "mary-queen-of-scots",
-    "preferredName": "Mary, Queen of Scots",
-    "aliases": ["Mary Stuart"],
-    "type": "person:historical"
-  },
-  {
-    "id": "merlin",
-    "preferredName": "Merlin",
-    "aliases": ["Merlin the Wizard"],
-    "type": "person:legendary"
-  },
-  {
-    "id": "napoleon-bonaparte",
-    "preferredName": "Napoleon Bonaparte",
-    "aliases": ["Napoleon"],
-    "type": "person:historical"
-  },
-  {
-    "id": "nero",
-    "preferredName": "Nero",
-    "aliases": ["Emperor Nero", "Nero Claudius Caesar"],
-    "type": "person:historical"
-  },
-  {
-    "id": "peter-the-great",
-    "preferredName": "Peter the Great",
-    "aliases": ["Peter I of Russia"],
-    "type": "person:historical"
-  },
-  {
-    "id": "richard-ii",
-    "preferredName": "Richard II",
-    "aliases": ["King Richard II of England"],
-    "type": "person:historical"
-  },
-  {
-    "id": "richard-nixon",
-    "preferredName": "Richard Nixon",
-    "aliases": ["President Richard Nixon"],
-    "type": "person:historical"
-  },
-  {
-    "id": "sitting-bull",
-    "preferredName": "Sitting Bull",
-    "aliases": ["Tatanka Iyotake"],
-    "type": "person:historical"
-  },
-  {
-    "id": "vladimir-putin",
-    "preferredName": "Vladimir Putin",
-    "aliases": ["President Vladimir Putin"],
-    "type": "person:historical"
-  },
-  {
-    "id": "winston-churchill",
-    "preferredName": "Winston Churchill",
-    "aliases": ["Sir Winston Churchill"],
-    "type": "person:historical"
-  },
-  {
-    "id": "george-orwell",
-    "preferredName": "George Orwell",
-    "aliases": ["Eric Arthur Blair"],
-    "type": "person:historical"
-  },
-  {
-    "id": "helen-of-troy",
-    "preferredName": "Helen of Troy",
-    "aliases": ["Helen"],
-    "type": "person:legendary"
-  },
-  {
-    "id": "hercules",
-    "preferredName": "Hercules",
-    "aliases": ["Heracles"],
-    "type": "person:mythological"
-  },
-  {
-    "id": "prince-charles",
-    "preferredName": "Prince Charles",
-    "aliases": ["Charles Philip Arthur George", "King Charles III"],
-    "type": "person:historical"
-  },
-  {
-    "id": "lady-diana",
-    "preferredName": "Lady Diana",
-    "aliases": ["Princess Diana", "Diana Spencer"],
-    "type": "person:historical"
-  },
-  {
-    "id": "shah-jahan",
-    "preferredName": "Shah Jahan",
-    "aliases": ["Shahab-ud-din Muhammad Khurram"],
-    "type": "person:historical"
-  },
-  {
-    "id": "mumtaz-mahal",
-    "preferredName": "Mumtaz Mahal",
-    "aliases": ["Arjumand Banu Begum"],
-    "type": "person:historical"
-  },
-  {
-    "id": "jean-shrimpton",
-    "preferredName": "Jean Shrimpton",
-    "aliases": [],
-    "type": "person:historical"
-  },
-  {
-    "id": "jonathan-swift",
-    "preferredName": "Jonathan Swift",
-    "aliases": ["Dean Swift"],
-    "type": "person:historical"
-  },
-  {
-    "id": "jimi-hendrix",
-    "preferredName": "Jimi Hendrix",
-    "aliases": ["James Marshall Hendrix"],
-    "type": "person:historical"
-  },
-  {
-    "id": "robert-f-kennedy",
-    "preferredName": "Robert F. Kennedy",
-    "aliases": ["Bobby Kennedy"],
-    "type": "person:historical"
-  },
-  {
-    "id": "george-wallace",
-    "preferredName": "George Wallace",
-    "aliases": ["George Corley Wallace"],
-    "type": "person:historical"
-  },
-  {
-    "id": "donald-trump",
-    "preferredName": "Donald Trump",
-    "aliases": ["President Donald Trump"],
-    "type": "person:historical"
-  },
-  {
-    "id": "grover-cleveland",
-    "preferredName": "Grover Cleveland",
-    "aliases": ["Stephen Grover Cleveland"],
+    "aliases": [
+      "Baroness Thatcher"
+    ],
     "type": "person:historical"
   },
   {
@@ -606,10 +650,111 @@
     "type": "person:historical"
   },
   {
-    "id": "zeus",
-    "preferredName": "Zeus",
-    "aliases": ["Dias"],
-    "type": "person:mythological"
+    "id": "marie-antoinette",
+    "preferredName": "Marie Antoinette",
+    "aliases": [
+      "Queen Marie Antoinette"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "martin-luther",
+    "preferredName": "Martin Luther",
+    "aliases": [
+      "Dr. Martin Luther"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "martin-luther-king-jr",
+    "preferredName": "Martin Luther King Jr.",
+    "aliases": [
+      "Dr. Martin Luther King Jr."
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "mary-queen-of-scots",
+    "preferredName": "Mary, Queen of Scots",
+    "aliases": [
+      "Mary Stuart"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "medea",
+    "preferredName": "Medea",
+    "aliases": [],
+    "type": "person:legendary"
+  },
+  {
+    "id": "merlin",
+    "preferredName": "Merlin",
+    "aliases": [
+      "Merlin the Wizard"
+    ],
+    "type": "person:legendary"
+  },
+  {
+    "id": "michael-collins",
+    "preferredName": "Michael Collins",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "montezuma",
+    "preferredName": "Montezuma",
+    "aliases": [
+      "Moctezuma I"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "montezuma-ii",
+    "preferredName": "Montezuma II",
+    "aliases": [
+      "Moctezuma II"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "mumtaz-mahal",
+    "preferredName": "Mumtaz Mahal",
+    "aliases": [
+      "Arjumand Banu Begum"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "napoleon-bonaparte",
+    "preferredName": "Napoleon Bonaparte",
+    "aliases": [
+      "Napoleon"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "nero",
+    "preferredName": "Nero",
+    "aliases": [
+      "Emperor Nero",
+      "Nero Claudius Caesar"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "neville-chamberlain",
+    "preferredName": "Neville Chamberlain",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "odysseus",
+    "preferredName": "Odysseus",
+    "aliases": [
+      "Ulysses"
+    ],
+    "type": "person:legendary"
   },
   {
     "id": "oedipus",
@@ -618,9 +763,44 @@
     "type": "person:legendary"
   },
   {
-    "id": "sophocles",
-    "preferredName": "Sophocles",
+    "id": "oliver-cromwell",
+    "preferredName": "Oliver Cromwell",
     "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "orpheus",
+    "preferredName": "Orpheus",
+    "aliases": [],
+    "type": "person:legendary"
+  },
+  {
+    "id": "oswald-mosley",
+    "preferredName": "Oswald Mosley",
+    "aliases": [],
+    "type": "person:historical"
+  },
+  {
+    "id": "panfilo-de-narvaez",
+    "preferredName": "P\u00e1nfilo de Narv\u00e1ez",
+    "aliases": [
+      "Panfilo de Narvaez",
+      "Panfilo Narvaez"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "paul-rouse",
+    "preferredName": "Paul Rouse",
+    "aliases": [],
+    "type": "person:guest"
+  },
+  {
+    "id": "pedro-de-alvarado",
+    "preferredName": "Pedro de Alvarado",
+    "aliases": [
+      "Pedro de Alvarado y Contreras"
+    ],
     "type": "person:historical"
   },
   {
@@ -630,123 +810,192 @@
     "type": "person:historical"
   },
   {
+    "id": "peter-the-great",
+    "preferredName": "Peter the Great",
+    "aliases": [
+      "Peter I of Russia"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "prince-charles",
+    "preferredName": "Prince Charles",
+    "aliases": [
+      "Charles Philip Arthur George",
+      "King Charles III"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "queen-victoria",
+    "preferredName": "Queen Victoria",
+    "aliases": [
+      "Victoria"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "red-cloud",
+    "preferredName": "Red Cloud",
+    "aliases": [
+      "Ma\u021fp\u00edya L\u00fata",
+      "Mahpiya Luta"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "richard-ii",
+    "preferredName": "Richard II",
+    "aliases": [
+      "King Richard II of England"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "richard-iii",
+    "preferredName": "Richard III",
+    "aliases": [
+      "King Richard III"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "richard-nixon",
+    "preferredName": "Richard Nixon",
+    "aliases": [
+      "President Richard Nixon"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "robert-f-kennedy",
+    "preferredName": "Robert F. Kennedy",
+    "aliases": [
+      "Bobby Kennedy"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "ronald-reagan",
+    "preferredName": "Ronald Reagan",
+    "aliases": [
+      "President Ronald Reagan"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "rudolf-vrba",
+    "preferredName": "Rudolf Vrba",
+    "aliases": [
+      "Walter Rosenberg"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "shah-jahan",
+    "preferredName": "Shah Jahan",
+    "aliases": [
+      "Shahab-ud-din Muhammad Khurram"
+    ],
+    "type": "person:historical"
+  },
+  {
     "id": "sigmund-freud",
     "preferredName": "Sigmund Freud",
     "aliases": [],
     "type": "person:historical"
   },
   {
-    "id": "dionysus",
-    "preferredName": "Dionysus",
-    "aliases": ["Bacchus"],
-    "type": "person:mythological"
+    "id": "sitting-bull",
+    "preferredName": "Sitting Bull",
+    "aliases": [
+      "Tatanka Iyotake"
+    ],
+    "type": "person:historical"
   },
   {
-    "id": "artemis",
-    "preferredName": "Artemis",
-    "aliases": ["Diana (Roman)"],
-    "type": "person:mythological"
-  },
-  {
-    "id": "jason",
-    "preferredName": "Jason",
-    "aliases": ["Jason of Iolcos"],
-    "type": "person:legendary"
-  },
-  {
-    "id": "medea",
-    "preferredName": "Medea",
+    "id": "sophocles",
+    "preferredName": "Sophocles",
     "aliases": [],
-    "type": "person:legendary"
+    "type": "person:historical"
   },
   {
-    "id": "odysseus",
-    "preferredName": "Odysseus",
-    "aliases": ["Ulysses"],
-    "type": "person:legendary"
-  },
-  {
-    "id": "orpheus",
-    "preferredName": "Orpheus",
+    "id": "stanley-baldwin",
+    "preferredName": "Stanley Baldwin",
     "aliases": [],
-    "type": "person:legendary"
-  },
-  {
-    "id": "achilles",
-    "preferredName": "Achilles",
-    "aliases": [],
-    "type": "person:legendary"
-  },
-  {
-    "id": "circe",
-    "preferredName": "Circe",
-    "aliases": [],
-    "type": "person:mythological"
-  },
-  {
-    "id": "leopold-ii-of-belgium",
-    "preferredName": "Leopold II of Belgium",
-    "aliases": ["King Leopold II", "Leopold II"],
     "type": "person:historical"
   },
   {
-    "id": "henry-morton-stanley",
-    "preferredName": "Henry Morton Stanley",
-    "aliases": ["Sir Henry Morton Stanley", "Henry Stanley"],
+    "id": "suetonius",
+    "preferredName": "Suetonius",
+    "aliases": [
+      "Gaius Suetonius Tranquillus"
+    ],
     "type": "person:historical"
   },
   {
-    "id": "bart-van-loo",
-    "preferredName": "Bart van Loo",
-    "aliases": ["Bart Van Loo"],
+    "id": "theodora",
+    "preferredName": "Theodora",
+    "aliases": [
+      "Empress Theodora"
+    ],
     "type": "person:historical"
   },
   {
-    "id": "jan-van-eyck",
-    "preferredName": "Jan van Eyck",
-    "aliases": ["Jan Van Eyck", "Johannes de Eyck"],
+    "id": "tiberius",
+    "preferredName": "Tiberius",
+    "aliases": [
+      "Emperor Tiberius",
+      "Tiberius Julius Caesar"
+    ],
     "type": "person:historical"
   },
   {
-    "id": "malinche",
-    "preferredName": "Malinche",
-    "aliases": ["La Malinche", "Malintzin", "Doña Marina", "Dona Marina"],
+    "id": "tony-blair",
+    "preferredName": "Tony Blair",
+    "aliases": [
+      "Anthony Blair"
+    ],
     "type": "person:historical"
   },
   {
-    "id": "panfilo-de-narvaez",
-    "preferredName": "Pánfilo de Narváez",
-    "aliases": ["Panfilo de Narvaez", "Panfilo Narvaez"],
-    "type": "person:historical"
-  },
-  {
-    "id": "juan-peron",
-    "preferredName": "Juan Perón",
-    "aliases": ["Juan Peron"],
-    "type": "person:historical"
-  },
-  {
-    "id": "rudolf-vrba",
-    "preferredName": "Rudolf Vrba",
-    "aliases": ["Walter Rosenberg"],
-    "type": "person:historical"
-  },
-  {
-    "id": "alfred-wetzler",
-    "preferredName": "Alfréd Wetzler",
-    "aliases": ["Alfred Wetzler"],
-    "type": "person:historical"
-  },
-  {
-    "id": "kurt-schuschnigg",
-    "preferredName": "Kurt Schuschnigg",
-    "aliases": ["Chancellor Kurt Schuschnigg"],
+    "id": "vladimir-putin",
+    "preferredName": "Vladimir Putin",
+    "aliases": [
+      "President Vladimir Putin"
+    ],
     "type": "person:historical"
   },
   {
     "id": "walt-disney",
     "preferredName": "Walt Disney",
-    "aliases": ["Walter Elias Disney"],
+    "aliases": [
+      "Walter Elias Disney"
+    ],
     "type": "person:historical"
+  },
+  {
+    "id": "winston-churchill",
+    "preferredName": "Winston Churchill",
+    "aliases": [
+      "Sir Winston Churchill"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "wolfgang-amadeus-mozart",
+    "preferredName": "Wolfgang Amadeus Mozart",
+    "aliases": [
+      "Mozart"
+    ],
+    "type": "person:historical"
+  },
+  {
+    "id": "zeus",
+    "preferredName": "Zeus",
+    "aliases": [
+      "Dias"
+    ],
+    "type": "person:mythological"
   }
 ]

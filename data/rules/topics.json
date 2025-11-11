@@ -4,7 +4,9 @@
     "preferredName": "Age of Discovery",
     "label": "Age of Discovery",
     "slug": "age-of-discovery",
-    "aliases": ["Age of Exploration"],
+    "aliases": [
+      "Age of Exploration"
+    ],
     "type": "era",
     "description": "European maritime expansion and exploration from the 15th to 17th centuries."
   },
@@ -13,16 +15,23 @@
     "preferredName": "American Civil War",
     "label": "American Civil War",
     "slug": "american-civil-war",
-    "aliases": ["US Civil War", "War Between the States"],
+    "aliases": [
+      "US Civil War",
+      "War Between the States"
+    ],
     "type": "conflict",
-    "description": "Union vs Confederacy conflict (1861–1865)."
+    "description": "Union vs Confederacy conflict (1861\u20131865)."
   },
   {
     "id": "american-indian-wars",
     "preferredName": "American Indian Wars",
     "label": "American Indian Wars",
     "slug": "american-indian-wars",
-    "aliases": ["Indian Wars", "Plains Wars", "Sioux Wars"],
+    "aliases": [
+      "Indian Wars",
+      "Plains Wars",
+      "Sioux Wars"
+    ],
     "type": "conflict",
     "description": "Series of conflicts between the United States and Indigenous peoples of North America."
   },
@@ -31,7 +40,9 @@
     "preferredName": "Ancient Egypt",
     "label": "Ancient Egypt",
     "slug": "ancient-egypt",
-    "aliases": ["Pharaonic Egypt"],
+    "aliases": [
+      "Pharaonic Egypt"
+    ],
     "type": "civilization",
     "description": "Culture, politics, and religion of Egypt from the Early Dynastic period through the Ptolemaic era."
   },
@@ -40,16 +51,31 @@
     "preferredName": "Ancient Greece",
     "label": "Ancient Greece",
     "slug": "ancient-greece",
-    "aliases": ["Greek Civilization"],
+    "aliases": [
+      "Greek Civilization"
+    ],
     "type": "civilization",
     "description": "Greek city-states and culture from the Archaic period through Hellenistic times."
+  },
+  {
+    "id": "ancient-mesopotamia",
+    "preferredName": "Ancient Mesopotamia",
+    "label": "Ancient Mesopotamia",
+    "slug": "ancient-mesopotamia",
+    "aliases": [
+      "Mesopotamian Civilization"
+    ],
+    "type": "civilization",
+    "description": "Cultures and city-states of Mesopotamia from the Ubaid period through the Neo-Babylonian era."
   },
   {
     "id": "ancient-rome",
     "preferredName": "Ancient Rome",
     "label": "Ancient Rome",
     "slug": "ancient-rome",
-    "aliases": ["Roman Civilization"],
+    "aliases": [
+      "Roman Civilization"
+    ],
     "type": "civilization",
     "description": "People, politics, and wars tied to Rome from monarchy through empire."
   },
@@ -58,7 +84,9 @@
     "preferredName": "Anglo-Saxon England",
     "label": "Anglo-Saxon England",
     "slug": "anglo-saxon-england",
-    "aliases": ["Early Medieval England"],
+    "aliases": [
+      "Early Medieval England"
+    ],
     "type": "era",
     "description": "England from the 5th century settlement of Anglo-Saxons to the Norman Conquest."
   },
@@ -67,16 +95,20 @@
     "preferredName": "Aztec Conquest",
     "label": "Aztec Conquest",
     "slug": "aztec-conquest",
-    "aliases": ["Conquest of Mexico"],
+    "aliases": [
+      "Conquest of Mexico"
+    ],
     "type": "event",
-    "description": "Spanish-led campaign that toppled the Aztec Empire (1519–1521)."
+    "description": "Spanish-led campaign that toppled the Aztec Empire (1519\u20131521)."
   },
   {
     "id": "aztec-empire",
     "preferredName": "Aztec Empire",
     "label": "Aztec Empire",
     "slug": "aztec-empire",
-    "aliases": ["Mexica Empire"],
+    "aliases": [
+      "Mexica Empire"
+    ],
     "type": "civilization",
     "description": "Mesoamerican empire centered on Tenochtitlan prior to Spanish conquest."
   },
@@ -85,25 +117,73 @@
     "preferredName": "British Empire",
     "label": "British Empire",
     "slug": "british-empire",
-    "aliases": ["British Imperialism"],
+    "aliases": [
+      "British Imperialism"
+    ],
     "type": "empire",
     "description": "Expansion, governance, and decline of the British Empire."
+  },
+  {
+    "id": "british-royal-family",
+    "preferredName": "British Royal Family",
+    "label": "British Royal Family",
+    "slug": "british-royal-family",
+    "aliases": [
+      "Royal Family",
+      "House of Windsor",
+      "UK Royal Family"
+    ],
+    "type": "organization",
+    "description": "Modern royal household of the United Kingdom and Commonwealth realms, centred on the House of Windsor."
+  },
+  {
+    "id": "christmas",
+    "preferredName": "Christmas",
+    "label": "Christmas",
+    "slug": "christmas",
+    "aliases": [],
+    "type": "culture",
+    "description": "Seasonal traditions and cultural history of Christmas celebrations."
   },
   {
     "id": "cold-war",
     "preferredName": "Cold War",
     "label": "Cold War",
     "slug": "cold-war",
-    "aliases": ["US-Soviet Cold War"],
+    "aliases": [
+      "US-Soviet Cold War"
+    ],
     "type": "era",
     "description": "Post-WWII geopolitical rivalry between Western and Eastern blocs."
+  },
+  {
+    "id": "colonialism",
+    "preferredName": "Colonialism",
+    "label": "Colonialism",
+    "slug": "colonialism",
+    "aliases": [
+      "Imperialism"
+    ],
+    "type": "theme",
+    "description": "Imperial expansion, governance, and resistance across colonized regions."
+  },
+  {
+    "id": "conspiracy-theories",
+    "preferredName": "Conspiracy Theories",
+    "label": "Conspiracy Theories",
+    "slug": "conspiracy-theories",
+    "aliases": [],
+    "type": "culture",
+    "description": "Persistent alternative explanations that shape political and cultural movements."
   },
   {
     "id": "disney",
     "preferredName": "Disney",
     "label": "Disney",
     "slug": "disney",
-    "aliases": ["Walt Disney Company"],
+    "aliases": [
+      "Walt Disney Company"
+    ],
     "type": "organization",
     "description": "Entertainment company and brand spanning film, television, and theme parks."
   },
@@ -112,7 +192,9 @@
     "preferredName": "English Civil War",
     "label": "English Civil War",
     "slug": "english-civil-war",
-    "aliases": ["Wars of the Three Kingdoms (England)"],
+    "aliases": [
+      "Wars of the Three Kingdoms (England)"
+    ],
     "type": "conflict",
     "description": "17th-century conflicts between Parliamentarians and Royalists in England."
   },
@@ -121,34 +203,95 @@
     "preferredName": "French Revolution",
     "label": "French Revolution",
     "slug": "french-revolution",
-    "aliases": ["Reign of Terror"],
+    "aliases": [
+      "Reign of Terror"
+    ],
     "type": "revolution",
-    "description": "Revolutionary upheaval in France (1789–1799)."
+    "description": "Revolutionary upheaval in France (1789\u20131799)."
+  },
+  {
+    "id": "greco-roman-myth",
+    "preferredName": "Greco-Roman Myth",
+    "label": "Greco-Roman Myth",
+    "slug": "greco-roman-myth",
+    "aliases": [
+      "Classical Mythology"
+    ],
+    "type": "mythology",
+    "description": "Foundational myths shared across Greek and Roman traditions."
   },
   {
     "id": "greek-mythology",
     "preferredName": "Greek Mythology",
     "label": "Greek Mythology",
     "slug": "greek-mythology",
-    "aliases": ["Hellenic Mythology"],
+    "aliases": [
+      "Hellenic Mythology"
+    ],
     "type": "mythology",
     "description": "Myths and legends of ancient Greek religion and storytelling."
+  },
+  {
+    "id": "historical-fiction",
+    "preferredName": "Historical Fiction",
+    "label": "Historical Fiction",
+    "slug": "historical-fiction",
+    "aliases": [],
+    "type": "literature",
+    "description": "Fictional narratives rooted in historical settings and figures."
+  },
+  {
+    "id": "history-and-philosophy",
+    "preferredName": "History and Philosophy",
+    "label": "History and Philosophy",
+    "slug": "history-and-philosophy",
+    "aliases": [
+      "History Philosophy"
+    ],
+    "type": "intellectual",
+    "description": "Meta-discussions on learning from history, philosophy of history, and historiography."
+  },
+  {
+    "id": "latin-american-politics",
+    "preferredName": "Latin American Politics",
+    "label": "Latin American Politics",
+    "slug": "latin-american-politics",
+    "aliases": [
+      "Latin America Politics"
+    ],
+    "type": "politics",
+    "description": "Political movements, revolutions, and governance across Latin America in the modern era."
   },
   {
     "id": "mary-queen-of-scots",
     "preferredName": "Reign of Mary, Queen of Scots",
     "label": "Reign of Mary, Queen of Scots",
     "slug": "mary-queen-of-scots",
-    "aliases": ["Mary Queen of Scots' Reign"],
+    "aliases": [
+      "Mary Queen of Scots' Reign"
+    ],
     "type": "biography",
     "description": "Episodes focused on the life and legacy of Mary Stuart."
+  },
+  {
+    "id": "media-history",
+    "preferredName": "Media History",
+    "label": "Media History",
+    "slug": "media-history",
+    "aliases": [
+      "History of Media"
+    ],
+    "type": "theme",
+    "description": "Evolution of communication mediums from print to broadcast to digital public spheres."
   },
   {
     "id": "medieval-england",
     "preferredName": "Medieval England",
     "label": "Medieval England",
     "slug": "medieval-england",
-    "aliases": ["High Medieval England"],
+    "aliases": [
+      "High Medieval England"
+    ],
     "type": "era",
     "description": "England from the Norman Conquest through the Late Middle Ages."
   },
@@ -157,82 +300,113 @@
     "preferredName": "The Middle Ages",
     "label": "The Middle Ages",
     "slug": "the-middle-ages",
-    "aliases": ["Medieval Europe"],
+    "aliases": [
+      "Medieval Europe"
+    ],
     "type": "era",
     "description": "European history from roughly the 5th to the 15th century."
+  },
+  {
+    "id": "modern-espionage",
+    "preferredName": "Modern Espionage",
+    "label": "Modern Espionage",
+    "slug": "modern-espionage",
+    "aliases": [
+      "Early 2000s Espionage"
+    ],
+    "type": "politics",
+    "description": "Intelligence operations, spycraft, and geopolitical intrigue in the late 20th/21st centuries."
+  },
+  {
+    "id": "mughal-empire",
+    "preferredName": "Mughal Empire",
+    "label": "Mughal Empire",
+    "slug": "mughal-empire",
+    "aliases": [
+      "Moghul Empire"
+    ],
+    "type": "empire",
+    "description": "Early modern Islamic empire that ruled much of South Asia between 1526 and 1857."
   },
   {
     "id": "napoleonic-wars",
     "preferredName": "Napoleonic Wars",
     "label": "Napoleonic Wars",
     "slug": "napoleonic-wars",
-    "aliases": ["Napoleonic Era"],
+    "aliases": [
+      "Napoleonic Era"
+    ],
     "type": "conflict",
     "description": "Campaigns and politics tied to Napoleon Bonaparte."
-  },
-  {
-    "id": "nazi-germany",
-    "preferredName": "Nazi Germany",
-    "label": "Nazi Germany",
-    "slug": "nazi-germany",
-    "aliases": ["Nazis", "Third Reich", "National Socialism"],
-    "type": "regime",
-    "description": "National Socialist government and ideology in Germany (1933–1945)."
-  },
-  {
-    "id": "norman-conquest",
-    "preferredName": "Norman Conquest",
-    "label": "Norman Conquest",
-    "slug": "norman-conquest",
-    "aliases": ["Conquest of England"],
-    "type": "event",
-    "description": "1066 Norman invasion of England and subsequent rule."
   },
   {
     "id": "natural-history",
     "preferredName": "Natural History",
     "label": "Natural History",
     "slug": "natural-history",
-    "aliases": ["Paleontology", "Dinosaur Paleontology"],
+    "aliases": [
+      "Paleontology",
+      "Dinosaur Paleontology"
+    ],
     "type": "theme",
     "description": "Scientific study of Earth's past life, fossils, and geological change."
   },
   {
-    "id": "media-history",
-    "preferredName": "Media History",
-    "label": "Media History",
-    "slug": "media-history",
-    "aliases": ["History of Media"],
-    "type": "theme",
-    "description": "Evolution of communication mediums from print to broadcast to digital public spheres."
+    "id": "nazi-germany",
+    "preferredName": "Nazi Germany",
+    "label": "Nazi Germany",
+    "slug": "nazi-germany",
+    "aliases": [
+      "Nazis",
+      "Third Reich",
+      "National Socialism"
+    ],
+    "type": "regime",
+    "description": "National Socialist government and ideology in Germany (1933\u20131945)."
+  },
+  {
+    "id": "norman-conquest",
+    "preferredName": "Norman Conquest",
+    "label": "Norman Conquest",
+    "slug": "norman-conquest",
+    "aliases": [
+      "Conquest of England"
+    ],
+    "type": "event",
+    "description": "1066 Norman invasion of England and subsequent rule."
+  },
+  {
+    "id": "northern-renaissance",
+    "preferredName": "Northern Renaissance",
+    "label": "Northern Renaissance",
+    "slug": "northern-renaissance",
+    "aliases": [
+      "Flemish Renaissance"
+    ],
+    "type": "culture",
+    "description": "Artistic and cultural flowering in the Low Countries and Northern Europe during the 15th\u201316th centuries."
   },
   {
     "id": "renaissance",
     "preferredName": "The Renaissance",
     "label": "The Renaissance",
     "slug": "the-renaissance",
-    "aliases": ["European Renaissance"],
+    "aliases": [
+      "European Renaissance"
+    ],
     "type": "era",
     "description": "Cultural rebirth in Europe from the 14th to 17th centuries."
   },
   {
-    "id": "theme-parks",
-    "preferredName": "Theme Parks",
-    "label": "Theme Parks",
-    "slug": "theme-parks",
-    "aliases": ["Amusement Parks"],
-    "type": "culture",
-    "description": "History and development of theme parks and immersive attractions."
-  },
-  {
-    "id": "theme-parks-and-disney",
-    "preferredName": "Theme Parks & Disney",
-    "label": "Theme Parks & Disney",
-    "slug": "theme-parks-and-disney",
-    "aliases": ["Disney Parks"],
-    "type": "deprecated",
-    "description": "Deprecated fused topic retained for backward compatibility. Use `theme-parks` and `disney`.",
-    "notes": "Existing data should migrate to separate Theme Parks and Disney topics."
+    "id": "thatcher-era",
+    "preferredName": "Thatcher Era",
+    "label": "Thatcher Era",
+    "slug": "thatcher-era",
+    "aliases": [
+      "Thatcherism"
+    ],
+    "type": "era",
+    "description": "British political, economic, and cultural landscape during Margaret Thatcher's premiership (1979\u20131990)."
   },
   {
     "id": "the-beatles",
@@ -253,92 +427,13 @@
     "description": "English rock band formed in London in 1962."
   },
   {
-    "id": "the-west",
-    "preferredName": "The West",
-    "label": "The West",
-    "slug": "the-west",
-    "aliases": ["Western World"],
-    "type": "concept",
-    "description": "Cultural and political concept referring to Western Europe and North America."
-  },
-  {
-    "id": "tudor-england",
-    "preferredName": "Tudor England",
-    "label": "Tudor England",
-    "slug": "tudor-england",
-    "aliases": [],
-    "type": "era",
-    "description": "England under the Tudor dynasty (1485–1603)."
-  },
-  {
-    "id": "victorian-england",
-    "preferredName": "Victorian England",
-    "label": "Victorian England",
-    "slug": "victorian-england",
-    "aliases": [],
-    "type": "era",
-    "description": "England during the reign of Queen Victoria (1837–1901)."
-  },
-  {
-    "id": "world-war-i",
-    "preferredName": "World War I",
-    "label": "World War I",
-    "slug": "world-war-i",
-    "aliases": ["First World War", "Great War", "WWI"],
-    "type": "conflict",
-    "description": "Global conflict of 1914–1918."
-  },
-  {
-    "id": "world-war-ii",
-    "preferredName": "World War II",
-    "label": "World War II",
-    "slug": "world-war-ii",
-    "aliases": ["Second World War", "WWII", "WW2"],
-    "type": "conflict",
-    "description": "Global conflict of 1939–1945."
-  },
-  {
-    "id": "ancient-mesopotamia",
-    "preferredName": "Ancient Mesopotamia",
-    "label": "Ancient Mesopotamia",
-    "slug": "ancient-mesopotamia",
-    "aliases": ["Mesopotamian Civilization"],
-    "type": "civilization",
-    "description": "Cultures and city-states of Mesopotamia from the Ubaid period through the Neo-Babylonian era."
-  },
-  {
-    "id": "colonialism",
-    "preferredName": "Colonialism",
-    "label": "Colonialism",
-    "slug": "colonialism",
-    "aliases": ["Imperialism"],
-    "type": "theme",
-    "description": "Imperial expansion, governance, and resistance across colonized regions."
-  },
-  {
-    "id": "latin-american-politics",
-    "preferredName": "Latin American Politics",
-    "label": "Latin American Politics",
-    "slug": "latin-american-politics",
-    "aliases": ["Latin America Politics"],
-    "type": "politics",
-    "description": "Political movements, revolutions, and governance across Latin America in the modern era."
-  },
-  {
-    "id": "mughal-empire",
-    "preferredName": "Mughal Empire",
-    "label": "Mughal Empire",
-    "slug": "mughal-empire",
-    "aliases": ["Moghul Empire"],
-    "type": "empire",
-    "description": "Early modern Islamic empire that ruled much of South Asia between 1526 and 1857."
-  },
-  {
     "id": "the-seventies",
     "preferredName": "The Seventies",
     "label": "The Seventies",
     "slug": "the-seventies",
-    "aliases": ["1970s"],
+    "aliases": [
+      "1970s"
+    ],
     "type": "era",
     "description": "Cultural, political, and economic shifts of the 1970s decade."
   },
@@ -347,35 +442,111 @@
     "preferredName": "The Sixties",
     "label": "The Sixties",
     "slug": "the-sixties",
-    "aliases": ["1960s"],
+    "aliases": [
+      "1960s"
+    ],
     "type": "era",
     "description": "Cultural, political, and social movements of the 1960s decade."
   },
   {
-    "id": "thatcher-era",
-    "preferredName": "Thatcher Era",
-    "label": "Thatcher Era",
-    "slug": "thatcher-era",
-    "aliases": ["Thatcherism"],
+    "id": "the-west",
+    "preferredName": "The West",
+    "label": "The West",
+    "slug": "the-west",
+    "aliases": [
+      "Western World"
+    ],
+    "type": "concept",
+    "description": "Cultural and political concept referring to Western Europe and North America."
+  },
+  {
+    "id": "theme-parks",
+    "preferredName": "Theme Parks",
+    "label": "Theme Parks",
+    "slug": "theme-parks",
+    "aliases": [
+      "Amusement Parks"
+    ],
+    "type": "culture",
+    "description": "History and development of theme parks and immersive attractions."
+  },
+  {
+    "id": "theme-parks-and-disney",
+    "preferredName": "Theme Parks & Disney",
+    "label": "Theme Parks & Disney",
+    "slug": "theme-parks-and-disney",
+    "aliases": [
+      "Disney Parks"
+    ],
+    "type": "deprecated",
+    "description": "Deprecated fused topic retained for backward compatibility. Use `theme-parks` and `disney`.",
+    "notes": "Existing data should migrate to separate Theme Parks and Disney topics."
+  },
+  {
+    "id": "tudor-england",
+    "preferredName": "Tudor England",
+    "label": "Tudor England",
+    "slug": "tudor-england",
+    "aliases": [],
     "type": "era",
-    "description": "British political, economic, and cultural landscape during Margaret Thatcher's premiership (1979–1990)."
+    "description": "England under the Tudor dynasty (1485\u20131603)."
+  },
+  {
+    "id": "uk-regional-identity",
+    "preferredName": "UK Regional Identity",
+    "label": "UK Regional Identity",
+    "slug": "uk-regional-identity",
+    "aliases": [
+      "North-South Divide"
+    ],
+    "type": "culture",
+    "description": "Economic and cultural contrasts across regions of the United Kingdom."
   },
   {
     "id": "us-politics",
     "preferredName": "US Politics",
     "label": "US Politics",
     "slug": "us-politics",
-    "aliases": ["American Politics", "United States Politics"],
+    "aliases": [
+      "American Politics",
+      "United States Politics"
+    ],
     "type": "politics",
     "description": "Recurring themes, movements, and electoral shifts in the political history of the United States."
   },
   {
-    "id": "british-royal-family",
-    "preferredName": "British Royal Family",
-    "label": "British Royal Family",
-    "slug": "british-royal-family",
-    "aliases": ["Royal Family", "House of Windsor", "UK Royal Family"],
-    "type": "organization",
-    "description": "Modern royal household of the United Kingdom and Commonwealth realms, centred on the House of Windsor."
+    "id": "victorian-england",
+    "preferredName": "Victorian England",
+    "label": "Victorian England",
+    "slug": "victorian-england",
+    "aliases": [],
+    "type": "era",
+    "description": "England during the reign of Queen Victoria (1837\u20131901)."
+  },
+  {
+    "id": "world-war-i",
+    "preferredName": "World War I",
+    "label": "World War I",
+    "slug": "world-war-i",
+    "aliases": [
+      "First World War",
+      "Great War",
+      "WWI"
+    ],
+    "type": "conflict",
+    "description": "Global conflict of 1914\u20131918."
+  },
+  {
+    "id": "world-war-ii",
+    "preferredName": "World War II",
+    "label": "World War II",
+    "slug": "world-war-ii",
+    "aliases": [
+      "Second World War",
+      "WWII",
+      "WW2"
+    ],
+    "type": "conflict",
+    "description": "Global conflict of 1939\u20131945."
   }
 ]
