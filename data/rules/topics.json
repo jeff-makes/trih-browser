@@ -198,6 +198,15 @@
     "description": "Scientific study of Earth's past life, fossils, and geological change."
   },
   {
+    "id": "media-history",
+    "preferredName": "Media History",
+    "label": "Media History",
+    "slug": "media-history",
+    "aliases": ["History of Media"],
+    "type": "theme",
+    "description": "Evolution of communication mediums from print to broadcast to digital public spheres."
+  },
+  {
     "id": "renaissance",
     "preferredName": "The Renaissance",
     "label": "The Renaissance",
@@ -298,6 +307,15 @@
     "description": "Cultures and city-states of Mesopotamia from the Ubaid period through the Neo-Babylonian era."
   },
   {
+    "id": "colonialism",
+    "preferredName": "Colonialism",
+    "label": "Colonialism",
+    "slug": "colonialism",
+    "aliases": ["Imperialism"],
+    "type": "theme",
+    "description": "Imperial expansion, governance, and resistance across colonized regions."
+  },
+  {
     "id": "mughal-empire",
     "preferredName": "Mughal Empire",
     "label": "Mughal Empire",
@@ -305,6 +323,15 @@
     "aliases": ["Moghul Empire"],
     "type": "empire",
     "description": "Early modern Islamic empire that ruled much of South Asia between 1526 and 1857."
+  },
+  {
+    "id": "the-seventies",
+    "preferredName": "The Seventies",
+    "label": "The Seventies",
+    "slug": "the-seventies",
+    "aliases": ["1970s"],
+    "type": "era",
+    "description": "Cultural, political, and economic shifts of the 1970s decade."
   },
   {
     "id": "the-sixties",

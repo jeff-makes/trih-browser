@@ -7,6 +7,7 @@
 ## Session Prep
 - Read `docs/SYSTEM_OVERVIEW.md` at session start to refresh the architecture and data flow.
 - Skim the PRDs — `docs/PRD-Pipeline.md` and `docs/PRD-UI.md` — so work stays aligned with current requirements; dive deeper into whichever matches the day’s focus.
+- Before curating entities, review `docs/entity-curation-playbook.md` for the latest naming rules and approval workflow so decisions stay consistent across sessions.
 - When running the pipeline locally, load secrets first: `source .env.local && npm run dev:pipeline` so `OPENAI_API_KEY` and related env vars are available.
 
 ### Avoiding CI Artefact Conflicts
@@ -27,6 +28,7 @@
 ## Next Steps
 - Re-run the composer with cached data (`OPENAI_API_KEY=dummy npm run dev:pipeline -- --max-llm-calls 0`) whenever registries change so artefacts pick up the latest canonical refs without new LLM calls.
 - Continue curating pending entities: review `data/errors.jsonl` (especially new Tudor + Disney proposals), update `data/rules/{people,places,topics}.json`, and log each decision in `data/pending/reviews.jsonl`.
+- Use the playbook (`docs/entity-curation-playbook.md`) as the blueprint for accept/map/reject decisions so new LLM proposals stay deterministic.
 - Plan the next enrichment batch (mid/late catalogue) once the current proposals are cleared, using `--force-llm` to target the chosen episode IDs and cap spend with `--max-llm-calls`.
 - Keep auditing registries for cross-entity collisions; reconcile duplicates early so the validator guardrail doesn’t block future pipeline runs.
 - Monitor the scheduled GitHub Actions publish + Vercel revalidation webhook to ensure nightly artefact pushes stay in sync with local work.
