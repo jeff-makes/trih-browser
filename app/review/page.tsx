@@ -197,6 +197,18 @@ type ProposalRowProps = {
 
 type Mode = "idle" | "accept" | "reject" | "map";
 
+type AcceptFormState = {
+  id: string;
+  preferredName: string;
+  aliases: string;
+  type: string;
+  label?: string;
+  slug?: string;
+  description?: string;
+  reason?: string;
+  targetId?: string;
+};
+
 function ProposalRow({
   episode,
   entityType,
@@ -206,7 +218,7 @@ function ProposalRow({
   disabled,
 }: ProposalRowProps) {
   const [mode, setMode] = useState<Mode>("idle");
-  const [form, setForm] = useState<Record<string, string>>(() =>
+  const [form, setForm] = useState<AcceptFormState>(() =>
     initialForm(entityType, proposal),
   );
 
@@ -365,7 +377,7 @@ function ProposalRow({
 function initialForm(
   entityType: "person" | "place" | "topic",
   proposal: ProposalItem,
-) {
+): AcceptFormState {
   const baseId = proposal.id ?? slugify(proposal.label);
   if (entityType === "topic") {
     return {
@@ -388,8 +400,8 @@ function initialForm(
 
 type AcceptFieldsProps = {
   entityType: "person" | "place" | "topic";
-  form: Record<string, string>;
-  setForm: React.Dispatch<React.SetStateAction<Record<string, string>>>;
+  form: AcceptFormState;
+  setForm: React.Dispatch<React.SetStateAction<AcceptFormState>>;
 };
 
 function AcceptFields({ entityType, form, setForm }: AcceptFieldsProps) {
@@ -488,7 +500,7 @@ function AcceptFields({ entityType, form, setForm }: AcceptFieldsProps) {
 
 function normalizeAcceptData(
   entityType: "person" | "place" | "topic",
-  form: Record<string, string>,
+  form: AcceptFormState,
 ) {
   const aliases =
     form.aliases
