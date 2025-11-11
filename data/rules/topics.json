@@ -142,6 +142,17 @@
     "description": "Ancient Mesopotamian city-state and empire centered on the city of Babylon."
   },
   {
+    "id": "balkan-history",
+    "preferredName": "Balkan History",
+    "label": "Balkan History",
+    "slug": "balkan-history",
+    "aliases": [
+      "History of the Balkans"
+    ],
+    "type": "civilization",
+    "description": "Political and cultural history of Southeastern Europe from antiquity through the modern era."
+  },
+  {
     "id": "biblical-history",
     "preferredName": "Biblical History",
     "label": "Biblical History",
@@ -215,6 +226,17 @@
     "aliases": [],
     "type": "culture",
     "description": "Seasonal traditions and cultural history of Christmas celebrations."
+  },
+  {
+    "id": "climate-history",
+    "preferredName": "Climate History",
+    "label": "Climate History",
+    "slug": "climate-history",
+    "aliases": [
+      "Environmental History"
+    ],
+    "type": "theme",
+    "description": "Climate science, environmental shocks, and their influence on human societies."
   },
   {
     "id": "cold-war",
@@ -308,6 +330,17 @@
     "description": "The return of the monarchy under Charles II and its cultural aftermath."
   },
   {
+    "id": "evolution",
+    "preferredName": "Evolution",
+    "label": "Evolution",
+    "slug": "evolution",
+    "aliases": [
+      "Human Evolution"
+    ],
+    "type": "theme",
+    "description": "Origins of life, evolutionary science, and the development of hominins."
+  },
+  {
     "id": "fashion-history",
     "preferredName": "Fashion History",
     "label": "Fashion History",
@@ -315,6 +348,26 @@
     "aliases": [],
     "type": "culture",
     "description": "Evolution of clothing, textiles, and style trends across eras."
+  },
+  {
+    "id": "falklands-war",
+    "preferredName": "Falklands War",
+    "label": "Falklands War",
+    "slug": "falklands-war",
+    "aliases": [],
+    "type": "conflict",
+    "description": "The 1982 conflict between the United Kingdom and Argentina over the Falkland Islands."
+  },
+  {
+    "id": "food-and-drink-history",
+    "preferredName": "Food and Drink History",
+    "label": "Food and Drink History",
+    "slug": "food-and-drink-history",
+    "aliases": [
+      "Culinary History"
+    ],
+    "type": "culture",
+    "description": "Culinary traditions, beverages, and the social history of what people consume."
   },
   {
     "id": "french-revolution",
@@ -368,6 +421,15 @@
     "description": "Meta-discussions on learning from history, philosophy of history, and historiography."
   },
   {
+    "id": "hundred-years-war",
+    "preferredName": "Hundred Years' War",
+    "label": "Hundred Years' War",
+    "slug": "hundred-years-war",
+    "aliases": [],
+    "type": "conflict",
+    "description": "The 14th- and 15th-century wars between England and France."
+  },
+  {
     "id": "indian-history",
     "preferredName": "Indian History",
     "label": "Indian History",
@@ -386,6 +448,28 @@
     "aliases": [],
     "type": "theme",
     "description": "Proposed topic; episode centers on the Industrial Revolution and Britain's role in industrialisation."
+  },
+  {
+    "id": "islamic-history",
+    "preferredName": "Islamic History",
+    "label": "Islamic History",
+    "slug": "islamic-history",
+    "aliases": [
+      "History of Islam"
+    ],
+    "type": "religion",
+    "description": "Sacred sites, movements, and historical developments across the Islamic world."
+  },
+  {
+    "id": "korean-history",
+    "preferredName": "Korean History",
+    "label": "Korean History",
+    "slug": "korean-history",
+    "aliases": [
+      "History of Korea"
+    ],
+    "type": "civilization",
+    "description": "Political and cultural history of the Korean peninsula from early kingdoms to the present."
   },
   {
     "id": "latin-american-politics",
@@ -654,6 +738,17 @@
     "description": "Cultural rebirth in Europe from the 14th to 17th centuries."
   },
   {
+    "id": "romanticism",
+    "preferredName": "Romanticism",
+    "label": "Romanticism",
+    "slug": "romanticism",
+    "aliases": [
+      "Romantic Movement"
+    ],
+    "type": "culture",
+    "description": "Artistic and intellectual movement emphasizing emotion, nature, and individualism."
+  },
+  {
     "id": "roman-britain",
     "preferredName": "Roman Britain",
     "label": "Roman Britain",
@@ -674,15 +769,16 @@
     "description": "The 1905\u20131921 revolutionary waves that reshaped Russia."
   },
   {
-    "id": "slavery-in-america",
-    "preferredName": "Slavery in America",
-    "label": "Slavery in America",
-    "slug": "slavery-in-america",
+    "id": "slavery",
+    "preferredName": "Slavery",
+    "label": "Slavery",
+    "slug": "slavery",
     "aliases": [
+      "Slavery in America",
       "American Slavery"
     ],
     "type": "culture",
-    "description": "Enslavement, resistance, and abolition across North America and the Caribbean."
+    "description": "Systems of enslavement, resistance, and abolition across the Atlantic world."
   },
   {
     "id": "smuggling",
@@ -745,6 +841,17 @@
     "aliases": [],
     "type": "organization:band",
     "description": "British rock band active from 1960 to 1970."
+  },
+  {
+    "id": "the-eighties",
+    "preferredName": "The Eighties",
+    "label": "The Eighties",
+    "slug": "the-eighties",
+    "aliases": [
+      "1980s"
+    ],
+    "type": "era",
+    "description": "Global political, cultural, and technological shifts of the 1980s."
   },
   {
     "id": "the-nineties",

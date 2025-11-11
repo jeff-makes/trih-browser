@@ -60,6 +60,15 @@
     "type": "person:guest"
   },
   {
+    "id": "anna-chapman",
+    "preferredName": "Anna Chapman",
+    "aliases": [
+      "Anna Vasilyevna Chapman",
+      "Anna Kushchenko"
+    ],
+    "type": "person:contemporary"
+  },
+  {
     "id": "anne-boleyn",
     "preferredName": "Anne Boleyn",
     "aliases": [
@@ -335,6 +344,15 @@
       "President George Washington"
     ],
     "type": "person:historical"
+  },
+  {
+    "id": "gilgamesh",
+    "preferredName": "Gilgamesh",
+    "aliases": [
+      "King Gilgamesh",
+      "Bilgamesh"
+    ],
+    "type": "person:legendary"
   },
   {
     "id": "grover-cleveland",
