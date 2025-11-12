@@ -11,7 +11,7 @@ This playbook captures the conventions we use when approving LLM proposals for p
 1. **Inspect proposals**  
    Use `rg '"personProposal"' data/errors.jsonl` (or place/topic equivalents) to group proposals by episode/series. Capture the cache key and fingerprint so you can re-run targeted `--force-llm` commands later if needed.
 2. **Decide add vs. map vs. reject**  
-   Apply the criteria below for each entity type. Prefer mapping/aliasing to existing entries whenever a reusable canonical ID already exists.
+   Apply the criteria below for each entity type. Prefer mapping/aliasing to existing entries whenever a reusable canonical ID already exists, and default to umbrella topics instead of minting single-use IDs.
 3. **Update registries**  
    - People: `data/rules/people.json` (sorted alphabetically by ID).  
    - Places: `data/rules/places.json`.  
