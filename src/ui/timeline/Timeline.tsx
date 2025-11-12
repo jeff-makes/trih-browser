@@ -58,7 +58,7 @@ const isValidEra = (value: string | null): value is (typeof ERA_OPTIONS)[number]
 const filterRowsByEra = (rows: TimelineDisplayRow[], eraId: string): TimelineDisplayRow[] => {
   if (eraId === "all" || eraId === "undated") return rows;
   const era = ERA_OPTIONS.find((option) => option.id === eraId);
-  if (!era || !era.range) return rows;
+  if (!era || !("range" in era)) return rows;
   const { from, to } = era.range;
   return rows.filter((row) => {
     const start = row.yearFrom ?? row.yearTo;
