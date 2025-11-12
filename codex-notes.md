@@ -50,6 +50,8 @@ source .env.local && npm run dev:pipeline -- \
 _After the run_: review `data/errors.jsonl`, curate registries, append a review record to `data/pending/reviews.jsonl`, then recompose with `OPENAI_API_KEY=dummy npm run dev:pipeline -- --max-llm-calls 0` so artefacts pick up the canonical refs.
 
 ## Recent Changes
+- **2025-11-12**: Entity page styling investigation stalled—pending/sparse people, places, and topics still show oversized hero boxes despite forcing default LayoutDetail variant. Need fresh CSS eyes later (see Rome vs Christmas screenshots).
+
 - **2025-11-11:** Timeline/UI refresh shipped—parchment background, oxblood + beige palette, centered spine, “Latest Episode” banner, rounded era chips (including the Undated/Special filter), tactile cards with gap markers, and matching detail-page styling (series + episode) using the same brand tokens.
 - **2025-11-10:** Ingested the Nov 10 RSS snapshot, force-enriched episodes `615`, `616`, and the Bob Iger RIHC special, enforced cross-entity guardrails in `src/pipeline/validator.ts`, cleaned legacy pending topics that duplicated people/places, renamed the Rome/Greece entries to separate polity vs. topic labels, and added canonical people for Anne Boleyn, Catherine of Aragon, and Bob Iger.
 - **2025-11-04:** Introduced canonical people/places/topic registries end-to-end (prompt v3, composer/validator/schema updates), enriched a 20-episode pilot batch (`2, 4–7, 360–364, 505, 507, 510, 511, 519, 601–605`), accepted 24 new people + 13 places, added topics (`thatcher-era`, `the-sixties`, `ancient-mesopotamia`, `mughal-empire`, `us-politics`), and logged decisions in `data/pending/reviews.jsonl`; artefacts (`public/episodes.json`) now ship structured entity refs alongside legacy arrays.

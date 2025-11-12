@@ -34,8 +34,6 @@ export default function TopicPage({ params }: TopicPageProps): JSX.Element {
     notFound();
   }
 
-  const heroVariant = data.description && data.description.trim().length >= 120 ? "default" : "condensed";
-
   const facts: QuickFactsItem[] = [];
   const renderEpisodeFact = (entry: NonNullable<typeof data.firstEpisode>) => (
     <div className={entityStyles.factLink}>
@@ -57,12 +55,12 @@ export default function TopicPage({ params }: TopicPageProps): JSX.Element {
 
   const factColumns = (facts.length >= 4 ? 3 : 2) as 1 | 2 | 3;
 
-  const factsBlock = facts.length > 0 ? <QuickFacts items={facts} columns={factColumns} /> : null;
+  const factsBlock = facts.length > 0 ? <QuickFacts items={facts} columns={2} /> : null;
 
   const sectionClass = `${entityStyles.section} ${data.episodes.length <= 3 ? entityStyles.sectionCompact : ""}`;
 
   return (
-    <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs heroVariant={heroVariant}>
+    <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs>
       {factsBlock}
       {data.notes ? <p className={entityStyles.notes}>{data.notes}</p> : null}
 
