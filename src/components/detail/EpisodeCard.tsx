@@ -7,6 +7,9 @@ import { getPersonHref, getPlaceHref, getTopicHref } from "@/lib/entityLinks";
 import { PillLink } from "./PillLink";
 import styles from "./EpisodeCard.module.css";
 
+const classNames = (...values: Array<string | false | null | undefined>) =>
+  values.filter(Boolean).join(" ");
+
 export interface EpisodeCardProps {
   episode: PublicEpisode;
   showPeopleCount?: number;
@@ -15,6 +18,7 @@ export interface EpisodeCardProps {
   showTopicsCount?: number;
   seriesHref?: string | null;
   seriesLabel?: string | null;
+  density?: "default" | "compact";
 }
 
 const formatYear = (value: number | null): string | null => {
@@ -31,7 +35,8 @@ export function EpisodeCard({
   showThemesCount = 0,
   showTopicsCount = 2,
   seriesHref,
-  seriesLabel
+  seriesLabel,
+  density = "default"
 }: EpisodeCardProps): JSX.Element {
   const people = (
     episode.people && episode.people.length > 0
@@ -74,8 +79,10 @@ export function EpisodeCard({
   const summary =
     description.length > 220 ? `${description.slice(0, 200).trim().replace(/[.,;:]?$/, "")}…` : description;
 
+  const cardClass = classNames(styles.card, density === "compact" && styles.cardCompact);
+
   return (
-    <article className={styles.card}>
+    <article className={cardClass}>
       <div className={styles.titleRow}>
         <Link href={`/episode/${episode.slug}`} className={styles.titleLink}>
           <span>{episode.cleanTitle}</span>
@@ -83,9 +90,12 @@ export function EpisodeCard({
         </Link>
         <div className={styles.meta}>{metaParts.join(" • ")}</div>
         {seriesHref && seriesLabel ? (
-          <Link href={seriesHref} className={styles.seriesLink}>
-            {seriesLabel}
-          </Link>
+          <div className={styles.seriesContext}>
+            From the{" "}
+            <Link href={seriesHref} className={styles.seriesLink}>
+              {seriesLabel}
+            </Link>
+          </div>
         ) : null}
       </div>
 

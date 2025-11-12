@@ -10,7 +10,7 @@ export interface QuickFactsItem {
 export interface QuickFactsProps {
   heading?: ReactNode;
   items: QuickFactsItem[];
-  columns?: 1 | 2;
+  columns?: 1 | 2 | 3;
   className?: string;
 }
 
@@ -18,7 +18,11 @@ const classNames = (...values: Array<string | false | null | undefined>) =>
   values.filter(Boolean).join(" ");
 
 export function QuickFacts({ heading, items, columns = 1, className }: QuickFactsProps): JSX.Element {
-  const listClass = classNames(styles.list, columns === 2 && styles.listTwoColumn);
+  const listClass = classNames(
+    styles.list,
+    columns === 2 && styles.listTwoColumn,
+    columns === 3 && styles.listThreeColumn
+  );
 
   return (
     <section className={classNames(styles.container, className)}>

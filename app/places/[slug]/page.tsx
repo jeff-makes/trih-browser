@@ -1,28 +1,26 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-import { PLACE_DEFINITIONS, type PlaceDefinition, findPlace, findPlaceById } from "@/config/places";
-import { LayoutDetail } from "@/components/detail";
-
-const resolvePlace = (slug: string): PlaceDefinition | undefined =>
-  findPlaceById(slug) ?? findPlace(slug);
-
-const formatLabelFromSlug = (value: string): string =>
-  value
-    .split(/[-_]/g)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+import { LayoutDetail, QuickFacts } from "@/components/detail";
+import type { QuickFactsItem } from "@/components/detail/QuickFacts";
+import EntityEpisodes from "@/components/entity/EntityEpisodes";
+import entityStyles from "@/components/entity/EntityPage.module.css";
+import { formatDisplayDate, getPlaceEntityData, getPlaceStaticSlugs } from "@/lib/entities";
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return PLACE_DEFINITIONS.map((place) => ({ slug: place.id }));
+  return getPlaceStaticSlugs().map((slug) => ({ slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const place = resolvePlace(params.slug);
-  const label = place?.preferredName ?? formatLabelFromSlug(params.slug);
+  const data = getPlaceEntityData(params.slug);
+  if (!data) {
+    return {};
+  }
 
   return {
-    title: `${label} — The Rest Is History`,
-    description: place?.description ?? `We’re building a destination page for ${label}.`
+    title: `${data.label} — The Rest Is History Explorer`,
+    description: data.metaDescription
   };
 }
 
@@ -31,31 +29,66 @@ interface PlacePageProps {
 }
 
 export default function PlacePage({ params }: PlacePageProps): JSX.Element {
-  const place = resolvePlace(params.slug);
-  const label = place?.preferredName ?? formatLabelFromSlug(params.slug);
-  const slug = place?.id ?? params.slug;
-  const description = place?.description ?? "Destination page coming soon.";
+  const data = getPlaceEntityData(params.slug);
+  if (!data) {
+    notFound();
+  }
+
+  const heroVariant = data.description && data.description.trim().length >= 120 ? "default" : "condensed";
+
+  const facts: QuickFactsItem[] = [];
+  const renderEpisodeFact = (entry: NonNullable<typeof data.firstEpisode>) => (
+    <div className={entityStyles.factLink}>
+      <Link href={`/episode/${entry.episode.slug}`}>{entry.episode.cleanTitle}</Link>
+      <span className={entityStyles.factDate}>{formatDisplayDate(entry.episode.publishedAt)}</span>
+    </div>
+  );
+
+  if (data.firstEpisode) {
+    facts.push({
+      term: "First Episode Appearance",
+      detail: renderEpisodeFact(data.firstEpisode)
+    });
+  }
+
+  if (data.latestEpisode && data.latestEpisode !== data.firstEpisode) {
+    facts.push({
+      term: "Last Episode Appearance",
+      detail: renderEpisodeFact(data.latestEpisode)
+    });
+  }
+
+  if (data.yearRangeLabel) {
+    facts.push({ term: "Year Range", detail: data.yearRangeLabel });
+  }
+
+  const factColumns = (facts.length >= 4 ? 3 : 2) as 1 | 2 | 3;
+
+  const factsBlock =
+    facts.length >= 3 ? (
+      <QuickFacts items={facts} columns={factColumns} />
+    ) : facts.length > 0 ? (
+      <div className={entityStyles.inlineFacts}>
+        {facts.map((fact) => (
+          <div key={fact.term} className={entityStyles.factPill}>
+            <span className={entityStyles.factLabel}>{fact.term}</span>
+            <div className={entityStyles.factValue}>{fact.detail}</div>
+          </div>
+        ))}
+      </div>
+    ) : null;
+
+  const sectionClass = `${entityStyles.section} ${data.episodes.length <= 3 ? entityStyles.sectionCompact : ""}`;
 
   return (
-    <LayoutDetail
-      title={label}
-      subtitle={description}
-      breadcrumbs={[
-        { label: "Timeline", href: "/" },
-        { label, href: `/places/${slug}` }
-      ]}
-    >
-      <p>
-        We’re preparing a full page for <strong>{label}</strong> with featured episodes and historical context. Sit
-        tight—we’ll light it up soon.
-      </p>
-      {place?.notes ? <p>{place.notes}</p> : null}
-      {!place ? (
-        <p>
-          This place hasn’t been added to the canonical registry yet, so the name is coming directly from the episode
-          data.
-        </p>
-      ) : null}
+    <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs heroVariant={heroVariant}>
+      {factsBlock}
+      {data.notes ? <p className={entityStyles.notes}>{data.notes}</p> : null}
+
+      <section className={sectionClass}>
+        <h2 className={entityStyles.seoHeading}>The Rest Is History episodes about {data.label}</h2>
+        <EntityEpisodes entries={data.episodes} />
+      </section>
     </LayoutDetail>
   );
 }

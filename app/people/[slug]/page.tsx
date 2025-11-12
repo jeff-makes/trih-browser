@@ -1,28 +1,26 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-import { PEOPLE_DEFINITIONS, type PersonDefinition, findPerson, findPersonById } from "@/config/people";
-import { LayoutDetail } from "@/components/detail";
-
-const resolvePerson = (slug: string): PersonDefinition | undefined =>
-  findPersonById(slug) ?? findPerson(slug);
-
-const formatLabelFromSlug = (value: string): string =>
-  value
-    .split(/[-_]/g)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+import { LayoutDetail, QuickFacts } from "@/components/detail";
+import type { QuickFactsItem } from "@/components/detail/QuickFacts";
+import EntityEpisodes from "@/components/entity/EntityEpisodes";
+import entityStyles from "@/components/entity/EntityPage.module.css";
+import { formatDisplayDate, getPersonEntityData, getPersonStaticSlugs } from "@/lib/entities";
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return PEOPLE_DEFINITIONS.map((person) => ({ slug: person.id }));
+  return getPersonStaticSlugs().map((slug) => ({ slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const person = resolvePerson(params.slug);
-  const label = person?.preferredName ?? formatLabelFromSlug(params.slug);
+  const data = getPersonEntityData(params.slug);
+  if (!data) {
+    return {};
+  }
 
   return {
-    title: `${label} — The Rest Is History`,
-    description: person?.description ?? `We’re building a dedicated page for ${label}.`
+    title: `${data.label} — The Rest Is History Explorer`,
+    description: data.metaDescription
   };
 }
 
@@ -31,31 +29,69 @@ interface PersonPageProps {
 }
 
 export default function PersonPage({ params }: PersonPageProps): JSX.Element {
-  const person = resolvePerson(params.slug);
-  const label = person?.preferredName ?? formatLabelFromSlug(params.slug);
-  const slug = person?.id ?? params.slug;
-  const description = person?.description ?? "Destination page coming soon.";
+  const data = getPersonEntityData(params.slug);
+  if (!data) {
+    notFound();
+  }
+
+  const heroVariant = data.description && data.description.trim().length >= 120 ? "default" : "condensed";
+
+  const facts: QuickFactsItem[] = [];
+  const renderEpisodeFact = (entry: NonNullable<typeof data.firstEpisode>) => (
+    <div className={entityStyles.factLink}>
+      <Link href={`/episode/${entry.episode.slug}`}>{entry.episode.cleanTitle}</Link>
+      <span className={entityStyles.factDate}>{formatDisplayDate(entry.episode.publishedAt)}</span>
+    </div>
+  );
+
+  if (data.firstEpisode) {
+    facts.push({
+      term: "First Episode Appearance",
+      detail: renderEpisodeFact(data.firstEpisode)
+    });
+  }
+
+  if (data.latestEpisode && data.latestEpisode !== data.firstEpisode) {
+    facts.push({
+      term: "Last Episode Appearance",
+      detail: renderEpisodeFact(data.latestEpisode)
+    });
+  }
+
+  if (data.yearRangeLabel) {
+    facts.push({
+      term: "Year Range",
+      detail: data.yearRangeLabel
+    });
+  }
+
+  const factColumns = (facts.length >= 4 ? 3 : 2) as 1 | 2 | 3;
+
+  const factsBlock =
+    facts.length >= 3 ? (
+      <QuickFacts items={facts} columns={factColumns} />
+    ) : facts.length > 0 ? (
+      <div className={entityStyles.inlineFacts}>
+        {facts.map((fact) => (
+          <div key={fact.term} className={entityStyles.factPill}>
+            <span className={entityStyles.factLabel}>{fact.term}</span>
+            <div className={entityStyles.factValue}>{fact.detail}</div>
+          </div>
+        ))}
+      </div>
+    ) : null;
+
+  const sectionClass = `${entityStyles.section} ${data.episodes.length <= 3 ? entityStyles.sectionCompact : ""}`;
 
   return (
-    <LayoutDetail
-      title={label}
-      subtitle={description}
-      breadcrumbs={[
-        { label: "Timeline", href: "/" },
-        { label, href: `/people/${slug}` }
-      ]}
-    >
-      <p>
-        We’re filling in a story-driven page for <strong>{label}</strong>. Check back soon for biography highlights,
-        connected episodes, and recurring series callouts.
-      </p>
-      {person?.notes ? <p>{person.notes}</p> : null}
-      {!person ? (
-        <p>
-          This person hasn’t been added to the canonical registry yet, so the name is coming directly from the episode
-          data.
-        </p>
-      ) : null}
+    <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs heroVariant={heroVariant}>
+      {factsBlock}
+      {data.notes ? <p className={entityStyles.notes}>{data.notes}</p> : null}
+
+      <section className={sectionClass}>
+        <h2 className={entityStyles.seoHeading}>The Rest Is History episodes about {data.label}</h2>
+        <EntityEpisodes entries={data.episodes} />
+      </section>
     </LayoutDetail>
   );
 }

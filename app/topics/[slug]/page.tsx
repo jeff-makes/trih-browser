@@ -1,33 +1,26 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-import {
-  TOPIC_DEFINITIONS,
-  type TopicDefinition,
-  findTopic,
-  findTopicBySlug
-} from "@/config/topics";
-import { LayoutDetail } from "@/components/detail";
-
-const resolveTopic = (slug: string): TopicDefinition | undefined =>
-  TOPIC_DEFINITIONS.find((topic) => topic.slug === slug) ?? findTopicBySlug(slug) ?? findTopic(slug);
-
-const formatLabelFromSlug = (value: string): string =>
-  value
-    .split(/[-_]/g)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+import { LayoutDetail, QuickFacts } from "@/components/detail";
+import type { QuickFactsItem } from "@/components/detail/QuickFacts";
+import EntityEpisodes from "@/components/entity/EntityEpisodes";
+import entityStyles from "@/components/entity/EntityPage.module.css";
+import { formatDisplayDate, getTopicEntityData, getTopicStaticSlugs } from "@/lib/entities";
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return TOPIC_DEFINITIONS.map((topic) => ({ slug: topic.slug }));
+  return getTopicStaticSlugs().map((slug) => ({ slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const topic = resolveTopic(params.slug);
-  const label = topic?.label ?? formatLabelFromSlug(params.slug);
+  const data = getTopicEntityData(params.slug);
+  if (!data) {
+    return {};
+  }
 
   return {
-    title: `${label} — The Rest Is History`,
-    description: topic?.description ?? `We’re building a destination page for ${label}.`
+    title: `${data.label} — The Rest Is History Explorer`,
+    description: data.metaDescription
   };
 }
 
@@ -36,31 +29,47 @@ interface TopicPageProps {
 }
 
 export default function TopicPage({ params }: TopicPageProps): JSX.Element {
-  const topic = resolveTopic(params.slug);
-  const label = topic?.label ?? formatLabelFromSlug(params.slug);
-  const slug = topic?.slug ?? params.slug;
-  const description = topic?.description ?? "Destination page coming soon.";
+  const data = getTopicEntityData(params.slug);
+  if (!data) {
+    notFound();
+  }
+
+  const heroVariant = data.description && data.description.trim().length >= 120 ? "default" : "condensed";
+
+  const facts: QuickFactsItem[] = [];
+  const renderEpisodeFact = (entry: NonNullable<typeof data.firstEpisode>) => (
+    <div className={entityStyles.factLink}>
+      <Link href={`/episode/${entry.episode.slug}`}>{entry.episode.cleanTitle}</Link>
+      <span className={entityStyles.factDate}>{formatDisplayDate(entry.episode.publishedAt)}</span>
+    </div>
+  );
+
+  if (data.firstEpisode) {
+    facts.push({
+      term: "First Episode Appearance",
+      detail: renderEpisodeFact(data.firstEpisode)
+    });
+  }
+
+  if (data.yearRangeLabel) {
+    facts.push({ term: "Year Range", detail: data.yearRangeLabel });
+  }
+
+  const factColumns = (facts.length >= 4 ? 3 : 2) as 1 | 2 | 3;
+
+  const factsBlock = facts.length > 0 ? <QuickFacts items={facts} columns={factColumns} /> : null;
+
+  const sectionClass = `${entityStyles.section} ${data.episodes.length <= 3 ? entityStyles.sectionCompact : ""}`;
 
   return (
-    <LayoutDetail
-      title={label}
-      subtitle={description}
-      breadcrumbs={[
-        { label: "Timeline", href: "/" },
-        { label, href: `/topics/${slug}` }
-      ]}
-    >
-      <p>
-        We’re stitching together a full topic page for <strong>{label}</strong>. Expect curated background, linked
-        episodes, and connected people/places in an upcoming release.
-      </p>
-      {topic?.notes ? <p>{topic.notes}</p> : null}
-      {!topic ? (
-        <p>
-          This topic hasn’t been curated in the registry yet, so the label and slug come from the original episode
-          proposal.
-        </p>
-      ) : null}
+    <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs heroVariant={heroVariant}>
+      {factsBlock}
+      {data.notes ? <p className={entityStyles.notes}>{data.notes}</p> : null}
+
+      <section className={sectionClass}>
+        <h2 className={entityStyles.seoHeading}>The Rest Is History episodes about {data.label}</h2>
+        <EntityEpisodes entries={data.episodes} />
+      </section>
     </LayoutDetail>
   );
 }
