@@ -7,6 +7,7 @@ import type { QuickFactsItem } from "@/components/detail/QuickFacts";
 import EntityEpisodes from "@/components/entity/EntityEpisodes";
 import entityStyles from "@/components/entity/EntityPage.module.css";
 import { formatDisplayDate, getTopicEntityData, getTopicStaticSlugs } from "@/lib/entities";
+import { buildEntityStructuredData } from "@/lib/structuredData";
 
 export function generateStaticParams(): Array<{ slug: string }> {
   return getTopicStaticSlugs().map((slug) => ({ slug }));
@@ -33,6 +34,7 @@ export default function TopicPage({ params }: TopicPageProps): JSX.Element {
   if (!data) {
     notFound();
   }
+  const structuredData = JSON.stringify(buildEntityStructuredData(data));
 
   const facts: QuickFactsItem[] = [];
   const renderEpisodeFact = (entry: NonNullable<typeof data.firstEpisode>) => (
@@ -60,14 +62,17 @@ export default function TopicPage({ params }: TopicPageProps): JSX.Element {
   const sectionClass = `${entityStyles.section} ${data.episodes.length <= 3 ? entityStyles.sectionCompact : ""}`;
 
   return (
-    <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs>
-      {factsBlock}
-      {data.notes ? <p className={entityStyles.notes}>{data.notes}</p> : null}
+    <>
+      <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs>
+        {factsBlock}
+        {data.notes ? <p className={entityStyles.notes}>{data.notes}</p> : null}
 
-      <section className={sectionClass}>
-        <h2 className={entityStyles.seoHeading}>The Rest Is History episodes about {data.label}</h2>
-        <EntityEpisodes entries={data.episodes} />
-      </section>
-    </LayoutDetail>
+        <section className={sectionClass}>
+          <h2 className={entityStyles.seoHeading}>The Rest Is History episodes about {data.label}</h2>
+          <EntityEpisodes entries={data.episodes} />
+        </section>
+      </LayoutDetail>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
+    </>
   );
 }

@@ -65,8 +65,14 @@ Composition ensures slugs are deterministic and consistent across runs; registry
 | `/` | Timeline home | Mobile-first vertical spine with sticky decade markers. |
 | `/series/[slug]` | Series detail | Narrative, year span chip, ordered list of parts. |
 | `/episode/[slug]` | Episode detail | Title, part badge, audio player, chips, description. |
+| `/people/[slug]` | Person entity page | Quick facts + chronological or grouped list of appearances. |
+| `/places/[slug]` | Place entity page | Mirrors person layout with type labels and contextual notes. |
+| `/topics/[slug]` | Topic entity page | Focused narrative around curated registry topics. |
+| `/about` | About the project | Unofficial fan-story + motivation; repeats “not affiliated” disclaimer. |
+| `/privacy` | Privacy policy | Plain-language summary of logging/analytics (none) and contact note. |
+| `/terms` | Terms of service | Lightweight usage guidelines and fan-site disclaimer. |
 
-Series pages link to their constituent episodes via `/episode/[episodeSlug]`. No nested routes in v1.
+Series pages link to their constituent episodes via `/episode/[episodeSlug]`. Entity pages round out the IA so every pill link has a deterministic destination; no nested routes in v1.
 
 ---
 
@@ -123,15 +129,11 @@ Composer (or the registry build step) writes the resolved slugs onto artefacts a
 
 ---
 
-## 8. Search Experience (SERP)
+## 8. Search Experience (SERP — backlog)
 
-- Single omnibox; queries match title, description, people, places, themes, and series titles.
-- Results interleave series and episodes with a badge (“Series” / “Episode”).
-- Optional facet chips for People and Places; toggling chips filters results client-side.
-- Client-only search index using `minisearch` (preferred) or `Fuse.js`.
-  - Indexed fields: `cleanTitle`, `cleanDescriptionText`, `seriesTitle`, `keyPeople`, `keyPlaces`, `keyThemes`, `keyTopics.label`.
-  - Field boosts: title ×4, keyPeople ×3, keyPlaces ×2, others ×1.
-- Analytics on search submissions and result clicks.
+- Not built yet; the current experience deep-links users from timeline + chips into entity detail pages instead.
+- When prioritized, deliverables remain: single omnibox across episodes/series, lightweight client index (MiniSearch/Fuse), optional People/Places facet chips, and GA events for submit/result clicks.
+- Keep this section as the canonical requirements doc for that future sprint.
 
 ---
 
@@ -149,13 +151,18 @@ Composer (or the registry build step) writes the resolved slugs onto artefacts a
 - Ordered list of parts with publication years and part badges; child rows link to episode detail pages.
 - CTA to scroll timeline back to the series position (deep link anchor).
 
+**People / Places / Topics**
+- Share the same `LayoutDetail` hero (title, descriptive subtitle, optional notes) plus a reusable Quick Facts block (first/latest appearance links, year range, entity-specific metadata).
+- Entity episodes component lists every mention with toggleable grouping (chronological pagination vs. grouped by series) and `EpisodeCard` styling.
+- Chips route to `/people/[slug]`, `/places/[slug]`, `/topics/[slug]` so the browse loop is closed without relying on unfinished search.
+
 Accessibility: provide `aria-expanded` for collapsible sections, descriptive button labels, and ensure screen-reader ordering follows the visual layout.
 
 ---
 
 ## 10. SEO & Sharing
 
-- Canonical URL per page (`/episode/[slug]`, `/series/[slug]`).
+- Canonical URL per page (`/episode/[slug]`, `/series/[slug]`, `/people/[slug]`, `/places/[slug]`, `/topics/[slug]`).
 - `twitter:card=summary` (no image in v1).
 - Open Graph:
   - `og:title`: `The Rest Is History — {cleanTitle}` or `TRIH Series — {seriesTitle}`.
@@ -163,6 +170,8 @@ Accessibility: provide `aria-expanded` for collapsible sections, descriptive but
 - JSON-LD:
   - Episodes as `PodcastEpisode` with `partOfSeries`.
   - Series as `CreativeWorkSeries`.
+  - People as `Person`, places as `Place`, topics as `DefinedTerm` (or `Thing` when taxonomy is broader) with `subjectOf` pointing back to related episodes.
+  - Static pages (`/about`, `/privacy`, `/terms`) share standard metadata only (no JSON-LD required).
 - `robots.txt` allows all crawlers.
 - Sitemap generated from `public/slug-registry.json` either during publish or via `/sitemap.xml`.
 
@@ -170,11 +179,11 @@ Accessibility: provide `aria-expanded` for collapsible sections, descriptive but
 
 ## 11. Performance & Technical Notes
 
-- Client fetches `public/episodes.json`, `public/series.json`, and `public/slug-registry.json` once; leverage CDN caching.
-- Trim index payload (only store fields required for search) to keep bundle sizes manageable.
+- Timeline currently imports `public/episodes.json`/`public/series.json` at build time, so no client fetch is required; updates flow through the pipeline-generated artefacts.
+- Entity detail routes call `get*StaticSlugs()` (derived from registry files + artefacts) inside `generateStaticParams`, keeping pre-render deterministic and avoiding runtime filesystem reads.
+- Once search ships, trim the client index payload (only store fields required for search) to keep bundle sizes manageable.
 - Static generation with Incremental Static Regeneration (ISR):
-  - `generateStaticParams` reads `slug-registry.json` for pre-render.
-  - `revalidate` ~300 s for detail pages, or on-demand revalidation triggered by pipeline publish.
+  - Detail pages revalidate on the cadence Vercel config specifies, or use on-demand revalidation triggered by the publish workflow.
 - Long-cache immutable assets; bust via filename hashing when necessary.
 - Target Core Web Vitals budgets; avoid layout shift by reserving space for timeline elements.
 
@@ -206,10 +215,11 @@ Integrate via GA4 gtag events with consistent parameters (`content_type`, `conte
 
 - [ ] Composer emits slugs for all episodes/series and writes `public/slug-registry.json`.
 - [ ] Timeline home (`/`) with expandable series and undated section.
-- [ ] Client search with People/Places facet chips.
-- [ ] Series and episode pages with metadata, audio embed, breadcrumbs.
-- [ ] Canonicals, sitemap/robots, JSON-LD metadata.
-- [ ] GA4 events wired for timeline, search, detail interactions.
+- [ ] Entity destinations for series, episodes, people, places, topics share consistent LayoutDetail experience.
+- [ ] Static footer with fan disclaimer + quick links to key pages (about/privacy/terms/featured entities).
+- [ ] Search backlog scoped and captured (section 8) for the next milestone.
+- [ ] Canonicals, sitemap/robots, JSON-LD metadata (episodes/series/entities).
+- [ ] GA4 events wired for timeline + detail interactions (search events deferred until feature launch).
 - [ ] ISR/on-demand revalidation path documented and integrated with pipeline.
 - [ ] Smoke tests on mobile viewports and screen readers (VoiceOver/NVDA).
 

@@ -23,9 +23,8 @@ export default function HomePage() {
   return (
     <div className="page">
       <header className="page__hero">
-        <p className="page__eyebrow">The Rest Is History</p>
-        <h1>The Explorer Timeline</h1>
-        <p className="page__tagline">Discover your next listen — explore every era of history in one scrollable timeline.</p>
+        <h1>The Rest Is History Explorer</h1>
+        <p className="page__tagline">A better way to find your next listen.</p>
       </header>
 
       <main className="page__content">

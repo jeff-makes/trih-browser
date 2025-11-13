@@ -32,14 +32,14 @@
 - Use the local review console (`npm run dev` → `http://localhost:3000/review`) to accept/map/reject proposals instead of editing JSON by hand; it writes straight to the registries and review log.
 - Backlog status: `/review` is clear after the 2025-11-11 batches. Just monitor for new entries (nightly pipeline reruns) and map them immediately so the queue stays empty.
 - Upcoming work ideas:
-  1. UI polish pass (spacing, typography, additional brand touches).
-  2. People/Places/Topics destination pages so each chip resolves to canonical content.
-  3. Site-wide search experience (start with filtered list, grow into richer query if needed).
-  4. Instrumentation (Google Analytics or preferred analytics stack) before launch.
+  1. Site-wide search experience (start with filtered list, grow into richer query if needed).
+  2. Instrumentation (Google Analytics or preferred analytics stack) before launch.
+- Next session focus: UI polish pass (spacing, typography tweaks, footer/legal page styling follow-ups).
 - Use the playbook (`docs/entity-curation-playbook.md`) as the blueprint for accept/map/reject decisions so new LLM proposals stay deterministic.
 - Plan the next enrichment batch (mid/late catalogue) once the current proposals are cleared, using `--force-llm` to target the chosen episode IDs and cap spend with `--max-llm-calls`.
 - Keep auditing registries for cross-entity collisions; reconcile duplicates early so the validator guardrail doesn’t block future pipeline runs.
 - Monitor the scheduled GitHub Actions publish + Vercel revalidation webhook to ensure nightly artefact pushes stay in sync with local work.
+- Once the production domain is finalized, set `NEXT_PUBLIC_SITE_URL` (or `SITE_URL`) so canonical URLs/JSON-LD stop defaulting to `http://localhost:3000`.
 
 ## Canon backfill command
 ```bash
@@ -50,7 +50,7 @@ source .env.local && npm run dev:pipeline -- \
 _After the run_: review `data/errors.jsonl`, curate registries, append a review record to `data/pending/reviews.jsonl`, then recompose with `OPENAI_API_KEY=dummy npm run dev:pipeline -- --max-llm-calls 0` so artefacts pick up the canonical refs.
 
 ## Recent Changes
-- **2025-11-12**: Entity page styling investigation stalled—pending/sparse people, places, and topics still show oversized hero boxes despite forcing default LayoutDetail variant. Need fresh CSS eyes later (see Rome vs Christmas screenshots).
+- **2025-11-12**: Added global footer with fan disclaimer + quick links, launched lightweight About/Privacy/Terms pages, and tightened the home hero copy to “The Rest Is History Explorer”. Entity page styling investigation still pending—people/places/topics with sparse data continue to show oversized heroes (see Rome vs Christmas screenshots).
 
 - **2025-11-11:** Timeline/UI refresh shipped—parchment background, oxblood + beige palette, centered spine, “Latest Episode” banner, rounded era chips (including the Undated/Special filter), tactile cards with gap markers, and matching detail-page styling (series + episode) using the same brand tokens.
 - **2025-11-10:** Ingested the Nov 10 RSS snapshot, force-enriched episodes `615`, `616`, and the Bob Iger RIHC special, enforced cross-entity guardrails in `src/pipeline/validator.ts`, cleaned legacy pending topics that duplicated people/places, renamed the Rome/Greece entries to separate polity vs. topic labels, and added canonical people for Anne Boleyn, Catherine of Aragon, and Bob Iger.

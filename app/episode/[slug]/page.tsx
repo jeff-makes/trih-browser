@@ -5,6 +5,7 @@ import { EpisodeCard, FindAndListen, LayoutDetail, PillLink, QuickFacts, Related
 import { getAllEpisodes, getEpisodeBySlug, getEpisodesForSeries, getSeriesById } from "@/lib/data";
 import { getPersonHref, getPlaceHref, getTopicHref } from "@/lib/entityLinks";
 import { findRelatedEpisodes } from "@/lib/similar";
+import { buildEpisodeStructuredData } from "@/lib/structuredData";
 
 import styles from "./page.module.css";
 
@@ -138,53 +139,58 @@ export default function EpisodePage({ params }: EpisodePageProps): JSX.Element {
     { label: episode.cleanTitle, href: `/episode/${episode.slug}` }
   ];
 
+  const structuredData = JSON.stringify(buildEpisodeStructuredData(episode, { series }));
+
   return (
-    <LayoutDetail title={episode.cleanTitle} subtitle={cleanedDescription} breadcrumbs={breadcrumbs}>
-      <QuickFacts items={quickFacts} columns={2} />
+    <>
+      <LayoutDetail title={episode.cleanTitle} subtitle={cleanedDescription} breadcrumbs={breadcrumbs}>
+        <QuickFacts items={quickFacts} columns={2} />
 
-      {(people.length > 0 || places.length > 0) && (
+        {(people.length > 0 || places.length > 0) && (
+          <section className={styles.section}>
+            <h2>At a glance</h2>
+            <div className={styles.pillList}>
+              {people.map((person) => (
+                <PillLink key={person.href} href={person.href} variant="people">
+                  {person.name}
+                </PillLink>
+              ))}
+              {places.map((place) => (
+                <PillLink key={place.href} href={place.href} variant="places">
+                  {place.name}
+                </PillLink>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className={styles.section}>
-          <h2>At a glance</h2>
-          <div className={styles.pillList}>
-            {people.map((person) => (
-              <PillLink key={person.href} href={person.href} variant="people">
-                {person.name}
-              </PillLink>
-            ))}
-            {places.map((place) => (
-              <PillLink key={place.href} href={place.href} variant="places">
-                {place.name}
-              </PillLink>
-            ))}
-          </div>
+          <h2>Listen now</h2>
+          <audio controls className={styles.audio} src={episode.audioUrl}>
+            Your browser does not support the audio element.
+          </audio>
+          <FindAndListen />
         </section>
-      )}
 
-      <section className={styles.section}>
-        <h2>Listen now</h2>
-        <audio controls className={styles.audio} src={episode.audioUrl}>
-          Your browser does not support the audio element.
-        </audio>
-        <FindAndListen />
-      </section>
+        {siblings.length > 0 ? (
+          <section className={styles.section}>
+            <h2>More from this series</h2>
+            <div className={styles.episodeGrid}>
+              {siblings.map((sibling) => (
+                <EpisodeCard
+                  key={sibling.episodeId}
+                  episode={sibling}
+                  showPeopleCount={2}
+                  showPlacesCount={1}
+                />
+              ))}
+            </div>
+          </section>
+        ) : null}
 
-      {siblings.length > 0 ? (
-        <section className={styles.section}>
-          <h2>More from this series</h2>
-          <div className={styles.episodeGrid}>
-            {siblings.map((sibling) => (
-              <EpisodeCard
-                key={sibling.episodeId}
-                episode={sibling}
-                showPeopleCount={2}
-                showPlacesCount={1}
-              />
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-      <RelatedRow title="You might also like" items={relatedEpisodes} />
-    </LayoutDetail>
+        <RelatedRow title="You might also like" items={relatedEpisodes} />
+      </LayoutDetail>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
+    </>
   );
 }

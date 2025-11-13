@@ -1,9 +1,12 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+
+import { Footer } from "@/components/layout/Footer";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'The Rest Is History Explorer',
-  description: 'Browse The Rest Is History episodes and series along a chronological timeline.'
+  title: "The Rest Is History Explorer",
+  description: "Browse The Rest Is History episodes, series, people, places, and topics in one place."
 };
 
 export default function RootLayout(props: Readonly<{ children: React.ReactNode }>) {
@@ -11,8 +14,12 @@ export default function RootLayout(props: Readonly<{ children: React.ReactNode }
 
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="site-shell">
+          <div className="site-content">{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
-

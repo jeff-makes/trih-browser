@@ -6,6 +6,7 @@ import { getAllSeries, getSeriesAggregate, getSeriesBySlug } from "@/lib/data";
 import { getPersonHref, getPlaceHref } from "@/lib/entityLinks";
 import { getTopPeopleForSeries, getTopPlacesForSeries } from "@/lib/indexes";
 import { findRelatedSeries } from "@/lib/similar";
+import { buildSeriesStructuredData } from "@/lib/structuredData";
 
 import styles from "./page.module.css";
 
@@ -84,53 +85,64 @@ export default function SeriesPage({ params }: SeriesPageProps): JSX.Element {
     title: entry.seriesTitle
   }));
 
-  return (
-    <LayoutDetail
-      title={series.seriesTitle}
-      subtitle={series.narrativeSummary ?? undefined}
-      breadcrumbs={[
-        { label: "Timeline", href: "/" },
-        { label: series.seriesTitle, href: `/series/${series.slug}` }
-      ]}
-    >
-      <QuickFacts items={quickFacts} columns={2} />
+  const structuredData = JSON.stringify(
+    buildSeriesStructuredData(series, {
+      episodes,
+      people: topPeople.map((person) => person.name),
+      places: topPlaces.map((place) => place.name)
+    })
+  );
 
-      {(topPeople.length > 0 || topPlaces.length > 0) && (
+  return (
+    <>
+      <LayoutDetail
+        title={series.seriesTitle}
+        subtitle={series.narrativeSummary ?? undefined}
+        breadcrumbs={[
+          { label: "Timeline", href: "/" },
+          { label: series.seriesTitle, href: `/series/${series.slug}` }
+        ]}
+      >
+        <QuickFacts items={quickFacts} columns={2} />
+
+        {(topPeople.length > 0 || topPlaces.length > 0) && (
+          <section className={styles.section}>
+            <h2>Key People & Places</h2>
+            <div className={styles.pillList}>
+              {topPeople.map((person) => (
+                <PillLink key={person.name} href={getPersonHref(person.name)} variant="people">
+                  {person.name}
+                </PillLink>
+              ))}
+              {topPlaces.map((place) => (
+                <PillLink key={place.name} href={getPlaceHref(place.name)} variant="places">
+                  {place.name}
+                </PillLink>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className={styles.section}>
-          <h2>Key People & Places</h2>
-          <div className={styles.pillList}>
-            {topPeople.map((person) => (
-              <PillLink key={person.name} href={getPersonHref(person.name)} variant="people">
-                {person.name}
-              </PillLink>
-            ))}
-            {topPlaces.map((place) => (
-              <PillLink key={place.name} href={getPlaceHref(place.name)} variant="places">
-                {place.name}
-              </PillLink>
+          <h2>Episodes in this series</h2>
+          <div className={styles.episodeGrid}>
+            {episodes.map((episode) => (
+              <EpisodeCard
+                key={episode.episodeId}
+                episode={episode}
+                showPeopleCount={2}
+                showPlacesCount={1}
+                showThemesCount={0}
+              />
             ))}
           </div>
         </section>
-      )}
 
-      <section className={styles.section}>
-        <h2>Episodes in this series</h2>
-        <div className={styles.episodeGrid}>
-          {episodes.map((episode) => (
-            <EpisodeCard
-              key={episode.episodeId}
-              episode={episode}
-              showPeopleCount={2}
-              showPlacesCount={1}
-              showThemesCount={0}
-            />
-          ))}
-        </div>
-      </section>
+        <FindAndListen title="Listen to this arc" />
 
-      <FindAndListen title="Listen to this arc" />
-
-      <RelatedRow title="Related series" items={relatedSeries} />
-    </LayoutDetail>
+        <RelatedRow title="Related series" items={relatedSeries} />
+      </LayoutDetail>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
+    </>
   );
 }
