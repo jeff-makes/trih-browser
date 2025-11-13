@@ -3,6 +3,10 @@
   gap: clamp(1rem, 4vw, 1.5rem);
 }
 
+.heroDescription {
+  margin-top: 0.75rem;
+}
+
 .pillList {
   display: flex;
   flex-wrap: wrap;

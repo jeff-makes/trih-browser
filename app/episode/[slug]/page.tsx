@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { EpisodeCard, FindAndListen, LayoutDetail, PillLink, QuickFacts, RelatedRow } from "@/components/detail";
+import {
+  EpisodeCard,
+  FindAndListen,
+  LayoutDetail,
+  PillLink,
+  QuickFacts,
+  ReadMoreDescription,
+  RelatedRow
+} from "@/components/detail";
 import { getAllEpisodes, getEpisodeBySlug, getEpisodesForSeries, getSeriesById } from "@/lib/data";
+import { segmentDescription, stripAdChoices } from "@/lib/description";
 import { getPersonHref, getPlaceHref, getTopicHref } from "@/lib/entityLinks";
 import { findRelatedEpisodes } from "@/lib/similar";
 import { buildEpisodeStructuredData } from "@/lib/structuredData";
@@ -72,10 +81,17 @@ export default function EpisodePage({ params }: EpisodePageProps): JSX.Element {
       title: candidate.cleanTitle
     }));
 
-  const removeAdChoices = (value: string) =>
-    value.replace(/Learn more about your ad choices\. Visit podcastchoices\.com\/adchoices/gi, "").trim();
-
-  const cleanedDescription = removeAdChoices(episode.cleanDescriptionText);
+  const { intro, promo } = segmentDescription(episode.cleanDescriptionMarkdown);
+  const fallbackParagraph = stripAdChoices(episode.cleanDescriptionText);
+  const introParagraphs = intro.length > 0 ? intro : fallbackParagraph ? [fallbackParagraph] : [];
+  const heroSubtitle =
+    introParagraphs.length > 0 ? (
+      <ReadMoreDescription
+        introParagraphs={introParagraphs}
+        promoParagraphs={promo}
+        className={styles.heroDescription}
+      />
+    ) : undefined;
 
   const publishedLabel = episode.publishedAt ? episode.publishedAt.slice(0, 10) : "Unknown";
   const topics = episode.keyTopics ?? [];
@@ -133,17 +149,11 @@ export default function EpisodePage({ params }: EpisodePageProps): JSX.Element {
     });
   }
 
-  const breadcrumbs = [
-    { label: "Timeline", href: "/" },
-    ...(series ? [{ label: series.seriesTitle, href: `/series/${series.slug}` }] : []),
-    { label: episode.cleanTitle, href: `/episode/${episode.slug}` }
-  ];
-
   const structuredData = JSON.stringify(buildEpisodeStructuredData(episode, { series }));
 
   return (
     <>
-      <LayoutDetail title={episode.cleanTitle} subtitle={cleanedDescription} breadcrumbs={breadcrumbs}>
+      <LayoutDetail title={episode.cleanTitle} subtitle={heroSubtitle}>
         <QuickFacts items={quickFacts} columns={2} />
 
         {(people.length > 0 || places.length > 0) && (

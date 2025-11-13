@@ -34,11 +34,10 @@ Implication: the brainstormed UX is mostly supported, but we need deterministic 
 Data sources: one `PublicEpisode`, matching `PublicSeries` (optional), plus prebuilt indexes for people/place relationships and similarity scoring.
 
 Implementation checklist:
-- **Header & breadcrumb**
-  - Breadcrumb order: Home → (optional era/region placeholder) → Series (when applicable) → Episode.
-  - Use `seriesId` to pull the parent series title when present and render it as a link back to `/series/[seriesId]`.
+- **Hero & summary**
+  - Hero shows title + first paragraph of `cleanDescriptionMarkdown`. Longer copy collapses behind a “Read more” toggle that reveals promos/sponsor text inline.
+  - When an episode belongs to a series, include a subtle inline note (“From the {seriesTitle} arc”) under the hero.
   - Format publish date via shared `formatDate(publishedAt)`. Year range chip uses `formatYearRange(yearFrom, yearTo)`, falls back to publish year.
-  - Mobile treatment: hide or collapse breadcrumbs into a single “Back to series” link to avoid wrapping long labels on smaller screens.
 - **Series context (conditional)**
   - If `seriesId` exists, surface a prominent CTA (e.g., inline banner or pill) near the header that links to the parent Series page and calls out the current `part` / total parts.
   - Include the series card inside “Connected Threads” even when the episode belongs to it, so the loop remains obvious.
@@ -85,9 +84,9 @@ Implementation checklist:
   - H1 uses `seriesTitle` (LLM generated via composer; see `src/pipeline/composer.ts:117-146`).
   - Subhead: `episodeCount`, optional year range chip from `yearFrom`/`yearTo` + `yearConfidence`.
   - Render `narrativeSummary` as the hero paragraph; fall back to a deterministic title-derived sentence if LLM data is missing.
-  - Notebook breadcrumb treatment mirrors episode page: show full trail on desktop, collapse to a compact “Back to timeline” / “Back to episodes” link on mobile.
+  - Hero mirrors the episode layout (no breadcrumbs) with the same inline “Read more” treatment for long descriptions and a footer “Back to timeline” pill.
 - **Quick Overview**
-  - Grid or pill list summarising key people/places aggregated across the series (top N from combined episode metadata).
+  - “At a glance” pill list summarises key people/places aggregated across the series (top N from combined episode metadata) using the same layout as the episode detail page.
   - Clamp the default display (e.g., show first 6 chips) with “+ more” expanders to avoid overwhelming the hero.
   - Include “Listen to latest episode” CTA linking to the most recent `publishedAt` entry within the series, plus a complementary “Start at Part 1” CTA for new listeners.
   - “View full arc on timeline” should link to `/` with query params until timeline filters ship; flag it as TODO for dedicated routes.
@@ -175,7 +174,7 @@ Data gap: we do not yet have a canonical hierarchy for places (no continent/coun
   - `CollapsibleText` — summary expander using `useState` + CSS clamp.
   - `RelatedRow` — horizontal scroll list or responsive grid.
   - `FindAndListen` — CTA block generating platform search URLs.
-- Consider a `LayoutDetail` wrapper that injects consistent spacing, breadcrumbs, and “Back to timeline” link.
+- Consider a `LayoutDetail` wrapper that injects consistent spacing and the persistent “Back to timeline” link (breadcrumbs intentionally removed).
 
 Performance: indexes can be generated once at module scope since artefacts are static; avoid reprocessing on each request. If bundle size grows, gate heavy computation behind `process.env.NEXT_RUNTIME !== "edge"` or precompute JSON at publish time.
 

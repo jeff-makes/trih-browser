@@ -28,7 +28,7 @@ Make it effortless to “see the show as history”: a mobile-first vertical tim
 - Undated items discoverable via a dedicated “Undated / Special” chip plus a supplemental list when browsing “All Eras.”
 - Mixed client-side search (episodes + series) with People/Places facet chips (no type filter).
 - Series detail pages (`/series/[slug]`) with narrative summaries and part lists.
-- Episode detail pages (`/episode/[slug]`) with audio playback, people/places chips, and breadcrumbs.
+- Episode detail pages (`/episode/[slug]`) with audio playback and people/places chips (no breadcrumbs).
 - Deterministic slugs emitted during composition, plus `public/slug-registry.json`.
 - Canonical URLs, sitemap, robots.txt, JSON-LD metadata, GA4 event instrumentation.
 - Twitter/OG summary card (no custom image in v1).

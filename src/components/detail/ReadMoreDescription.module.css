@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  gap: 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(15, 23, 42, 0.86);
+}
+
+.container p {
+  margin: 0;
+}
+
+.container a {
+  color: #4338ca;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.toggleRow {
+  display: flex;
+}
+
+.toggleButton {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(67, 56, 202, 0.12);
+  color: #4338ca;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.toggleButton:hover,
+.toggleButton:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(67, 56, 202, 0.25);
+}
+
+.toggleButton:focus-visible {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}

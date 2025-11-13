@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { PublicEpisode } from "@/types";
 
 import { getPersonHref, getPlaceHref, getTopicHref } from "@/lib/entityLinks";
+import { stripAdChoices } from "@/lib/description";
 
 import { PillLink } from "./PillLink";
 import styles from "./EpisodeCard.module.css";
@@ -72,10 +73,7 @@ export function EpisodeCard({
     metaParts.push(yearFrom);
   }
 
-  const removeAdChoices = (value: string) =>
-    value.replace(/Learn more about your ad choices\. Visit podcastchoices\.com\/adchoices/gi, "").trim();
-
-  const description = removeAdChoices(episode.cleanDescriptionText);
+  const description = stripAdChoices(episode.cleanDescriptionText);
   const summary =
     description.length > 220 ? `${description.slice(0, 200).trim().replace(/[.,;:]?$/, "")}…` : description;
 

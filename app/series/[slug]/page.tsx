@@ -95,19 +95,12 @@ export default function SeriesPage({ params }: SeriesPageProps): JSX.Element {
 
   return (
     <>
-      <LayoutDetail
-        title={series.seriesTitle}
-        subtitle={series.narrativeSummary ?? undefined}
-        breadcrumbs={[
-          { label: "Timeline", href: "/" },
-          { label: series.seriesTitle, href: `/series/${series.slug}` }
-        ]}
-      >
+      <LayoutDetail title={series.seriesTitle} subtitle={series.narrativeSummary ?? undefined}>
         <QuickFacts items={quickFacts} columns={2} />
 
         {(topPeople.length > 0 || topPlaces.length > 0) && (
           <section className={styles.section}>
-            <h2>Key People & Places</h2>
+            <h2>At a glance</h2>
             <div className={styles.pillList}>
               {topPeople.map((person) => (
                 <PillLink key={person.name} href={getPersonHref(person.name)} variant="people">
