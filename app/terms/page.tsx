@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { LayoutDetail } from "@/components/detail";
+import { StaticPageLayout } from "@/components/detail";
 
 import styles from "../static-pages.module.css";
 
@@ -11,11 +11,9 @@ export const metadata: Metadata = {
 
 export default function TermsPage(): JSX.Element {
   return (
-    <LayoutDetail
+    <StaticPageLayout
       title="Terms of Service"
       subtitle="Use this fan-built reference at your own discretion. It’s a hobby project, not a commercial platform."
-      heroVariant="condensed"
-      hideBreadcrumbs
     >
       <div className={styles.stack}>
         <p>
@@ -34,11 +32,11 @@ export default function TermsPage(): JSX.Element {
           </li>
         </ul>
         <div className={styles.callout}>
-          The Rest Is History Explorer is an independent fan experience built by Jeff Talajic. It is not affiliated with
-          Dominic Sandbrook, Tom Holland, Goalhanger, or the official Rest Is History team. All trademarks belong to
-          their respective owners.
+          The Rest Is History Explorer is an independent fan experience maintained by the community. It is not
+          affiliated with Dominic Sandbrook, Tom Holland, Goalhanger, or the official Rest Is History team. All
+          trademarks belong to their respective owners.
         </div>
       </div>
-    </LayoutDetail>
+    </StaticPageLayout>
   );
 }

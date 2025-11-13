@@ -152,9 +152,13 @@ Composer (or the registry build step) writes the resolved slugs onto artefacts a
 - CTA to scroll timeline back to the series position (deep link anchor).
 
 **People / Places / Topics**
-- Share the same `LayoutDetail` hero (title, descriptive subtitle, optional notes) plus a reusable Quick Facts block (first/latest appearance links, year range, entity-specific metadata).
+- Share the dedicated `EntityLayout` hero: oxblood serif title, optional subtitle, parchment card background, automatic compact padding when no subtitle is available so sparse entities do not leave an empty billboard.
+- Quick Facts block (first/latest appearance links, year range, entity-specific metadata) sits directly under the hero.
 - Entity episodes component lists every mention with toggleable grouping (chronological pagination vs. grouped by series) and `EpisodeCard` styling.
 - Chips route to `/people/[slug]`, `/places/[slug]`, `/topics/[slug]` so the browse loop is closed without relying on unfinished search.
+
+**About / Privacy / Terms**
+- Use `StaticPageLayout` — condensed serif hero without the entity card, stacked prose content, and compact “Back to timeline” pill. Copy stays generic (no personal names) and reinforces the unofficial fan-project disclaimer.
 
 Accessibility: provide `aria-expanded` for collapsible sections, descriptive button labels, and ensure screen-reader ordering follows the visual layout.
 

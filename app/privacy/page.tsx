@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { LayoutDetail } from "@/components/detail";
+import { StaticPageLayout } from "@/components/detail";
 
 import styles from "../static-pages.module.css";
 
@@ -11,11 +11,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage(): JSX.Element {
   return (
-    <LayoutDetail
+    <StaticPageLayout
       title="Privacy Policy"
       subtitle="This fan site keeps things lightweight—no accounts, trackers, or behavioural profiling."
-      heroVariant="condensed"
-      hideBreadcrumbs
     >
       <div className={styles.stack}>
         <p>
@@ -33,14 +31,14 @@ export default function PrivacyPage(): JSX.Element {
           instrumentation is added in the future, this page will be updated before it goes live.
         </p>
         <p>
-          If you have questions or need something removed, reach out directly to Jeff Talajic via the project’s GitHub
-          issues list or the contact details shared with collaborators.
+          If you have questions or need something removed, reach out to the maintainers through the contact channels
+          shared with collaborators or via the site’s published support instructions.
         </p>
         <div className={styles.callout}>
           tl;dr — browse freely. This project stores no personal data beyond the transient infrastructure logs required
           to keep the site online.
         </div>
       </div>
-    </LayoutDetail>
+    </StaticPageLayout>
   );
 }

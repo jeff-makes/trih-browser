@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { LayoutDetail } from "@/components/detail";
+import { StaticPageLayout } from "@/components/detail";
 
 import styles from "../static-pages.module.css";
 
@@ -11,11 +11,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage(): JSX.Element {
   return (
-    <LayoutDetail
+    <StaticPageLayout
       title="About The Rest Is History Explorer"
       subtitle="Built by Jeff Talajic — a Rest Is History fan who wanted a faster way to revisit the archive."
-      heroVariant="condensed"
-      hideBreadcrumbs
     >
       <div className={styles.stack}>
         <p>
@@ -38,6 +36,6 @@ export default function AboutPage(): JSX.Element {
           Holland, Goalhanger, or the official Rest Is History podcast team.
         </div>
       </div>
-    </LayoutDetail>
+    </StaticPageLayout>
   );
 }

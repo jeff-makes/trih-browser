@@ -1,11 +1,20 @@
 .page {
   min-height: 100vh;
   display: grid;
-  gap: 2rem;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
   padding: 3rem 1.25rem 4rem;
   background: var(--color-bg);
   color: var(--color-text);
   background-image: radial-gradient(circle at top, rgba(106, 31, 27, 0.07), transparent 55%);
+}
+
+.pageCondensed {
+  gap: 1.25rem;
+  padding: 2.25rem 1.25rem 3rem;
+}
+
+.pageHeroCompact {
+  gap: clamp(0.85rem, 2vw, 1.25rem);
 }
 
 .breadcrumbs {
@@ -23,7 +32,16 @@
 @media (max-width: 600px) {
   .page {
     padding: 2rem 1rem 3rem;
-    gap: 1.5rem;
+    gap: 1.35rem;
+  }
+
+  .pageCondensed {
+    padding: 1.5rem 1rem 2.5rem;
+    gap: 1rem;
+  }
+
+  .pageHeroCompact {
+    gap: 0.9rem;
   }
 
   .heroTitle {
@@ -52,9 +70,18 @@
   box-shadow: none;
 }
 
+.heroTitleOnly {
+  padding: 0.9rem 1.35rem 1rem;
+  gap: 0.5rem;
+}
+
 .heroCondensed .heroTitle {
   font-size: clamp(1.6rem, 2.4vw, 2.15rem);
   color: var(--color-text);
+}
+
+.heroTitleOnly .heroTitle {
+  font-size: clamp(1.75rem, 2.6vw, 2.2rem);
 }
 
 .heroCondensed .heroSubtitle {
@@ -79,8 +106,32 @@
   width: min(960px, 100%);
   margin: 0 auto;
   display: grid;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
+  gap: clamp(1.5rem, 3.5vw, 2.4rem);
   color: var(--color-text);
+}
+
+.contentCondensed {
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+.contentCompact {
+  gap: clamp(0.75rem, 1.75vw, 1.3rem);
+}
+
+.footer {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 0.75rem;
+}
+
+.footerCondensed {
+  padding-top: 0.4rem;
+}
+
+.footerCompact {
+  padding-top: 0.35rem;
 }
 
 .metaRow {

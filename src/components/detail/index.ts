@@ -12,3 +12,5 @@ export { FindAndListen } from "./FindAndListen";
 export type { FindAndListenProps } from "./FindAndListen";
 export { LayoutDetail } from "./LayoutDetail";
 export type { LayoutDetailProps, BreadcrumbItem } from "./LayoutDetail";
+export { StaticPageLayout } from "./StaticPageLayout";
+export { EntityLayout } from "./EntityLayout";

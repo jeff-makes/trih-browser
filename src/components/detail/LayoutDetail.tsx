@@ -33,12 +33,33 @@ export function LayoutDetail({
   hideBreadcrumbs = false,
   heroVariant = "default"
 }: LayoutDetailProps): JSX.Element {
+  const useCondensedHero = heroVariant === "condensed";
   const hasSupportingHeroContent = Boolean(subtitle || meta || actions);
-  const useCondensedHero =
-    heroVariant === "condensed" || (!hasSupportingHeroContent && heroVariant === "default");
+  const isTitleOnlyHero = !useCondensedHero && !hasSupportingHeroContent;
+
+  const pageClass = classNames(
+    styles.page,
+    useCondensedHero && styles.pageCondensed,
+    isTitleOnlyHero && styles.pageHeroCompact
+  );
+  const heroClass = classNames(
+    styles.hero,
+    useCondensedHero && styles.heroCondensed,
+    isTitleOnlyHero && styles.heroTitleOnly
+  );
+  const contentClass = classNames(
+    styles.content,
+    useCondensedHero && styles.contentCondensed,
+    isTitleOnlyHero && styles.contentCompact
+  );
+  const footerClass = classNames(
+    styles.footer,
+    useCondensedHero && styles.footerCondensed,
+    isTitleOnlyHero && styles.footerCompact
+  );
 
   return (
-    <div className={styles.page}>
+    <div className={pageClass}>
       {!hideBreadcrumbs && breadcrumbs.length > 0 ? (
         <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
           {breadcrumbs.map((crumb, index) => (
@@ -49,17 +70,17 @@ export function LayoutDetail({
           ))}
         </nav>
       ) : null}
-      <header className={classNames(styles.hero, useCondensedHero && styles.heroCondensed)}>
+      <header className={heroClass}>
         <h1 className={styles.heroTitle}>{title}</h1>
         {subtitle ? <div className={styles.heroSubtitle}>{subtitle}</div> : null}
         {meta ? <div className={styles.metaRow}>{meta}</div> : null}
         {actions ? <div>{actions}</div> : null}
       </header>
 
-      <main className={styles.content}>{children}</main>
+      <main className={contentClass}>{children}</main>
 
-      <footer className={styles.content}>
-        <PillLink href="/" variant="series">
+      <footer className={footerClass}>
+        <PillLink href="/" variant="series" className={styles.backLink}>
           ← Back to timeline
         </PillLink>
       </footer>

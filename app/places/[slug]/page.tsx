@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { LayoutDetail, QuickFacts } from "@/components/detail";
+import { EntityLayout, QuickFacts } from "@/components/detail";
 import type { QuickFactsItem } from "@/components/detail/QuickFacts";
 import EntityEpisodes from "@/components/entity/EntityEpisodes";
 import entityStyles from "@/components/entity/EntityPage.module.css";
@@ -70,7 +70,7 @@ export default function PlacePage({ params }: PlacePageProps): JSX.Element {
 
   return (
     <>
-      <LayoutDetail title={data.label} subtitle={data.description} hideBreadcrumbs>
+      <EntityLayout title={data.label} subtitle={data.description}>
         {factsBlock}
         {data.notes ? <p className={entityStyles.notes}>{data.notes}</p> : null}
 
@@ -78,7 +78,7 @@ export default function PlacePage({ params }: PlacePageProps): JSX.Element {
           <h2 className={entityStyles.seoHeading}>The Rest Is History episodes about {data.label}</h2>
           <EntityEpisodes entries={data.episodes} />
         </section>
-      </LayoutDetail>
+      </EntityLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
     </>
   );
