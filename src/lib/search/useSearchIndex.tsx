@@ -23,7 +23,7 @@ const NUMERIC_QUERY_REGEX = /^\d{4}$/;
 const normalizeFilter = (value?: string | null): string | null =>
   value ? value.trim().toLowerCase() || null : null;
 
-const matchesFilter = (result: SearchDocument, filters: SearchFilters | undefined): boolean => {
+const matchesFilter = (result: SearchResult, filters: SearchFilters | undefined): boolean => {
   if (!filters) {
     return true;
   }
@@ -152,9 +152,9 @@ export function SearchIndexProvider({ children }: { children: ReactNode }): JSX.
           : undefined;
 
       const hits = miniSearch.search(query, searchOptions);
-      const filtered = hits.filter((hit) => matchesFilter(hit as SearchDocument, filters));
+      const filtered = hits.filter((hit) => matchesFilter(hit as unknown as SearchResult, filters));
       return filtered.map((hit, index) => ({
-        ...(hit as SearchResult),
+        ...(hit as unknown as SearchResult),
         rank: index + 1
       }));
     },

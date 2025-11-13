@@ -1,8 +1,9 @@
 import { trackEvent } from "@/lib/analytics";
+import type { SearchFilters } from "@/lib/search/types";
 
 interface CommonParams {
   query?: string;
-  filters?: Record<string, string | null | undefined>;
+  filters?: SearchFilters;
 }
 
 export const logSearchSubmit = (params: CommonParams & { resultCount: number }): void => {

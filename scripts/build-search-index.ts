@@ -111,23 +111,29 @@ const getTopicDefinition = (value: string) =>
   TOPIC_BY_SLUG.get(value) ??
   TOPIC_DEFINITIONS.find((topic) => lower(topic.label) === lower(value) || topic.aliases.some((alias) => lower(alias) === lower(value)));
 
+interface FacetAccumulatorEntry {
+  id: string;
+  label: string;
+  count: number;
+}
+
 interface FacetAccumulator {
-  people: Map<string, { id: string; label: string; count: number }>;
-  places: Map<string, { id: string; label: string; count: number }>;
-  topics: Map<string, { id: string; label: string; count: number }>;
+  people: Map<string, FacetAccumulatorEntry>;
+  places: Map<string, FacetAccumulatorEntry>;
+  topics: Map<string, FacetAccumulatorEntry>;
 }
 
 const incrementFacet = (
-  acc: Map<string, { id: string; label: string; count: number }>,
-  id: string,
+  acc: Map<string, FacetAccumulatorEntry>,
+  id: string | null | undefined,
   label: string
 ): void => {
-  const key = id || label;
-  const existing = acc.get(key);
+  const resolvedId = id ?? label;
+  const existing = acc.get(resolvedId);
   if (existing) {
     existing.count += 1;
   } else {
-    acc.set(key, { id, label, count: 1 });
+    acc.set(resolvedId, { id: resolvedId, label, count: 1 });
   }
 };
 
@@ -140,14 +146,20 @@ const createEpisodeDocument = (
   const summary = getEpisodeSummary(episode);
   const description = normalizeText(episode.cleanDescriptionText);
   const yearRange = formatYearRange(episode.yearFrom ?? null, episode.yearTo ?? null);
-  const people = ensureArray(episode.people).map((person) => ({
-    id: person.id,
-    label: person.name
-  }));
-  const places = ensureArray(episode.places).map((place) => ({
-    id: place.id,
-    label: place.name
-  }));
+  const people = ensureArray(episode.people).map((person) => {
+    const resolvedId = person.id ?? person.name;
+    return {
+      id: resolvedId,
+      label: person.name
+    };
+  });
+  const places = ensureArray(episode.places).map((place) => {
+    const resolvedId = place.id ?? place.name;
+    return {
+      id: resolvedId,
+      label: place.name
+    };
+  });
   const topics = ensureArray(episode.keyTopics).map((topic) => ({
     id: topic.id,
     label: topic.label ?? topic.slug ?? topic.id,
@@ -227,10 +239,12 @@ const createSeriesDocument = (series: PublicSeries, episodes: PublicEpisode[]): 
 
   episodes.forEach((episode) => {
     ensureArray(episode.people).forEach((person) => {
-      aggregatedPeople.set(person.id, { id: person.id, label: person.name });
+      const key = person.id ?? person.name;
+      aggregatedPeople.set(key, { id: key, label: person.name });
     });
     ensureArray(episode.places).forEach((place) => {
-      aggregatedPlaces.set(place.id, { id: place.id, label: place.name });
+      const key = place.id ?? place.name;
+      aggregatedPlaces.set(key, { id: key, label: place.name });
     });
     keywordParts.push(...(episode.keyTopics ?? []).map((topic) => topic.label));
   });
